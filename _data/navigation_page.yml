@@ -1,0 +1,26 @@
+- name: "Mo Coushle"
+  url: "/mocuishle/"
+
+- name: "Browse History"
+  url: "/browse-history/"
+
+- name: "Outgoing History"
+  url: "/outgoing-history/"
+
+- name: "Full Text Search"
+  url: "/full-text-search/"
+
+- name: "Blocking Addresses"
+  url: "/block-unblock/"
+
+- name: "Android Install"
+  url: "/android-install/"
+
+- name: "Mozilla Install"
+  url: "/mozilla-install/"
+
+- name: "License"
+  url: "/license/"
+
+- name: "All Articles"
+  url: "/archive/"

@@ -1,0 +1,44 @@
+/* Footer
+------------------------------------------------------------------- */
+
+#footer {
+  margin-top: 7em;
+  padding-bottom: 2em;
+  letter-spacing: 1px;
+  line-height: $font-size-small;
+  color: $footer-color;
+}
+#footer a {
+  border: 0;
+  color: $footer-color;
+}
+#footer a:hover {
+    color: $ci-1;
+}
+#footer ul.inline-list li:before {
+	// middot
+	content: '';
+	padding: 0 .5em;
+}
+#footer ul.inline-list li:first-child:before {
+	content: '';
+	padding: 0;
+}
+#footer ul.inline-list li:first-child {
+}
+
+// Meta Information beneath article content
+article footer:before {
+    position: absolute;
+    content:'';
+    height: 1px;
+    width: 4em;
+    background-color: $footer-color;
+}
+article footer {
+    margin: 2em auto 3em auto;
+    color: $footer-color;
+}
+article footer p {
+    padding-top: .25em;
+}

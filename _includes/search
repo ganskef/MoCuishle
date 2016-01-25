@@ -1,0 +1,9 @@
+<form id="search-container" name="x" action="//duckduckgo.com/">
+    <input type="hidden" value="{{ site.url }}{{ site.baseurl }}" name="sites">
+    <input type="hidden" value="1" name="kh">
+    <input type="hidden" value="1" name="kn">
+    <input type="hidden" value="1" name="kac">
+    <input accesskey="4" tabindex="1" class="search-input" type="search" placeholder="{{ site.language.search_input_placeholder }}" name="q">
+    <button class="search-button" type="submit">{{ site.language.search }}</button>
+</form>
+

@@ -1,0 +1,32 @@
+/* #logo
+------------------------------------------------------------------- */
+
+#logo a img  {
+	height: 30px;
+	margin: 10px 1em 0 0;
+	padding: 0;
+	float: left;
+}
+#logo a:hover {
+	text-decoration: none;
+	color: $ci-1;
+}
+
+@media (max-width: $small - 1) {
+	#logo a img  {
+		height: 20px;
+		margin-top: 5px;
+	}
+}
+
+@media (min-width: $small ) and (max-width: $medium) {
+	#logo a img  {
+		height: 26px;
+		margin-top: 8px;
+	}
+}
+
+.slogan {
+    padding-top: .21em !important;
+    display: block !important;
+}

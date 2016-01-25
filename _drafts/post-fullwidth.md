@@ -1,0 +1,6 @@
+---
+title: ''
+fullwidth: true
+---
+
+<!--more-->

@@ -1,0 +1,67 @@
+{% comment %}
+*
+*   Liquid variables are created at the top to keep the source DRY and clean.
+*   Idea by ericcarlisle.com
+*
+*   Variables › {{ url }} › site.url + site.baseurl
+*   Variables › {{ description }} › excerpt, page.meta_description, or site.description
+*   Variables › {{ title }} › page.title
+*
+{% endcomment %}{% capture ignore %}
+
+{% assign url = site.baseurl | prepend: site.url %}
+
+{% capture description %}{% if page.meta_description %}{{ page.meta_description }}{% elsif page.teaser %}{{ page.teaser }}{% elsif page.excerpt %}{{ page.excerpt }}{% elsif site.description %}{{ site.description }}{% endif %}{% endcapture %}
+{% assign description = description | strip_html | escape | strip %}
+
+{% capture title %}{% if page.meta_title %}{{ page.meta_title}}{% elsif page.title %}{{ page.title }}{% else %}{{ site.title | strip_html | strip }}{% endif %}{% endcapture %}
+
+{% assign title = title | strip_html | escape | strip_newlines %}
+
+{% endcapture %}<!doctype html>
+<html lang="{% if site.language == nil %}en{% else %}{{ site.language.html_language }}{% endif %}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{{ title }}</title>
+
+  <link rel="stylesheet" href="{{ url }}/assets/css/simplicity.css">
+  <link rel="canonical" href="{{ url }}{{ page.url }}">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ url }}/feed.xml">
+
+  <meta name="description" content="{{ description }}">
+  <link type="text/plain" rel="author" href="{{ url }}/humans.txt">
+  {% if page.noindex == true %}<meta name="robots" content="noindex">{% endif %}
+  {% if site.google_site_verification %}<meta name="google-site-verification" content="{{ site.google_site_verification}}">{% endif %}
+  {% if site.bing_webmastertools_id %}<meta name="msvalidate.01" content="{{ site.bing_webmastertools_id }}">{% endif %}
+  {% if site.alexa_verify_id %}<meta name="alexaVerifyID" content="{{ site.alexa_verify_id }}">{% endif %}
+
+  <!-- Facebook Open Graph -->
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:locale" content="{% if site.og_locale == nil %}en_EN{% else %}{{ site.og_locale }}{% endif %}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="{{ url }}/{{ page.url }}">
+  <meta property="og:site_name" content="{{ site.title }}">
+  {% if page.image %}<meta property="og:image" content="{{ site.urlimg }}{{ page.image }}">{% endif %}
+  {% if site.socialmedia.facebook %}<meta property="article:author" content="https://www.facebook.com/{{ site.socialmedia.facebook }}">{% endif %}
+
+  {% if site.socialmedia.twitter %}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="{{ site.socialmedia.twitter }}">
+  <meta name="twitter:creator" content="{{ site.socialmedia.twitter }}">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  {% if page.image %}<meta name="twitter:image" content="{{ site.urlimg }}{{ page.image }}">{% endif %}
+  {% endif %}
+
+
+  {% include _favicon.html %}
+
+  {% unless page.style == NULL %}<style type="text/css">{{ page.style }}</style>{% endunless %}
+
+</head>
+<body id="top-of-page" class="{{ page.format }}">
+
