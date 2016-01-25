@@ -15,7 +15,7 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="/mocuishle-binary-preview/mocuishle-firefox-addon-1.0-20160123.xpi">Download</a>&nbsp;<a 
+href="/mocuishle-binary-preview/mocuishle-1.0-20160125.apk">Download</a>&nbsp;<a 
 class="button info" 
 href="/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk">5+ testing</a>** 4MB
 
@@ -66,5 +66,5 @@ installed. This causes HTTPS to fail.
 
 TO DESCRIBE IT HERE
 
-For background informations please refer to [Mozilla Install](/mozilla-install/) 
-too. 
+For background informations please refer to 
+[Mozilla Install](/mozilla-install/#other-browsers-settings) too. 

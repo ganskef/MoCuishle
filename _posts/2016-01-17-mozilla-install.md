@@ -17,7 +17,7 @@ UNENCRYPTED on your device.**
 **<a class="button info" 
 href="/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi">Download</a>** 7MB
 
-Please open an [issue](https://github.com/ganskef/MoCuishle/issues/) containing 
+Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
 informations about your environment in case you've no success.
 
 # Java
@@ -27,8 +27,7 @@ First of all you need *Java* installed on your system.
 #Mozilla Add-on
 
 The *Add-on XPI* depends on a *Mozilla* browser to install. Install it by 
-drag and drop `mocuishle-firefox-addon-1.0-SNAPSHOT.xpi` onto the browser. 
-That's simple!
+drag and drop `mocuishle-1.0-SNAPSHOT.xpi` onto the browser. That's simple!
 
 #Complication (first time only)
 Since December 2015, starting with *Firefox* 43.0 you can't install an unsigned 
@@ -66,7 +65,7 @@ needed to cache HTTPS contents. Try it in case of problems with certificates.
 without the add-on or with other browsers like *Google Chrome* too. Since it's 
 an *Executable JAR* simply enter the command:
 
- java -jar mocuishle-firefox-addon-1.0-SNAPSHOT.xpi
+ java -jar mocuishle-1.0-SNAPSHOT.xpi
 
 Logging is written to the console.
 
