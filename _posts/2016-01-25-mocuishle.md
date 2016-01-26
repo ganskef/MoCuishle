@@ -7,21 +7,21 @@ title: "Mo Cuishle"
 
 All web pages you've seen on the Internet via HTTP or HTTPS will be available 
 later to read them without having to remain connected.<br><a 
-class="button info" href="{{ base }}/android-install/">Android App</a>&nbsp;<a class="button info" 
-href="{{ base }}/mozilla-install">Mozilla/Java</a>&nbsp;&nbsp;
+class="button info" href="http://ganskef.github.io/MoCuishle/android-install/">Android App</a>&nbsp;<a class="button info" 
+href="http://ganskef.github.io/MoCuishle/mozilla-install">Mozilla/Java</a>&nbsp;&nbsp;
 <!--more-->
 
 *Mo Cuishle* provides your 
-[browse history]({{ base }}/browse-history/) ordered by the last access, and an 
-[outgoing history]({{ base }}/outgoing-history/) of the pages you've requested offline to 
-reload if needed. Also a [full text search]({{ base }}/full-text-search/) over the cached 
+[browse history](http://ganskef.github.io/MoCuishle/browse-history/) ordered by the last access, and an 
+[outgoing history](http://ganskef.github.io/MoCuishle/outgoing-history/) of the pages you've requested offline to 
+reload if needed. Also a [full text search](http://ganskef.github.io/MoCuishle/full-text-search/) over the cached 
 web sites is included. The hosts requested in the last minute are listed and you 
-can decide to [block or unblock]({{ base }}/block-unblock/) addresses on the fly. It's 
+can decide to [block or unblock](http://ganskef.github.io/MoCuishle/block-unblock/) addresses on the fly. It's 
 been used on *Linux*, *OS X* and *Windows*. Every platform with a [*Mozilla* 
-browser]({{ base }}/mozilla-install/) and *Java* should work simply by installing the 
-Add-on. For [*Android* devices]({{ base }}/android-install/) it is provided by an app 
+browser](http://ganskef.github.io/MoCuishle/mozilla-install/) and *Java* should work simply by installing the 
+Add-on. For [*Android* devices](http://ganskef.github.io/MoCuishle/android-install/) it is provided by an app 
 which launces the background service and installs the browser extension. This 
-is a binary preview. I'm not ready to [go public]({{ base }}/license/) for now.
+is a binary preview. I'm not ready to [go public](http://ganskef.github.io/MoCuishle/license/) for now.
 
 # The vision - Ideas behind
 

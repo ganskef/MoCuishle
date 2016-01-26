@@ -15,7 +15,7 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="{{ base }}/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi">Download</a>** 7MB
+href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi">Download</a>** 7MB
 
 Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
 informations about your environment in case you've no success.
@@ -42,7 +42,7 @@ I've tried to sign the add-on but it's not so easy... A work item.
 #Start Up
 
 *Mo Cuishle* is enabled on start up and launches the Java proxy in background. 
-The browser opens a Tab with the [Browse History]({{ base }}/browse-history/). 
+The browser opens a Tab with the [Browse History](http://ganskef.github.io/MoCuishle/browse-history/). 
 
 Clicking the blue *MC* Toolbar Icon stops/starts the Java process and 
 removed/entered the following required settings in *Mozilla Firefox*:
