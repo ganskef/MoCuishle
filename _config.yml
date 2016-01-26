@@ -14,7 +14,7 @@ description:  'A caching proxy for offline use.'
 
 
 # Build settings
-url:          'http://ganskef.github.io/MoCuishle'
+url:          'http://ganskef.github.io'
 baseurl:      '/MoCuishle'
 urlimg:       'http://ganskef.github.io/MoCuishle/images/'
 markdown:     kramdown
