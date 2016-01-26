@@ -15,7 +15,7 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi">Download</a>** 7MB
+href="../mocuishle-binary-preview/mocuishle-1.0-20160125.xpi">Download</a>** 7MB
 
 Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
 informations about your environment in case you've no success.

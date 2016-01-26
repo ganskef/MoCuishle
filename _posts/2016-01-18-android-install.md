@@ -15,9 +15,9 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="/mocuishle-binary-preview/mocuishle-1.0-20160125.apk">Download</a>&nbsp;<a 
+href="../mocuishle-binary-preview/mocuishle-1.0-20160125.apk">Download</a>&nbsp;<a 
 class="button info" 
-href="/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk">5+ testing</a>** 4MB
+href="../mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk">5+ testing</a>** 4MB
 
 There is an issue [#4718](https://github.com/netty/netty/issues/4718) with Netty 
 and secured connections on *Android* versions 5+ ongoing. Use the testing APK 
