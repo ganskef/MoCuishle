@@ -15,9 +15,9 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="../mocuishle-binary-preview/mocuishle-1.0-20160125.apk">Download</a>&nbsp;<a 
+href="{{ base }}/mocuishle-binary-preview/mocuishle-1.0-20160125.apk">Download</a>&nbsp;<a 
 class="button info" 
-href="../mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk">5+ testing</a>** 4MB
+href="{{ base }}/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk">5+ testing</a>** 4MB
 
 There is an issue [#4718](https://github.com/netty/netty/issues/4718) with Netty 
 and secured connections on *Android* versions 5+ ongoing. Use the testing APK 
@@ -50,7 +50,7 @@ Selecting one tries to install the add-on onto. That's simple!
 #Complications
 
 Please enable unsigned add-ons regarding 
-[Mozilla Install](/mozilla-install/#complication-first-time-only) first.
+[Mozilla Install]({{ base }}/mozilla-install/#complication-first-time-only) first.
 
 Sometimes I've seen the browser showing the file URL but not installing the 
 add-on. In this case you can modify the URL to open the directory 
@@ -67,4 +67,4 @@ installed. This causes HTTPS to fail.
 TO DESCRIBE IT HERE
 
 For background informations please refer to 
-[Mozilla Install](/mozilla-install/#other-browsers-settings) too. 
+[Mozilla Install]({{ base }}/mozilla-install/#other-browsers-settings) too. 

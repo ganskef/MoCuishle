@@ -1,3 +1,10 @@
+{% assign base = '' %}
+{% assign depth = page.url | split: '/' | size | minus: 1 %}
+{% if    depth == 1 %}{% assign base = '.' %}
+{% elsif depth == 2 %}{% assign base = '..' %}
+{% elsif depth == 3 %}{% assign base = '../..' %}
+{% elsif depth == 4 %}{% assign base = '../../..' %}{% endif %}
+
 {% comment %}
 *
 *   Liquid variables are created at the top to keep the source DRY and clean.
