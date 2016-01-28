@@ -66,5 +66,5 @@ installed. This causes HTTPS to fail.
 
 TO DESCRIBE IT HERE
 
-For background informations please refer to 
+For background information please refer to 
 [Mozilla Install](http://ganskef.github.io/MoCuishle/mozilla-install/#other-browsers-settings) too. 
