@@ -18,7 +18,7 @@ UNENCRYPTED on your device.**
 href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi">Download</a>** 7MB
 
 Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
-informations about your environment in case you've no success.
+information about your environment in case you've no success.
 
 # Java
 

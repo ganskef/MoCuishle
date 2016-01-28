@@ -1,6 +1,6 @@
 ---
 image: welcome-offline.png
-caption: "Caching informations highlighted in the browsed HTML"
+caption: "Caching information highlighted in the browsed HTML"
 subheadline: "A caching proxy for offline use"
 title: "Mo Cuishle"
 ---
@@ -52,7 +52,20 @@ interpretation a lot.
 **... to sync between** your cell phone and your notebook without having to go into someone's cloud?<br/>
 **... if you've really don't have to pay** to see content again you've seen before so often you like?<br/>
 **... to define an Add blocker** definition for your own, directly by viewing the site, offline too?<br/>
-**... to stop spreading informations** a lot while using the modern Web 2.0 and social media sites?<br/>
+**... to stop spreading information** a lot while using the modern Web 2.0 and social media sites?<br/>
 **... to save traffic volume**, not a problem on desktop, but mobile it's another situation often?<br/>
 
 All that *Mo Cuishle* aims to provide to you!
+
+# History
+
+[Better Android](http://ganskef.github.io/MoCuishle/better-android/)
+
+ * [mocuishle-1.0-20160128.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160128.apk)
+ * [mocuishle-1.0-testing-20160128.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-testing-1.0-20160128.apk)
+
+[It's out!](http://ganskef.github.io/MoCuishle/it-is-out/)
+
+ * [mocuishle-1.0-20160125.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160125.apk)
+ * [mocuishle-1.0-20160125.xpi](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi)
+ * [mocuishle-1.0-testing-20160125.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk)
