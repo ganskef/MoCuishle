@@ -1,5 +1,4 @@
 ---
-image: it-is-out.jpg
 subheadline: "Guided installation on Android 6."
 title: "Better Android"
 ---
