@@ -18,7 +18,7 @@ url:          'http://ganskef.github.io/MoCuishle'
 baseurl:      ''
 urlimg:       'http://ganskef.github.io/MoCuishle/images/'
 markdown:     kramdown
-highlighter:  pygments
+highlighter:  rouge
 permalink:    /:categories/:title/
 encoding:     utf-8
 
