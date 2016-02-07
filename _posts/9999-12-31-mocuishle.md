@@ -40,7 +40,7 @@ my laptop for years, but I'm a Java developer, and I've liked to use it with
 Android, so I've implemented it myself, simplified. 
 
 The name *Mo Cuishle* comes from *Clint Eastwood*'s movie *Million Dollar Baby* 
-of course. From [Wikipedia](http://en.wikipedia.org/wiki/Million_Dollar_Baby): 
+of course. From [Wikipedia](https://en.wikipedia.org/wiki/Million_Dollar_Baby): 
 &#171;*Mo Chuisle* (spelled incorrectly in the film as "mo cuishle"): Irish for 
 "my darling, and my blood" (literally, "my pulse")&#187;. There's room for 
 interpretation a lot. 
