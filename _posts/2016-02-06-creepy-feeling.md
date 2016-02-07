@@ -1,13 +1,14 @@
 ---
 image: creepy-feeling.png
 caption: "Modified content - verified by Google?"
-subheadline: "A long running Firefox bug with minor priority"
+subheadline: "A long running Firefox bug with minor priority."
 title: "Creepy Feeling"
 ---
 
 Using *Mo Cuishle* you're doing Man-In-The-Middle which is usually a very bad 
 thing. A Mozilla add-on installs a root certificate and you can enable and 
 disable with a single click. And, there is a bug in Firefox:
+<!--more-->
 
 * [Bug 1243901](https://bugzilla.mozilla.org/show_bug.cgi?id=1243901) - Replace Certificate Authority without user notification, wrong CA displayed 
 * [Bug 1230321](https://bugzilla.mozilla.org/show_bug.cgi?id=1230321) - Firefox 42.0 shows wrong certificate issuer when reloading a page after cert has changed 

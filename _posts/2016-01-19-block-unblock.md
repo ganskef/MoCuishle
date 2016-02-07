@@ -1,6 +1,6 @@
 ---
 image: welcome-block.png
-subheadline: "Decide to block or unblock addresses on the fly"
+subheadline: "Decide to block or unblock addresses on the fly."
 title: "Blocking Addresses"
 ---
 

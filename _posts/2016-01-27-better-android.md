@@ -6,7 +6,6 @@ title: "Better Android"
 *Mo Cuishle* runs on Android but installation isn't fail safe with the latest 
 versions. It's leaded better now, and testing includes the latest Netty snapshot 
 4.1.
-
 <!--more-->
 
  * To fix HTTPS on Android devices 5., 5.1, 6.0 the latest Netty snapshot is 

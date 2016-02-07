@@ -1,6 +1,6 @@
 ---
 image: welcome-browse.png
-subheadline: "Your history of pages recently visited"
+subheadline: "Your history of pages recently visited."
 title: "Browse History"
 ---
 

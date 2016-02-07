@@ -1,6 +1,6 @@
 ---
-#image: welcome-block.png
-subheadline: "Download and get it working on Java platforms"
+#image: mozilla-install.png
+subheadline: "Download and get it working on Java platforms."
 title: "Mozilla Install"
 ---
 
@@ -15,7 +15,7 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi">Download</a>** 7MB
+href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160207.xpi">Download</a>** 7MB
 
 Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
 information about your environment in case you've no success.
@@ -24,12 +24,12 @@ information about your environment in case you've no success.
 
 First of all you need *Java* installed on your system. 
 
-#Mozilla Add-on
+# Mozilla Add-on
 
 The *Add-on XPI* depends on a *Mozilla* browser to install. Install it by 
 drag and drop `mocuishle-1.0-SNAPSHOT.xpi` onto the browser. That's simple!
 
-#Complication (first time only)
+# Complication (first time only)
 Since December 2015, starting with *Firefox* 43.0 you can't install an unsigned 
 add-on like *Mo Cuishle* binary preview. So you have to use this trick [^1]:
 
@@ -39,10 +39,10 @@ Enter the URL `about:config` in *Firefox*, confirm if needed, then enter
 
 I've tried to sign the add-on but it's not so easy... A work item. 
 
-#Start Up
+# Start Up
 
 *Mo Cuishle* is enabled on start up and launches the Java proxy in background. 
-The browser opens a Tab with the [Browse History](http://ganskef.github.io/MoCuishle/browse-history/). 
+The browser opens a Tab with the [Browse History]({{ site.url }}/browse-history/). 
 
 Clicking the blue *MC* Toolbar Icon stops/starts the Java process and 
 removed/entered the following required settings in *Mozilla Firefox*:
@@ -59,7 +59,7 @@ Try <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>J</kbd>.
 Enabling/Disabling the installation imports/removes the Certificate Authority 
 needed to cache HTTPS contents. Try it in case of problems with certificates.
 
-#Other Browsers, Settings
+# Other Browsers, Settings
 
 *Mo Cuishle* is a proxy application following HTTP standards. So it can be used 
 without the add-on or with other browsers like *Google Chrome* too. Since it's 
@@ -94,5 +94,7 @@ LittleProxy-mitm):
 
  * prefs.set("security.ssl3.dhe_rsa_aes_128_sha", false);
  * prefs.set("security.ssl3.dhe_rsa_aes_256_sha", false);
+
+<img class="left" src="{{ site.urlimg }}mozilla-install.png" alt="">
 
  [^1]: The trick was formerly described here: <a href="https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct#w_override-add-on-signing-advanced-users">https://support.mozilla.org/en-US/kb/add-on-signing-in-firefox?as=u&utm_source=inproduct#w_override-add-on-signing-advanced-users</a>

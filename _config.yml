@@ -21,6 +21,8 @@ markdown:     kramdown
 highlighter:  rouge
 permalink:    /:categories/:title/
 encoding:     utf-8
+timezone:     Europe/Berlin
+future:       true
 
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->

@@ -1,6 +1,6 @@
 ---
 #image: welcome-block.png
-subheadline: "Download and get it working on mobile devices"
+subheadline: "Download and get it working on mobile devices."
 title: "Android Install"
 ---
 
@@ -15,22 +15,14 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160128.apk">Download</a>&nbsp;<a 
-class="button info" 
-href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-testing-1.0-20160128.apk">5+ testing</a>** 4MB
+href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160207.apk">Download</a>** 4MB
 
-There is an issue [#4718](https://github.com/netty/netty/issues/4718) with Netty 
-and secured connections on *Android* versions 5+ ongoing. Use the testing APK 
-with Android 5.0, 5.1, 6.0 only. It's working but I've noticed some blocking and 
-cancelled connections on emulators. It could be better to use the regular APK 
-which terminates all HTTPS connections on these phones.
-
-#Mozilla browser
+# Mozilla browser
 
 First you have to install a *Mozilla* browser. Grab it from *Google Play*, or 
 from the *Mozilla* [archive](https://ftp.mozilla.org/pub/mobile/releases/). 
 
-#Android APK, containing the Add-on
+# Android APK, containing the Add-on
 
 To install *Mo Cuishle* binary preview it's neccessary to enable *Unknown 
 sources*. This option is in *Settings* under *Security* on your phone. After 
@@ -47,7 +39,7 @@ the *Mo Cuishle* service has to be up and running always.
 The second setting displays a list of the installed *Mozilla* browsers. 
 Selecting one tries to install the add-on onto. That's simple! 
 
-#Complications
+# Complications
 
 Please enable unsigned add-ons regarding 
 [Mozilla Install](http://ganskef.github.io/MoCuishle/mozilla-install/#complication-first-time-only) first.
@@ -58,11 +50,11 @@ add-on. In this case you can modify the URL to open the directory
 directly to start the installation. 
 
 Don't use the *Mozilla* download with *Android*. It contains *Java* classes and 
-*Sqlite* binaries you never need on your phone, and more important the path of 
+*SQLite* binaries you never need on your phone, and more important the path of 
 *Mo Cuishle* on your device is probably wrong, so the certificate will not be 
 installed. This causes HTTPS to fail. 
 
-#Extended Settings
+# Extended Settings
 
 TO DESCRIBE IT HERE
 

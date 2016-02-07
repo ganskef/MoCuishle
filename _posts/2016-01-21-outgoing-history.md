@@ -1,6 +1,6 @@
 ---
 image: welcome-outgoing.png
-subheadline: "Pages you've requested offline to reload it later"
+subheadline: "Pages you've requested offline to reload it later."
 title: "Outgoing History"
 ---
 
