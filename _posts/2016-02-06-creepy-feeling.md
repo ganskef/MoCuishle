@@ -33,7 +33,7 @@ stated "As for nsIX509CertDB2, it was folded into nsIX509CertDB and no longer
 exists, ..." 
 
 A year before, January 2015, at time of writing the add-on at least, 
-[nsIX509CertDB2](http://doxygen.db48x.net/mozilla-full/html/db/d7a/interfacensIX509CertDB2.html) 
+[nsIX509CertDB2](http://doxygen.db48x.net/mozilla-full/html/df/d1e/interfacensIX509CertDB2.html) 
 was separated from the frozen 
 [nsIX509CertDB](http://doxygen.db48x.net/mozilla-full/html/db/d7a/interfacensIX509CertDB.html). 
 
