@@ -15,7 +15,7 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160207.apk">Download</a>** 4MB
+href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160207.apk">Download</a>** 4MB
 
 # Mozilla browser
 
@@ -42,7 +42,8 @@ Selecting one tries to install the add-on onto. That's simple!
 # Complications
 
 Please enable unsigned add-ons regarding 
-[Mozilla Install](http://ganskef.github.io/MoCuishle/mozilla-install/#complication-first-time-only) first.
+[Mozilla Install]({{ site.url }}/mozilla-install/#complication-first-time-only) 
+first.
 
 Sometimes I've seen the browser showing the file URL but not installing the 
 add-on. In this case you can modify the URL to open the directory 
@@ -59,4 +60,4 @@ installed. This causes HTTPS to fail.
 TO DESCRIBE IT HERE
 
 For background information please refer to 
-[Mozilla Install](http://ganskef.github.io/MoCuishle/mozilla-install/#other-browsers-settings) too. 
+[Mozilla Install]({{ site.url }}/mozilla-install/#other-browsers-settings) too. 

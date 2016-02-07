@@ -7,21 +7,23 @@ title: "Mo Cuishle"
 
 All web pages you've seen on the Internet via HTTP or HTTPS will be available 
 later to read them without having to remain connected.<br><a 
-class="button info" href="http://ganskef.github.io/MoCuishle/android-install/">Android App</a>&nbsp;<a class="button info" 
-href="http://ganskef.github.io/MoCuishle/mozilla-install">Mozilla/Java</a>&nbsp;&nbsp;
+class="button info" href="{{ site.url }}/android-install/">Android App</a>&nbsp;<a 
+class="button info" href="{{ site.url }}/mozilla-install">Mozilla/Java</a>&nbsp;&nbsp;
 <!--more-->
 
 *Mo Cuishle* provides your 
-[browse history](http://ganskef.github.io/MoCuishle/browse-history/) ordered by the last access, and an 
-[outgoing history](http://ganskef.github.io/MoCuishle/outgoing-history/) of the pages you've requested offline to 
-reload if needed. Also a [full text search](http://ganskef.github.io/MoCuishle/full-text-search/) over the cached 
-web sites is included. The hosts requested in the last minute are listed and you 
-can decide to [block or unblock](http://ganskef.github.io/MoCuishle/block-unblock/) addresses on the fly. It's 
-been used on *Linux*, *OS X* and *Windows*. Every platform with a [*Mozilla* 
-browser](http://ganskef.github.io/MoCuishle/mozilla-install/) and *Java* should work simply by installing the 
-Add-on. For [*Android* devices](http://ganskef.github.io/MoCuishle/android-install/) it is provided by an app 
-which launces the background service and installs the browser extension. This 
-is a binary preview. I'm not ready to [go public](http://ganskef.github.io/MoCuishle/license/) for now.
+[browse history]({{ site.url }}/browse-history/) ordered by the last access, and 
+an [outgoing history]({{ site.url }}/outgoing-history/) of the pages you've 
+requested offline to reload if needed. Also a 
+[full text search]({{ site.url }}/full-text-search/) over the cached web sites 
+is included. The hosts requested in the last minute are listed and you can 
+decide to [block or unblock]({{ site.url }}/block-unblock/) addresses on the 
+fly. It's been used on *Linux*, *OS X* and *Windows*. Every platform with a 
+[*Mozilla* browser]({{ site.url }}/mozilla-install/) and *Java* should work 
+simply by installing the add-on. For 
+[*Android* devices]({{ site.url }}/android-install/) it is provided by an app 
+which launces the background service and installs the browser extension. This is 
+a binary preview. I'm not ready to [go public]({{ site.url }}/license/) for now.
 
 # The vision - Ideas behind
 
@@ -59,18 +61,18 @@ All that *Mo Cuishle* aims to provide to you!
 
 # History
 
-[Chrome and Mediaserver](http://ganskef.github.io/MoCuishle/chrome-and-mediaserver/)
+[Chrome and Mediaserver]({{ site.url }}/chrome-and-mediaserver/)
 
- * [mocuishle-1.0-20160207.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160207.apk)
- * [mocuishle-1.0-20160207.xpi](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160207.xpi)
+ * [mocuishle-1.0-20160207.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160207.apk)
+ * [mocuishle-1.0-20160207.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160207.xpi)
 
-[Better Android](http://ganskef.github.io/MoCuishle/better-android/)
+[Better Android]({{ site.url }}/better-android/)
 
- * [mocuishle-1.0-20160128.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160128.apk)
- * [mocuishle-1.0-testing-20160128.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-testing-1.0-20160128.apk)
+ * [mocuishle-1.0-20160128.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160128.apk)
+ * [mocuishle-1.0-testing-20160128.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-testing-1.0-20160128.apk)
 
-[It's out!](http://ganskef.github.io/MoCuishle/it-is-out/)
+[It's out!]({{ site.url }}/it-is-out/)
 
- * [mocuishle-1.0-20160125.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160125.apk)
- * [mocuishle-1.0-20160125.xpi](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi)
- * [mocuishle-1.0-testing-20160125.apk](http://ganskef.github.io/MoCuishle/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk)
+ * [mocuishle-1.0-20160125.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160125.apk)
+ * [mocuishle-1.0-20160125.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi)
+ * [mocuishle-1.0-testing-20160125.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk)
