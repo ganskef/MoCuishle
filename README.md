@@ -3,12 +3,12 @@
 [*Mo Cuishle*](https://ganskef.github.io/MoCuishle/) is written in *Java* on top of 
 [*LittleProxy-mitm*](https://github.com/ganskef/LittleProxy-mitm), 
 [*LittleProxy*](https://github.com/adamfisk/LittleProxy), 
-[Netty](http://netty.io/). It's available as a
+[*Netty*](http://netty.io/). It's available as a
 [*Mozilla* add-on](http://ganskef.github.io/MoCuishle/mozilla-install/) 
 and an 
 [*Android* app](https://ganskef.github.io/MoCuishle/android-install/). So, you can 
-use it nearly everywhere, on Linux, Mac OS X, Windows, Android, and I've seen it 
-on FreeBSD. Other browsers like *Google Chrome* are possible. But 
+use it nearly everywhere, on *Linux*, *Mac OS X*, *Windows*, *Android*, and I've 
+seen it on *FreeBSD*. Other browsers like *Google Chrome* are possible. But 
 you can **not** use it with *iOS* devices since they're lacking *Java*. 
 
 This repository contains a [*Jekyll*](https://github.com/jekyll/jekyll) site 
@@ -45,20 +45,22 @@ $ PATH="$HOME/.gem/ruby/2.1.0/bin:$PATH"
 $ jekyll serve -c _config.yml,_config_dev.yml
 </pre>
 
-If there's no problem you can open this URL in a browser: http://localhost:4000/
+If there's no problem you can open this URL in a browser: 
+[http://localhost:4000/](http://localhost:4000/)
 
 ## Dependencies
 
-You need [Ruby](http://www.ruby-lang.org/en/downloads/) and 
-[RubyGems](https://rubygems.org/pages/download). Pyton and NodeJS is obsolete 
-now after GitHub is using Jekyll 3. With Debian it is simple like this:
+You need [*Ruby*](http://www.ruby-lang.org/en/downloads/) and 
+[*RubyGems*](https://rubygems.org/pages/download). *Pyton* and *NodeJS* are 
+obsolete now after *GitHub* is using *Jekyll 3*. With *Debian* it is simple 
+like this:
 <pre>
 # aptitude install ruby rubygems-integration
 </pre>
 
 For me the simplest way was shown above with `bundle install`. 
-The `--path ~/.gem` option installs all dependencies like Jekyll in the users 
-home without modifying the system. 
+The `--path ~/.gem` option installs all dependencies like *Jekyll* in the 
+users home without modifying the system. 
 
 You should add the gem path permanently to your PATH variable in your 
 `~/.bashrc` file for example.
@@ -69,11 +71,11 @@ fails for you.
 ## Contributing
 
 The content of the *Mo Cuishle* website is written in 
-[Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
+[*Markdown*](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) 
 residing in [_posts](https://github.com/ganskef/MoCuishle/tree/gh-pages/_posts).
 
-To create a pull request you need a GitHub account, fork the repository, clone 
-your fork locally, commit, push and use GitGub to create the pull request. If 
+To create a pull request you need a *GitHub* account, fork the repository, clone 
+your fork locally, commit, push and use *GitGub* to create the pull request. If 
 this isn't what you want I'm happy to integrate a patch or diff file too. Just 
 try it. And, of course you have the option to open an 
 [issue](https://github.com/ganskef/MoCuishle/issues).
