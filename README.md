@@ -2,7 +2,7 @@
 
 This repository is intended to be the home of 
 [*Mo Cuishle*](https://ganskef.github.io/MoCuishle/) written in *Java* on top of 
-[*LittleProxy*](https://adamfisk/LittleProxy). It's available as 
+[*LittleProxy*](https://github.com/adamfisk/LittleProxy). It's available as 
 [*Mozilla* Add-on](http://ganskef.github.io/MoCuishle/mozilla-install/) 
 and an 
 [*Android* App](https://ganskef.github.io/MoCuishle/android-install/). You can 
