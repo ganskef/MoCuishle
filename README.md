@@ -1,12 +1,14 @@
 # Mo Cuishle - A caching proxy for offline use
 
-This repository is intended to be the home of 
-[*Mo Cuishle*](https://ganskef.github.io/MoCuishle/) written in *Java* on top of 
-[*LittleProxy*](https://github.com/adamfisk/LittleProxy). It's available as 
-[*Mozilla* Add-on](http://ganskef.github.io/MoCuishle/mozilla-install/) 
+[*Mo Cuishle*](https://ganskef.github.io/MoCuishle/) is written in *Java* on top of 
+[*LittleProxy-mitm*](https://github.com/ganskef/LittleProxy-mitm), 
+[*LittleProxy*](https://github.com/adamfisk/LittleProxy), 
+[Netty](http://netty.io/). It's available as a
+[*Mozilla* add-on](http://ganskef.github.io/MoCuishle/mozilla-install/) 
 and an 
-[*Android* App](https://ganskef.github.io/MoCuishle/android-install/). You can 
-use it nearly everywhere. Other browsers like *Google Chrome* are possible. But 
+[*Android* app](https://ganskef.github.io/MoCuishle/android-install/). So, you can 
+use it nearly everywhere, on Linux, Mac OS X, Windows, Android, and I've seen it 
+on FreeBSD. Other browsers like *Google Chrome* are possible. But 
 you can **not** use it with *iOS* devices since they're lacking *Java*. 
 
 This repository contains a [*Jekyll*](https://github.com/jekyll/jekyll) site 
