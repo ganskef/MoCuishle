@@ -24,9 +24,19 @@ encoding:     utf-8
 timezone:     Europe/Berlin
 future:       true
 
+
+# Frontpage-Layout-Settings
+# Define how many posts should be shown with headline, teaser, image, video
+posts_with_teaser_limit: 1
+# Define how many posts should be shown in the list beneath the post(s)
+posts_list_limit: 7
+
+
 # Use <!--more--> in your posts to generate an excerpt and a teaser
 excerpt_separator: <!--more-->
 
+# The language setting is used in /includes/header.html for html-settings
+language: "en"
 
 gems:
     - jekyll-gist
@@ -162,11 +172,12 @@ sass:
 #
 # If you have social media-profiles put your username here.
 # Facebook and Twitter will be used in includes/_1_head.html
-# To inject some meta-data.
+# To inject some meta-data other services will be used in
+# _/includes/_4_footer.html.
 
 socialmedia:
     # youtube: PhlowMedia
-    github: ganskef
+    github: ganskef/MoCuishle/
     # twitter: phlow
     # facebook: phlow.media
     # soundcloud: phlow
