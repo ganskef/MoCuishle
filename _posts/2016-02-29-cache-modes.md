@@ -9,6 +9,9 @@ New binary previews are uploaded with welcome page extended to switch modes for
 answering from cache.
 <!--more-->
 
+By clicking on *Mo Cuishle* in the web UI navigation lists a welcome page is 
+provided. It's possible now there to switch modes of the cache.
+
 # AUTOMATIC
 
 This is the default behavior of *Mo Cuishle*. Depending the state of the network 
