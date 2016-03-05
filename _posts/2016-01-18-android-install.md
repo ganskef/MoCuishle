@@ -15,7 +15,7 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.apk">Download</a>** 4MB
+href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.apk">Download</a>** 4MB
 
 # Mozilla browser
 

@@ -1,9 +1,12 @@
 ---
-#image: google-chrome-happy.png
-#caption: "Looks better now after SHA1 is gone."
+image: cache-mode-automatic.png
+caption: "Welcome Page with mode switches."
 subheadline: "Modes to prefer offline or online contents."
 title: "Cache Modes"
 ---
+
+Update 2016-03-05: Flatrate mode was answering from cache like automatic mode. 
+This is fixed now. The versions from 2016-02-29 are obsolete.
 
 New binary previews are uploaded with welcome page extended to switch modes for 
 answering from cache.
@@ -37,7 +40,7 @@ requests will be relayed by the proxy it's a bug. It is a fairly new feature.
 
 # Latest Netty 4.1.0.CR3
 
-This release integrate the fixes of all known Android 5.0, 5.1, and 6.0 issues. 
+This release integrate the fixes of all known *Android* 5.0, 5.1, and 6.0 issues. 
 Using a Snapshot is not needed any longer.
 
 # Refactorings

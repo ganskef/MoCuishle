@@ -61,10 +61,12 @@ All that *Mo Cuishle* aims to provide to you!
 
 # History
 
-[Cache Modes]({{ site.url }}/cache-modes/)
+[Cache Modes]({{ site.url }}/cache-modes/) (updated 2016-03-05)
 
- * [mocuishle-1.0-20160229.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
- * [mocuishle-1.0-20160229.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
+ * [mocuishle-1.0-20160305.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.apk)
+ * [mocuishle-1.0-20160305.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.xpi)
+ * obsolete: [<strike>mocuishle-1.0-20160229.apk</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
+ * obsolete: [<strike>mocuishle-1.0-20160229.xpi</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
 
 [Chrome and Mediaserver]({{ site.url }}/chrome-and-mediaserver/)
 
