@@ -61,6 +61,11 @@ All that *Mo Cuishle* aims to provide to you!
 
 # History
 
+[Search reviewed, close #1]({{ site.url }}/search-reviewed/)
+
+ * [mocuishle-1.0-20160320.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320.apk)
+ * [mocuishle-1.0-20160320.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320.xpi)
+
 [Cache Modes]({{ site.url }}/cache-modes/) (updated 2016-03-05)
 
  * [mocuishle-1.0-20160305.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.apk)

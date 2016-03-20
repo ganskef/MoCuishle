@@ -15,7 +15,7 @@ either express or implied.**
 UNENCRYPTED on your device.**
 
 **<a class="button info" 
-href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.xpi">Download</a>** 7MB
+href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320.xpi">Download</a>** 7MB
 
 Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
 information about your environment in case you've no success.
@@ -74,26 +74,26 @@ configured with `about:config`:
 
 Manual proxy configuration localhost:9090 for all protocols:
 
- * prefs.set("network.proxy.http", "localhost");
- * prefs.set("network.proxy.http_port", 9090);
- * prefs.set("network.proxy.ssl", "localhost");
- * prefs.set("network.proxy.ssl_port", 9090);
- * prefs.set("network.proxy.type", 1);
+ * prefs.set(&quot;network.proxy.http&quot;, &quot;localhost&quot;);
+ * prefs.set(&quot;network.proxy.http_port&quot;, 9090);
+ * prefs.set(&quot;network.proxy.ssl&quot;, &quot;localhost&quot;);
+ * prefs.set(&quot;network.proxy.ssl_port&quot;, 9090);
+ * prefs.set(&quot;network.proxy.type&quot;, 1);
 
 Browser cache size to 0 to avoid conflicting with *Mo Cuishle* caching:
 
- * prefs.set("browser.cache.disk.capacity", 0);
+ * prefs.set(&quot;browser.cache.disk.capacity&quot;, 0);
 
 Disable automatic online/offline management for *Mo Cuishle*:
 
- * prefs.set("network.manage-offline-status", false);
- * prefs.set("network.online", true);
+ * prefs.set(&quot;network.manage-offline-status&quot;, false);
+ * prefs.set(&quot;network.online&quot;, true);
 
 Disable weak cipher suites failing on Android (should be obsolete, filtered by 
 LittleProxy-mitm):
 
- * prefs.set("security.ssl3.dhe_rsa_aes_128_sha", false);
- * prefs.set("security.ssl3.dhe_rsa_aes_256_sha", false);
+ * prefs.set(&quot;security.ssl3.dhe_rsa_aes_128_sha&quot;, false);
+ * prefs.set(&quot;security.ssl3.dhe_rsa_aes_256_sha&quot;, false);
 
 <img class="left" src="{{ site.urlimg }}mozilla-install.png" alt="">
 
