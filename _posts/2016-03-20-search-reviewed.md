@@ -6,7 +6,9 @@ title: "Search reviewed, close #1"
 ---
 
 New binary previews are uploaded to fix
-[issue #1](https://github.com/ganskef/MoCuishle/issues/1).
+[issue #1](https://github.com/ganskef/MoCuishle/issues/1). Update: additionally
+uploaded a second *Mozilla/Java* xpi version to fix network state detection on 
+[*Windows*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows).
 <!--more-->
 
 # Bleeding Edge
@@ -31,3 +33,12 @@ won't work. This is fixed now. Try to search words or words with * enclosed with
 &quot; signs. Every word or phrase is combined with AND by default, but you 
 could use OR and NOT, too (in capitals). 
 [more details...](https://www.sqlite.org/fts3.html#section_3)
+
+# Fixed offline on Microsoft Windows
+
+At 2015-09-25 15:29:35 I've replaced usage of NetworkUtils from *LittleProxy* in 
+*Mo Cuishle* since the class was removed. I've missed to test it on a *Windows* 
+device. I'm dreadfully sorry. Recently I had a chance to try, and it fails. Of 
+course! The state of the network is detected online always, so it doesn't answer 
+from cache while offline. A workaround could be manually use the 
+[tethering]({{ site.url }}/cache-modes/) mode, but now it's fixed.

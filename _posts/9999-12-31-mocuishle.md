@@ -61,22 +61,28 @@ All that *Mo Cuishle* aims to provide to you!
 
 # History
 
-[Search reviewed, close #1]({{ site.url }}/search-reviewed/)
+[Search reviewed, close #1]({{ site.url }}/search-reviewed/), Update: 
+[*Windows]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
 
+ * [mocuishle-1.0-20160320-2.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320-2.xpi)
  * [mocuishle-1.0-20160320.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320.apk)
  * [mocuishle-1.0-20160320.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320.xpi)
+   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
 
 [Cache Modes]({{ site.url }}/cache-modes/) (updated 2016-03-05)
 
  * [mocuishle-1.0-20160305.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.apk)
  * [mocuishle-1.0-20160305.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.xpi)
+   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
  * obsolete: [<strike>mocuishle-1.0-20160229.apk</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
  * obsolete: [<strike>mocuishle-1.0-20160229.xpi</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
+   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
 
 [Chrome and Mediaserver]({{ site.url }}/chrome-and-mediaserver/)
 
  * [mocuishle-1.0-20160207.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160207.apk)
  * [mocuishle-1.0-20160207.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160207.xpi)
+   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
 
 [Better Android]({{ site.url }}/better-android/)
 
@@ -87,4 +93,5 @@ All that *Mo Cuishle* aims to provide to you!
 
  * [mocuishle-1.0-20160125.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160125.apk)
  * [mocuishle-1.0-20160125.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi)
+   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
  * [mocuishle-1.0-testing-20160125.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk)
