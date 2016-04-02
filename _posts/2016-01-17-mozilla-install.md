@@ -5,8 +5,9 @@ subheadline: "Download and get it working on Java platforms."
 title: "Mozilla Install"
 ---
 
-*Mo Cuishle* binary preview XPI is signed by [addons.mozilla.org](https://addons.mozilla.org/) 
-(AMO) in version 20160331 and above. It's available here only.<br><a class="button info" 
+*Mo Cuishle* binary preview XPI is signed by 
+[addons.mozilla.org](https://addons.mozilla.org/) (AMO) since version 20160331 
+and above. It's available here only.<br><a class="button info" 
 href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320-2.xpi">Download</a> 7MB
 <!--more-->
 
@@ -25,13 +26,13 @@ First of all you need *Java* installed on your system.
 
 # Mozilla Add-on
 
-The *Add-on XPI* depends on a *Mozilla* browser. Install it with the *Download* 
-button from this site. That's simple!
+The *Add-on XPI* depends on a *Mozilla* browser. With it you can install it via 
+the *Download* button from this site. *That's simple!*
 
 # Start Up
 
-*Mo Cuishle* is enabled on start up and launches the Java proxy in background. 
-The browser opens a Tab with the [Browse History]({{ site.url }}/browse-history/). 
+*Mo Cuishle* is enabled on start up and launches the *Java* proxy in background. 
+The browser opens a tab with the [Browse History]({{ site.url }}/browse-history/). 
 
 Clicking the little blue *MC Toolbar Icon* stops/starts the *Java* process and 
 removed/entered the following required settings in *Mozilla Firefox*:
@@ -45,14 +46,14 @@ removed/entered the following required settings in *Mozilla Firefox*:
 The *Mozilla Add-on* includes the *Mo Cuishle* logging in the *Browser Console*. 
 Try <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>J</kbd>.
 
-Enabling/Disabling the installation imports/removes the Certificate Authority 
-needed to cache HTTPS contents. Try it in case of problems with certificates.
+Enabling/Disabling the installation imports/removes the *Certificate Authority* 
+needed to cache *HTTPS* contents. Try it in case of problems with certificates.
 
 # Other Browsers, Settings
 
-*Mo Cuishle* is a proxy application following HTTP standards. So it can be used 
+*Mo Cuishle* is a proxy application following *HTTP* standards. So it can be used 
 without the add-on or with other browsers like *Google Chrome* too. The *XPI* is 
-a *Zip* archive, containing ab *Executable JAR*[^1]. Extract it and enter the 
+a *Zip* archive, containing an *Executable JAR*[^1]. Extract it and enter the 
 command:
 
  java -jar mocuishle.jar
@@ -78,12 +79,6 @@ Disable automatic online/offline management for *Mo Cuishle*:
 
  * prefs.set(&quot;network.manage-offline-status&quot;, false);
  * prefs.set(&quot;network.online&quot;, true);
-
-Disable weak cipher suites failing on Android (should be obsolete, filtered by 
-LittleProxy-mitm):
-
- * prefs.set(&quot;security.ssl3.dhe_rsa_aes_128_sha&quot;, false);
- * prefs.set(&quot;security.ssl3.dhe_rsa_aes_256_sha&quot;, false);
 
 [^1]: Before the first signed version `mocuishle-1.0-20160331.xpi` the *XPI* is 
       an *Executable Jar* at once. 

@@ -36,16 +36,30 @@ running the service in background. [^1]
 The second setting displays a list of the installed *Mozilla* browsers. 
 Selecting one opens the location of the add-on to install:
 
+<img class="" src="{{ site.urlimg }}android-settings-activity.png" alt="">
 <img class="" src="{{ site.urlimg }}android-browser-extension.png" alt="">
 
-Open `mocuishle.xpi` and install it. That's simple! 
+Open `mocuishle.xpi` and install it. *That's simple!* 
 
-# Extended Settings, never need it
+# Start Up
 
-TO DESCRIBE IT HERE
+*Mo Cuishle* is enabled on starting *Mozilla Firefox*. The browser opens a tab 
+with the [Browse History]({{ site.url }}/browse-history/). 
+
+Clicking the little blue *MC Page Action* icon stops/starts the proxy usage and 
+removes/enters the required settings in *Mozilla Firefox*.
 
 For background information please refer to 
-[Mozilla Install]({{ site.url }}/mozilla-install/#other-browsers-settings) too. 
+[Mozilla Install]({{ site.url }}/mozilla-install/#other-browsers-settings), too. 
+
+# Extended Settings, you will never need it
+
+These are mostly for development and tests: 
+
+<img class="" src="{{ site.urlimg }}android-extended-settings-1.png" alt="">
+<img class="" src="{{ site.urlimg }}android-extended-settings-2.png" alt="">
+
+---
 
 [^1]: *Mo Cuishle* consists of an app and a *Mozilla* add-on separated since 
       *Android* has it's *Dalvik* runtime. The *Mozilla* add-on can't spawn a 

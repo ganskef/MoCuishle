@@ -22,7 +22,10 @@ The full featured *Mo Cuishle* Add-on, containing *Java* classes and *SQLite*
 binaries can not be an *Executable Jar* any longer. The *META-INF/MANIFEST.MF* 
 file is replaced during signing. Nevertheless a *XPI* is a *Zip* archive, 
 containing the *Jar* file. Extract the mocuishle.jar file to run *Mo Cuishle* 
-stand alone.
+stand alone. 
+
+The second add-on delivered with the *Android App* is an alternate packaging to 
+use with a standalone running *Mo Cuishle* proxy. It's 20 KB only.
 
 # Little blue MC switches
 
@@ -33,7 +36,7 @@ Cuishle* only. Now, on *Android* a *PageActions* button is added to the URL bar,
 to switch on/off.
 
 The second blue *MC* in the *Android Title Bar* belongs to the *Mo Cuishle* 
-service. This is launched by the *Android App*, separated from the *Add-on* but 
+service. This is launched by the *Android App*, separated from the add-on but 
 neccessary, since it is the *Java* proxy to work with.
 
 # Refactorings, a new build process
@@ -41,4 +44,4 @@ neccessary, since it is the *Java* proxy to work with.
 Behind the scenes, I've added tests for the *Web UI* navigations. I've done some
 refactorings, since I've got some ideas to introduce new features. Signing 
 enforces replacing *cfx* with *jpm* to build with the *Add-on SDK*. The signed 
-*Add-on* is integrated with the *Android App*. I have to reorganize my build.
+add-on is integrated with the *Android App*. I have to reorganize my build.
