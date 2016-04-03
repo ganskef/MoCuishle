@@ -7,7 +7,7 @@ title: "Creepy Feeling"
 
 Using *Mo Cuishle* you're doing Man-In-The-Middle which is usually a very bad 
 thing. A Mozilla add-on installs a root certificate and you can enable and 
-disable with a single click. And, there is a bug in Firefox:
+disable it with a single click. And, there is a bug in Firefox:
 <!--more-->
 
 * [Bug 1243901](https://bugzilla.mozilla.org/show_bug.cgi?id=1243901) - Replace Certificate Authority without user notification, wrong CA displayed 
@@ -42,3 +42,12 @@ These two methods in the second interface are introducing the power to replace
 certificates in no time without a user notification like it is done by *Mo 
 Cuishle*. I'm a beginner programming JavaScript with Firefox APIs and I hear 
 they talking, but...
+
+# Update 2016-04-03
+
+Please, don't misunderstand me. I love *Mozilla Firefox* for giving me the 
+feature to install a certificate. But, it would be okay to ask the user for 
+trusting the CA for websites with the well known 
+[dialog](https://github.com/ganskef/LittleProxy-mitm#get-it-up-and-running), 
+and to delete the *Mo Cuishle* certificate with its explicit identifier only. 
+This is possible with the old *API*, without the two new methods, I think.
