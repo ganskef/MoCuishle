@@ -61,6 +61,11 @@ All that *Mo Cuishle* aims to provide to you!
 
 # History
 
+[Page Actions Hassle]({{ site.url }}/page-actions-hassle/)
+
+ * [mocuishle-1.0-20160420.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160420.apk)
+ * [mocuishle-1.0-20160420.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160420.xpi)
+
 [Signed to be Simple]({{ site.url }}/signed-to-be-simple/)
 
  * [mocuishle-1.0-20160331.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160331.apk)
