@@ -61,6 +61,11 @@ All that *Mo Cuishle* aims to provide to you!
 
 # History
 
+[Windows 8.1 N tested]({{ site.url }}/windows-8-1-n-tested/)
+
+ * [mocuishle-1.0-20160501.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160501.apk)
+ * [mocuishle-1.0-20160501.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160501.xpi)
+
 [Page Actions Hassle]({{ site.url }}/page-actions-hassle/)
 
  * [mocuishle-1.0-20160420.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160420.apk)
