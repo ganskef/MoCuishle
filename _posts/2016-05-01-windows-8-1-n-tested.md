@@ -10,6 +10,12 @@ New binary previews are uploaded to fix issues discovered during tests with
 caching of *HTTPS* pages in these environments.
 <!--more-->
 
+While I'm regular using *Mo Cuishle* on *Debian GNU/Linux* and *Mac OS X*, 
+*Microsoft Windows* wasn't tested very well. Now I've acquired a license for 
+testing purposes. Especially *Java Nonblocking IO (NIO)* and *Transport Level 
+Security (TLS)* is needed both to test on every supported system. On *Android* 
+it feels like it's needed on every supported device :-) . 
+
 # Full Text Search on Windows
 
 [<img class="left" src="{{ site.urlimg }}windows-folder-300.png" alt="">]({{ site.urlimg }}windows-folder.png)
