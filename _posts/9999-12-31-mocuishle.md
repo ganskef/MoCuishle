@@ -29,15 +29,15 @@ a binary preview. I'm not ready to [go public]({{ site.url }}/license/) for now.
 
 > Simplicity is the ultimate sophistication. — Leonardo da Vinci
 
-However simplicity itself has many definitions. I think it has to be girl friend 
+However simplicity itself has many definitions. I think it has to be girlfriend 
 compatible. If I give it to here she should know what to do with it. (since she 
 will never ask me for that)
 
 The anchestor is 
 [Andrew M. Bishop's WWWOFFLE](http://www.gedanken.org.uk/software/wwwoffle/). 
 This great application is simple for a Unix guy thinking in C. I've used it on 
-my laptop for years, but I'm a Java developer, and I've liked to use it with 
-Android, so I've implemented it myself, simplified. 
+my laptop for years, but I'm a Java developer and I liked to use it on Android, 
+so I've implemented it myself, simplified. 
 
 The name *Mo Cuishle* comes from *Clint Eastwood*'s movie *Million Dollar Baby* 
 of course. From [Wikipedia](https://en.wikipedia.org/wiki/Million_Dollar_Baby): 
@@ -60,6 +60,11 @@ interpretation a lot.
 All that *Mo Cuishle* aims to provide to you!
 
 # History
+
+[Export UI and cleaned Titles]({{ site.url }}/export-ui-and-cleaned-titles/)
+
+ * [mocuishle-1.0-20160516.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160516.apk)
+ * [mocuishle-1.0-20160516.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160516.xpi)
 
 [Windows 8.1 N tested]({{ site.url }}/windows-8-1-n-tested/)
 
