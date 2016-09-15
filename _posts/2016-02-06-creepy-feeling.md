@@ -51,3 +51,12 @@ trusting the CA for websites with the well known
 [dialog](https://github.com/ganskef/LittleProxy-mitm#get-it-up-and-running), 
 and to delete the *Mo Cuishle* certificate with its explicit identifier only. 
 This is possible with the old *API*, without the two new methods, I think.
+
+# Update 2016-09-10
+
+With *Aurora Firefox Developer Edition* 50.0a2 (2016-09-10) I've tried out the 
+behavior today. It's a fresh look, but it is the same again. The modified 
+content (notice the green bullets border) is "Verified by Google Inc.":
+
+<img class="" src="{{ site.urlimg }}creepy-feeling-201609.png" alt="" height="270">
+<img class="" src="{{ site.urlimg }}creepy-feeling-201609-2.png" alt="" height="270">

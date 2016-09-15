@@ -8,4 +8,3 @@ title: "Outgoing History"
 You can open all while connected to refresh the contents of the cache.
 <!--more-->
 
-TO DESCRIBE IT HERE

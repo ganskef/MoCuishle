@@ -5,3 +5,6 @@ vendor
 .bundle
 .project
 .settings
+/local/
+.DS_Store
+/MoCuishle jekyll.launch
