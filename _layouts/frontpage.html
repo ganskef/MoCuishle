@@ -39,7 +39,7 @@ posts_list_limit: 7
             {% if post.video or post.embed %}
             {% elsif post.image %}
             <figure>
-                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title escape_once }}"></a>
+                <a href="{{ site.url }}{{ site.baseurl }}{{ post.url }}" title="{{ post.title | escape_once }}"><img src="{{ site.urlimg }}{{ post.image }}" alt="{{ post.title | escape_once }}"></a>
 
                 {% if post.caption_url and post.caption %}
                 <figcaption>
