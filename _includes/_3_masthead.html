@@ -6,7 +6,7 @@
 		{% if post.header_image %}
 			<figure>
 				<div style="background-image: url('{{ site.urlimg }}{{ post.header_image }}');"></div>
-				{% if post.header_caption_url && post.header_caption %}
+				{% if post.header_caption_url and post.header_caption %}
 				<figcaption>
 					<a href="{{ post.header_caption_url }}" target="_blank">{{ post.header_caption }}</a>
 				</figcaption>
@@ -27,7 +27,7 @@
 		{% if page.header_image %}
 			<figure>
 				<div style="background-image: url('{{ site.urlimg }}{{ page.header_image }}');"></div>
-				{% if page.header_caption_url && page.header_caption %}
+				{% if page.header_caption_url and page.header_caption %}
 				<figcaption>
 					<a href="{{ page.header_caption_url }}" target="_blank">{{ page.header_caption }}</a>
 				</figcaption>
