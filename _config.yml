@@ -11,7 +11,7 @@
 # Title and description of your site
 title:        'Mo Cuishle'
 description:  'A caching proxy for offline use.'
-
+download: 'https://github.com/ganskef/MoCuishle/releases/download'
 
 # Build settings
 url:          'https://ganskef.github.io/MoCuishle'
