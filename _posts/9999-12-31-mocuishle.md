@@ -68,36 +68,36 @@ All that *Mo Cuishle* aims to provide to you!
 
 [Export UI and cleaned Titles]({{ site.url }}/export-ui-and-cleaned-titles/)
 
- * [mocuishle-1.0-20160516.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160516.apk)
- * [mocuishle-1.0-20160516.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160516.xpi)
+ * [mocuishle-1.0-20160516.apk]({{ site.download }}/v1.0-20160516/mocuishle-1.0-20160516.apk)
+ * [mocuishle-1.0-20160516.xpi]({{ site.download }}/v1.0-20160516/mocuishle-1.0-20160516.xpi)
 
 [Windows 8.1 N tested]({{ site.url }}/windows-8-1-n-tested/)
 
- * [mocuishle-1.0-20160501.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160501.apk)
- * [mocuishle-1.0-20160501.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160501.xpi)
+ * [mocuishle-1.0-20160501.apk]({{ site.download }}/v1.0-20160501/mocuishle-1.0-20160501.apk)
+ * [mocuishle-1.0-20160501.xpi]({{ site.download }}/v1.0-20160501/mocuishle-1.0-20160501.xpi)
 
 [Page Actions Hassle]({{ site.url }}/page-actions-hassle/)
 
- * [mocuishle-1.0-20160420.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160420.apk)
- * [mocuishle-1.0-20160420.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160420.xpi)
+ * [mocuishle-1.0-20160420.apk]({{ site.download }}/v1.0-20160420/mocuishle-1.0-20160420.apk)
+ * [mocuishle-1.0-20160420.xpi]({{ site.download }}/v1.0-20160420/mocuishle-1.0-20160420.xpi)
 
 [Signed to be Simple]({{ site.url }}/signed-to-be-simple/)
 
- * [mocuishle-1.0-20160331.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160331.apk)
- * [mocuishle-1.0-20160331.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160331.xpi)
+ * [mocuishle-1.0-20160331.apk]({{ site.download }}/v1.0-20160331/mocuishle-1.0-20160331.apk)
+ * [mocuishle-1.0-20160331.xpi]({{ site.download }}/v1.0-20160331/mocuishle-1.0-20160331.xpi)
 
 [Search reviewed, close #1]({{ site.url }}/search-reviewed/), Update: 
 [*Windows]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
 
- * [mocuishle-1.0-20160320-2.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320-2.xpi)
- * [mocuishle-1.0-20160320.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320.apk)
- * [mocuishle-1.0-20160320.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160320.xpi)
+ * [mocuishle-1.0-20160320-2.xpi]({{ site.download }}/v1.0-20160320-2/mocuishle-1.0-20160320-2.xpi)
+ * [mocuishle-1.0-20160320.apk]({{ site.download }}/v1.0-20160320-2/mocuishle-1.0-20160320.apk)
+ * [mocuishle-1.0-20160320.xpi]({{ site.download }}/v1.0-20160320-2/mocuishle-1.0-20160320.xpi)
    [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
 
 [Cache Modes]({{ site.url }}/cache-modes/) (updated 2016-03-05)
 
- * [mocuishle-1.0-20160305.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.apk)
- * [mocuishle-1.0-20160305.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160305.xpi)
+ * [mocuishle-1.0-20160305.apk]({{ site.download }}/v1.0-20160305/mocuishle-1.0-20160305.apk)
+ * [mocuishle-1.0-20160305.xpi]({{ site.download }}/v1.0-20160305/mocuishle-1.0-20160305.xpi)
    [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
  * obsolete: [<strike>mocuishle-1.0-20160229.apk</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
  * obsolete: [<strike>mocuishle-1.0-20160229.xpi</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
@@ -105,18 +105,18 @@ All that *Mo Cuishle* aims to provide to you!
 
 [Chrome and Mediaserver]({{ site.url }}/chrome-and-mediaserver/)
 
- * [mocuishle-1.0-20160207.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160207.apk)
- * [mocuishle-1.0-20160207.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160207.xpi)
+ * [mocuishle-1.0-20160207.apk]({{ site.download }}/v1.0-20160207/mocuishle-1.0-20160207.apk)
+ * [mocuishle-1.0-20160207.xpi]({{ site.download }}/v1.0-20160207/mocuishle-1.0-20160207.xpi)
    [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
 
 [Better Android]({{ site.url }}/better-android/)
 
- * [mocuishle-1.0-20160128.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160128.apk)
- * [mocuishle-1.0-testing-20160128.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-testing-1.0-20160128.apk)
+ * [mocuishle-1.0-20160128.apk]({{ site.download }}/v1.0-20160128/mocuishle-1.0-20160128.apk)
+ * [mocuishle-1.0-testing-20160128.apk]({{ site.download }}/v1.0-20160128/mocuishle-testing-1.0-20160128.apk)
 
 [It's out!]({{ site.url }}/it-is-out/)
 
- * [mocuishle-1.0-20160125.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160125.apk)
- * [mocuishle-1.0-20160125.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160125.xpi)
+ * [mocuishle-1.0-20160125.apk]({{ site.download }}/v1.0-20160128/mocuishle-1.0-20160125.apk)
+ * [mocuishle-1.0-20160125.xpi]({{ site.download }}/v1.0-20160128/mocuishle-1.0-20160125.xpi)
    [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
- * [mocuishle-1.0-testing-20160125.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-testing-1.0-20160125.apk)
+ * [mocuishle-1.0-testing-20160125.apk]({{ site.download }}/v1.0-20160128/mocuishle-testing-1.0-20160125.apk)
