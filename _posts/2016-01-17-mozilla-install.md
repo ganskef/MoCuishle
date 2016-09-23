@@ -37,9 +37,9 @@ The browser opens a tab with the [Browse History]({{ site.url }}/browse-history/
 Clicking the little blue *MC Toolbar Icon* stops/starts the *Java* process and 
 removed/entered the following required settings in *Mozilla Firefox*:
 
- * Manual proxy configuration localhost:9090 for all protocols.
+ * Manual proxy configuration localhost:9090 for HTTP and HTTPS.
 
- * Browser cache size to 0 to avoid conflicting with *Mo Cuishle* caching.
+ * Disable browser cache to avoid conflicting with *Mo Cuishle* caching.
 
  * Disable automatic online/offline management for *Mo Cuishle*.
 
@@ -63,7 +63,7 @@ Logging is written to the console.
 You have to find equivalents for following *Mozilla Firefox* preferences 
 configured with `about:config`:
 
-Manual proxy configuration localhost:9090 for all protocols:
+Manual proxy configuration localhost:9090 for HTTP and HTTPS:
 
  * prefs.set(&quot;network.proxy.http&quot;, &quot;localhost&quot;);
  * prefs.set(&quot;network.proxy.http_port&quot;, 9090);
@@ -71,9 +71,13 @@ Manual proxy configuration localhost:9090 for all protocols:
  * prefs.set(&quot;network.proxy.ssl_port&quot;, 9090);
  * prefs.set(&quot;network.proxy.type&quot;, 1);
 
-Browser cache size to 0 to avoid conflicting with *Mo Cuishle* caching:
+Disable browser cache to avoid conflicting with *Mo Cuishle* caching:
 
- * prefs.set(&quot;browser.cache.disk.capacity&quot;, 0);
+ * <strike>prefs.set("browser.cache.disk.smart_size.enabled", false)</strike>
+ * <strike>prefs.set(&quot;browser.cache.disk.capacity&quot;, 0);</strike>
+   This breaks the refresh in mobile/tethering mode (tested with 39), replaced 
+   by `devtools.cache.disabled` (found in 45).
+ * prefs.set(&quot;devtools.cache.disabled&quot;, true);
 
 Disable automatic online/offline management for *Mo Cuishle*:
 
