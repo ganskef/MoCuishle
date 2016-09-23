@@ -116,7 +116,7 @@ All that *Mo Cuishle* aims to provide to you!
 
 [It's out!]({{ site.url }}/it-is-out/)
 
- * [mocuishle-1.0-20160125.apk]({{ site.download }}/v1.0-20160128/mocuishle-1.0-20160125.apk)
- * [mocuishle-1.0-20160125.xpi]({{ site.download }}/v1.0-20160128/mocuishle-1.0-20160125.xpi)
+ * [mocuishle-1.0-20160125.apk]({{ site.download }}/v1.0-20160125/mocuishle-1.0-20160125.apk)
+ * [mocuishle-1.0-20160125.xpi]({{ site.download }}/v1.0-20160125/mocuishle-1.0-20160125.xpi)
    [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
- * [mocuishle-1.0-testing-20160125.apk]({{ site.download }}/v1.0-20160128/mocuishle-testing-1.0-20160125.apk)
+ * [mocuishle-1.0-testing-20160125.apk]({{ site.download }}/v1.0-20160125/mocuishle-testing-1.0-20160125.apk)
