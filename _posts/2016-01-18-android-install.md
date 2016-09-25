@@ -7,7 +7,7 @@ title: "Android Install"
 
 *Mo Cuishle* binary preview is provided as an unsigned APK only. It's not 
 available at Google Play or other stores, but here.<br><a class="button info" 
-href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160913.apk">Download</a> 4MB
+href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160926.apk">Download</a> 4MB
 <!--more-->
 
 **The Software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, 
