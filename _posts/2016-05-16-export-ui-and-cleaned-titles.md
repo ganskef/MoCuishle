@@ -1,9 +1,8 @@
----
-image: export-ui.png
-caption: "A new link is introduced in the navigation."
-subheadline: "Transparent view of the cached items."
-title: "Export UI and cleaned Titles"
----
+![](../images/export-ui.png "A new link is introduced in the navigation.")
+
+> Transparent view of the cached items.
+
+# Export UI and cleaned Titles
 
 New binary previews are uploaded to fulfill a major requirement of *Mo Cuishle*:
 Transparency - everybody should be able to see what happens while using the 

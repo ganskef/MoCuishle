@@ -1,9 +1,8 @@
----
-image: cache-mode-automatic.png
-caption: "Welcome Page with mode switches."
-subheadline: "Modes to prefer offline or online contents."
-title: "Cache Modes"
----
+![](../images/cache-mode-automatic.png "Welcome Page with mode switches.")
+
+> Modes to prefer offline or online contents.
+
+# Cache Modes
 
 Update 2016-03-05: Flatrate mode was answering from cache like automatic mode. 
 This is fixed now. The versions from 2016-02-29 are obsolete.

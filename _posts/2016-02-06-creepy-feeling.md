@@ -1,9 +1,8 @@
----
-image: creepy-feeling.png
-caption: "Modified content - verified by Google?"
-subheadline: "A long running Firefox bug with minor priority."
-title: "Creepy Feeling"
----
+![](../images/creepy-feeling.png "Modified content - verified by Google?")
+
+> A long running Firefox bug with minor priority.
+
+# Creepy Feeling
 
 Using *Mo Cuishle* you're doing Man-In-The-Middle which is usually a very bad 
 thing. A Mozilla add-on installs a root certificate and you can enable and 

@@ -1,9 +1,8 @@
----
-image: windows-search.png
-caption: "Mozilla Firefox 46.0 doing Full Text Search on Windows."
-subheadline: "Gotten a license to work with."
-title: "Windows 8.1 N tested"
----
+![](../images/windows-search.png "Mozilla Firefox 46.0 doing Full Text Search on Windows.")
+
+> Gotten a license to work with.
+
+# Windows 8.1 N tested
 
 New binary previews are uploaded to fix issues discovered during tests with 
 *Windows* and *Oracle's* 32-bit *JVM*. It affects the *Full Text Search* and 

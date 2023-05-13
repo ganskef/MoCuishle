@@ -1,9 +1,8 @@
----
-image: macosx-desktop-startup.png
-caption: "Start up with your browse history in Mac OS X desktop."
-subheadline: "Download and get it working on Java platforms."
-title: "Mozilla Install"
----
+![](../images/macosx-desktop-startup.png "Start up with your browse history in Mac OS X desktop.")
+
+> Download and get it working on Java platforms.
+
+# Mozilla Install
 
 *Mo Cuishle* binary preview XPI is signed by 
 [addons.mozilla.org](https://addons.mozilla.org/) (AMO) since version 20160331 

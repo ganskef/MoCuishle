@@ -1,9 +1,7 @@
----
-image: android-startup.png
-caption: "Start up with your browse history in Android."
-subheadline: "Download and get it working on mobile devices."
-title: "Android Install"
----
+![](../images/android-startup.png "Start up with your browse history in Android.")
+
+> Download and get it working on mobile devices.
+# Android Install
 
 *Mo Cuishle* binary preview is provided as an unsigned APK only. It's not 
 available at Google Play or other stores, but here.<br><a class="button info" 

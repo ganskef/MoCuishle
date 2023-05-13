@@ -1,9 +1,8 @@
----
-image: android-site-actions.png
-caption: "Mo Cuishle's simple navigation for Mobile, too."
-subheadline: "Rebuilt to be signed, On/Off Switch in Android."
-title: "Signed to be Simple"
----
+![](../images/android-site-actions.png "Mo Cuishle's simple navigation for Mobile, too.")
+
+> Rebuilt to be signed, On/Off Switch in Android.
+
+# Signed to be Simple
 
 New binary previews are uploaded to fix "*Mo Cuishle* could not be verified for
 use in Firefox and has been disabled." In Android a switch to enable/disable 

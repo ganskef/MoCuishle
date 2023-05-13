@@ -1,9 +1,8 @@
----
-image: small-icon-and-icecat.png
-caption: "Fixed PageActions icon and GNU IceCat browser."
-subheadline: "Mostly relevant for Android usability."
-title: "Page Actions Hassle"
----
+![](../images/small-icon-and-icecat.png "Fixed PageActions icon and GNU IceCat browser.")
+
+> Mostly relevant for Android usability.
+
+# Page Actions Hassle
 
 New binary previews are uploaded to fix very small *PageActions* icon on high 
 resolution *Android* devices, and problems with enabling *Mo Cuishle* with it. 

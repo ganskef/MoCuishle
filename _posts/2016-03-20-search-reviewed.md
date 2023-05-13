@@ -1,9 +1,8 @@
----
-image: fulltextsearch-feb-2016.png
-caption: "This search &quot;phrase&quot; works unexpected."
-subheadline: "Review of Full Text Search for issue #1 and more."
-title: "Search reviewed, close #1"
----
+![](../images/fulltextsearch-feb-2016.png "This search &quot;phrase&quot; works unexpected.")
+
+> Review of Full Text Search for issue #1 and more.
+
+# Search reviewed, close #1
 
 New binary previews are uploaded to fix
 [issue #1](https://github.com/ganskef/MoCuishle/issues/1). Update: additionally

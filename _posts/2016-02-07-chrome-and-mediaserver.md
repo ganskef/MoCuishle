@@ -1,9 +1,8 @@
----
-image: google-chrome-happy.png
-caption: "Looks better now after SHA1 is gone."
-subheadline: "Make Google Chrome and Android mediaserver happy."
-title: "Chrome and Mediaserver"
----
+![](../images/google-chrome-happy.png "Looks better now after SHA1 is gone.")
+
+> Make Google Chrome and Android mediaserver happy.
+
+# Chrome and Mediaserver
 
 New binary previews are uploaded with some useful enhancements.
 <!--more-->

@@ -1,9 +1,8 @@
----
-image: welcome-offline.png
-caption: "Caching information highlighted in HTML content."
-subheadline: "A caching proxy for offline use."
-title: "Mo Cuishle"
----
+![](../images/welcome-offline.png "Caching information highlighted in HTML content.")
+
+> A caching proxy for offline use.
+
+# Mo Cuishle (1.0)
 
 All web pages you've seen on the Internet via HTTP or HTTPS will be available 
 later to read them without having to remain connected.<br><a 

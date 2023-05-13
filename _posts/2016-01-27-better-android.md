@@ -1,7 +1,6 @@
----
-subheadline: "Guided installation on Android 6."
-title: "Better Android"
----
+> Guided installation on Android 6.
+
+# Better Android
 
 *Mo Cuishle* runs on Android but installation isn't fail safe with the latest 
 versions. It's leaded better now, and testing includes the latest Netty snapshot 
