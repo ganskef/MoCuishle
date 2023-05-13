@@ -6,5 +6,3 @@
 
 *Mo Cuishle* provides an indexed search over the cached web sites.
 <!--more-->
-
-TO DESCRIBE IT HERE
