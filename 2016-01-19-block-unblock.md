@@ -1,4 +1,4 @@
-![](../images/welcome-block.png)
+![](images/welcome-block.png)
 
 > Decide to block or unblock addresses on the fly.
 

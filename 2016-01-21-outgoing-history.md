@@ -1,4 +1,4 @@
-![](../images/welcome-outgoing.png)
+![](images/welcome-outgoing.png)
 > Pages you've requested offline to reload it later.
 
 # Outgoing History

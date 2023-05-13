@@ -1,11 +1,11 @@
-![](../images/android-startup.png "Start up with your browse history in Android.")
+![](images/android-startup.png "Start up with your browse history in Android.")
 
 > Download and get it working on mobile devices.
 # Android Install
 
 *Mo Cuishle* binary preview is provided as an unsigned APK only. It's not 
 available at Google Play or other stores, but here.<br><a class="button info" 
-href="../mocuishle-binary-preview/mocuishle-1.0-20160926.apk">Download</a> 4MB
+href="mocuishle-binary-preview/mocuishle-1.0-20160926.apk">Download</a> 4MB
 
 **The Software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, 
 either express or implied.**
@@ -33,8 +33,8 @@ running the service in background. [^1]
 The second setting displays a list of the installed *Mozilla* browsers. 
 Selecting one opens the location of the add-on to install:
 
-<img class="" src="../images/android-settings-activity.png" alt="">
-<img class="" src="../images/android-browser-extension.png" alt="">
+<img class="" src="images/android-settings-activity.png" alt="">
+<img class="" src="images/android-browser-extension.png" alt="">
 
 Open `mocuishle.xpi` and install it. *That's simple!* 
 
@@ -53,8 +53,8 @@ For background information please refer to
 
 These are mostly for development and tests: 
 
-<img class="" src="../images/android-extended-settings-1.png" alt="">
-<img class="" src="../images/android-extended-settings-2.png" alt="">
+<img class="" src="images/android-extended-settings-1.png" alt="">
+<img class="" src="images/android-extended-settings-2.png" alt="">
 
 ---
 

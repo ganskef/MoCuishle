@@ -1,4 +1,4 @@
-![](../images/export-ui.png "A new link is introduced in the navigation.")
+![](images/export-ui.png "A new link is introduced in the navigation.")
 
 > Transparent view of the cached items.
 
@@ -18,7 +18,7 @@ will be purged every time. The export is **not** like *wget*, the contents are
 unmodified and often URLs can't be renamed to a file system item. It's a binary 
 snapshot of the cache nor a working web copy. 
 
-[<img class="left" src="../images/exported-contents-300.png" alt="">](../images/exported-contents.png)
+[<img class="left" src="images/exported-contents-300.png" alt="">](images/exported-contents.png)
 
 URLs which could not be renamed are often directory requests answered by the 
 server with an index.html (figure) or dynamic generated contents with long 

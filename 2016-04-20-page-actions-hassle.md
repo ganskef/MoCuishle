@@ -1,4 +1,4 @@
-![](../images/small-icon-and-icecat.png "Fixed PageActions icon and GNU IceCat browser.")
+![](images/small-icon-and-icecat.png "Fixed PageActions icon and GNU IceCat browser.")
 
 > Mostly relevant for Android usability.
 

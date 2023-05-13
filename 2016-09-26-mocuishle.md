@@ -1,4 +1,4 @@
-![](../images/welcome-offline.png "Caching information highlighted in HTML content.")
+![](images/welcome-offline.png "Caching information highlighted in HTML content.")
 
 > A caching proxy for offline use.
 
@@ -61,10 +61,10 @@ All that *Mo Cuishle* aims to provide to you!
 
 [BED-Con 2016 Berlin](2016-09-13-bed-con-2016-berlin.md) (updated 2016-09-26)
 
- * [mocuishle-1.0-20160926.apk](../mocuishle-binary-preview/mocuishle-1.0-20160926.apk)
- * [mocuishle-1.0-20160926.xpi](../mocuishle-binary-preview/mocuishle-1.0-20160926.xpi)
- * obsolete: [<strike>mocuishle-1.0-20160913.apk</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160913.apk)
- * obsolete: [<strike>mocuishle-1.0-20160913.xpi</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160913.xpi)
+ * [mocuishle-1.0-20160926.apk](mocuishle-binary-preview/mocuishle-1.0-20160926.apk)
+ * [mocuishle-1.0-20160926.xpi](mocuishle-binary-preview/mocuishle-1.0-20160926.xpi)
+ * obsolete: [<strike>mocuishle-1.0-20160913.apk</strike>](mocuishle-binary-preview/mocuishle-1.0-20160913.apk)
+ * obsolete: [<strike>mocuishle-1.0-20160913.xpi</strike>](mocuishle-binary-preview/mocuishle-1.0-20160913.xpi)
 
 [Export UI and cleaned Titles](2016-05-16-export-ui-and-cleaned-titles.md)
 
@@ -99,8 +99,8 @@ All that *Mo Cuishle* aims to provide to you!
  * [mocuishle-1.0-20160305.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160305/mocuishle-1.0-20160305.apk)
  * [mocuishle-1.0-20160305.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160305/mocuishle-1.0-20160305.xpi)
    [*](2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
- * obsolete: [<strike>mocuishle-1.0-20160229.apk</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
- * obsolete: [<strike>mocuishle-1.0-20160229.xpi</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
+ * obsolete: [<strike>mocuishle-1.0-20160229.apk</strike>](mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
+ * obsolete: [<strike>mocuishle-1.0-20160229.xpi</strike>](mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
    [*](2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
 
 [Chrome and Mediaserver](2016-02-07-chrome-and-mediaserver.md)

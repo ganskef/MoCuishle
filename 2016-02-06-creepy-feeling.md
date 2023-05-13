@@ -1,4 +1,4 @@
-![](../images/creepy-feeling.png "Modified content - verified by Google?")
+![](images/creepy-feeling.png "Modified content - verified by Google?")
 
 > A long running Firefox bug with minor priority.
 
@@ -56,5 +56,5 @@ With *Aurora Firefox Developer Edition* 50.0a2 (2016-09-10) I've tried out the
 behavior today. It's a fresh look, but it is the same again. The modified 
 content (notice the green bullets border) is "Verified by Google Inc.":
 
-<img class="" src="../images/creepy-feeling-201609.png" alt="" height="270">
-<img class="" src="../images/creepy-feeling-201609-2.png" alt="" height="270">
+<img class="" src="images/creepy-feeling-201609.png" alt="" height="270">
+<img class="" src="images/creepy-feeling-201609-2.png" alt="" height="270">

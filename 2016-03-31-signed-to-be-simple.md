@@ -1,4 +1,4 @@
-![](../images/android-site-actions.png "Mo Cuishle's simple navigation for Mobile, too.")
+![](images/android-site-actions.png "Mo Cuishle's simple navigation for Mobile, too.")
 
 > Rebuilt to be signed, On/Off Switch in Android.
 

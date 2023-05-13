@@ -1,4 +1,4 @@
-![](../images/google-chrome-happy.png "Looks better now after SHA1 is gone.")
+![](images/google-chrome-happy.png "Looks better now after SHA1 is gone.")
 
 > Make Google Chrome and Android mediaserver happy.
 

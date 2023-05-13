@@ -1,4 +1,4 @@
-![](../images/welcome-browse.png)
+![](images/welcome-browse.png)
 
 > Your history of pages recently visited.
 

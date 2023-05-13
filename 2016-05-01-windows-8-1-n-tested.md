@@ -1,4 +1,4 @@
-![](../images/windows-search.png "Mozilla Firefox 46.0 doing Full Text Search on Windows.")
+![](images/windows-search.png "Mozilla Firefox 46.0 doing Full Text Search on Windows.")
 
 > Gotten a license to work with.
 
@@ -16,8 +16,8 @@ it feels like it's needed on every supported device :-) .
 
 ## Full Text Search on Windows
 
-[<img class="left" src="../images/windows-folder-300.png" alt="">](../images/windows-folder.png)
-*Mo Cuishle* provides a [Full Text Search](../full-text-search/). 
+[<img class="left" src="images/windows-folder-300.png" alt="">](images/windows-folder.png)
+*Mo Cuishle* provides a [Full Text Search](full-text-search/). 
 Building the *SQLite* index is done in background. The last step is renaming the 
 index file from `mocuishle.sqlite.tmp` to `mocuishle.sqlite`. This is failing 
 on *Microsoft Windows*.
@@ -28,7 +28,7 @@ Now full text search is properly working on *Windows* too.
 
 ## HTTPS with Oracle's 32-bit JVM
 
-[<img class="left" src="../images/windows-github-300.png" alt="">](../images/windows-github.png)
+[<img class="left" src="images/windows-github-300.png" alt="">](images/windows-github.png)
 With *Windows 8.1 N* from [https://java.com/download](https://java.com/download) 
 a 32-bit *JVM* was installed by default. This has covered up an error introduced 
 with the [Chrome and Mediaserver](2016-02-07-chrome-and-mediaserver.md) 

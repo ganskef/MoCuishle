@@ -1,4 +1,4 @@
-![](../images/fulltextsearch-feb-2016.png "This search &quot;phrase&quot; works unexpected.")
+![](images/fulltextsearch-feb-2016.png "This search &quot;phrase&quot; works unexpected.")
 
 > Review of Full Text Search for issue #1 and more.
 

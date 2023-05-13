@@ -1,4 +1,4 @@
-![](../images/macosx-desktop-startup.png "Start up with your browse history in Mac OS X desktop.")
+![](images/macosx-desktop-startup.png "Start up with your browse history in Mac OS X desktop.")
 
 > Download and get it working on Java platforms.
 
@@ -7,7 +7,7 @@
 *Mo Cuishle* binary preview XPI is signed by 
 [addons.mozilla.org](https://addons.mozilla.org/) (AMO) since version 20160331 
 and above. It's available here only.<br><a class="button info" 
-href="../mocuishle-binary-preview/mocuishle-1.0-20160926.xpi">Download</a> 7MB
+href="mocuishle-binary-preview/mocuishle-1.0-20160926.xpi">Download</a> 7MB
 
 **The Software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, 
 either express or implied.**

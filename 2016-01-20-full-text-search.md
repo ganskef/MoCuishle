@@ -1,4 +1,4 @@
-![](../images/welcome-search.png)
+![](images/welcome-search.png)
 
 > An indexed search over the cached web sites.
 

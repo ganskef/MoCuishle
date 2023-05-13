@@ -1,4 +1,4 @@
-![](../images/cache-mode-automatic.png "Welcome Page with mode switches.")
+![](images/cache-mode-automatic.png "Welcome Page with mode switches.")
 
 > Modes to prefer offline or online contents.
 
