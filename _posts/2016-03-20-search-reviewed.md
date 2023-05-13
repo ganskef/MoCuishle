@@ -10,7 +10,7 @@ uploaded a second *Mozilla/Java* xpi version to fix network state detection on
 [*Windows*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows).
 <!--more-->
 
-# Bleeding Edge
+## Bleeding Edge
 
 *Mo Cuishle* is falling back now to the *SQLite* implementation of the *Android* 
 system if its [sqlite4java](https://bitbucket.org/almworks/sqlite4java) 
@@ -24,7 +24,7 @@ leads to problems indexing and searching international text. For example the
 German word `Ärzte` `ärzte` `arzte` is the same with unicode61 but different 
 with the default tokenizer. 
 
-# Phrase Queries
+## Phrase Queries
 
 By the way I've found some problems in the full text search navigation. Phrase 
 queries, a combination of tokens and token prefixes (with *) in quoting marks, 
@@ -33,7 +33,7 @@ won't work. This is fixed now. Try to search words or words with * enclosed with
 could use OR and NOT, too (in capitals). 
 [more details...](https://www.sqlite.org/fts3.html#section_3)
 
-# Fixed offline on Microsoft Windows
+## Fixed offline on Microsoft Windows
 
 At 2015-09-25 15:29:35 I've replaced usage of NetworkUtils from *LittleProxy* in 
 *Mo Cuishle* since the class was removed. I've missed to test it on a *Windows* 

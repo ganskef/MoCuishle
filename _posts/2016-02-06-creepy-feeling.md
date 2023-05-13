@@ -42,7 +42,7 @@ certificates in no time without a user notification like it is done by *Mo
 Cuishle*. I'm a beginner programming JavaScript with Firefox APIs and I hear 
 they talking, but...
 
-# Update 2016-04-03
+## Update 2016-04-03
 
 Please, don't misunderstand me. I love *Mozilla Firefox* for giving me the 
 feature to install a certificate. But, it would be okay to ask the user for 
@@ -51,7 +51,7 @@ trusting the CA for websites with the well known
 and to delete the *Mo Cuishle* certificate with its explicit identifier only. 
 This is possible with the old *API*, without the two new methods, I think.
 
-# Update 2016-09-10
+## Update 2016-09-10
 
 With *Aurora Firefox Developer Edition* 50.0a2 (2016-09-10) I've tried out the 
 behavior today. It's a fresh look, but it is the same again. The modified 

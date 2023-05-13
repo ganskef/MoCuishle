@@ -19,16 +19,16 @@ UNENCRYPTED on your device.**
 Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
 information about your environment in case you've no success.
 
-# Java
+## Java
 
 First of all you need *Java* installed on your system. 
 
-# Mozilla Add-on
+## Mozilla Add-on
 
 The *Add-on XPI* depends on a *Mozilla* browser. With it you can install it via 
 the *Download* button from this site. *That's simple!*
 
-# Start Up
+## Start Up
 
 *Mo Cuishle* is enabled on start up and launches the *Java* proxy in background. 
 The browser opens a tab with the [Browse History](../_posts/2016-01-22-browse-history.md). 
@@ -48,7 +48,7 @@ Try <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>J</kbd>.
 Enabling/Disabling the installation imports/removes the *Certificate Authority* 
 needed to cache *HTTPS* contents. Try it in case of problems with certificates.
 
-# Other Browsers, Settings
+## Other Browsers, Settings
 
 *Mo Cuishle* is a proxy application following *HTTP* standards. So it can be used 
 without the add-on or with other browsers like *Google Chrome* too. The *XPI* is 

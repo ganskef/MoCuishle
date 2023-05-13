@@ -14,12 +14,12 @@ either express or implied.**
 **Security Note: The encryption of the browser is broken. All content is stored 
 UNENCRYPTED on your device.**
 
-# Mozilla browser
+## Mozilla browser
 
 First you have to install a *Mozilla* browser. Grab it from *Google Play*, or 
 from the *Mozilla* [archive](https://ftp.mozilla.org/pub/mobile/releases/). 
 
-# 1. Android APK, containing the Add-on
+## 1. Android APK, containing the Add-on
 
 To install *Mo Cuishle* binary preview it's neccessary to enable *Unknown 
 sources*. This option is in *Settings* under *Security* on your phone. After 
@@ -29,7 +29,7 @@ The *Mo Cuishle* app starts with a simple settings activity. You have to enable
 the Proxy with the first setting. A notification icon "MC" is displayed while 
 running the service in background. [^1]
 
-# 2. Mozilla Firefox Add-on
+## 2. Mozilla Firefox Add-on
 
 The second setting displays a list of the installed *Mozilla* browsers. 
 Selecting one opens the location of the add-on to install:
@@ -39,7 +39,7 @@ Selecting one opens the location of the add-on to install:
 
 Open `mocuishle.xpi` and install it. *That's simple!* 
 
-# Start Up
+## Start Up
 
 *Mo Cuishle* is enabled on starting *Mozilla Firefox*. The browser opens a tab 
 with the [Browse History](../_posts/2016-01-22-browse-history.md). 
@@ -50,7 +50,7 @@ removes/enters the required settings in *Mozilla Firefox*.
 For background information please refer to 
 [Mozilla Install](../_posts/2016-01-17-mozilla-install.md#other-browsers-settings), too. 
 
-# Extended Settings, you will never need it
+## Extended Settings, you will never need it
 
 These are mostly for development and tests: 
 
@@ -62,4 +62,3 @@ These are mostly for development and tests:
 [^1]: *Mo Cuishle* consists of an app and a *Mozilla* add-on separated since 
       *Android* has it's *Dalvik* runtime. The *Mozilla* add-on can't spawn a 
       *Java* process so the *Mo Cuishle* service has to be up and running always. 
-

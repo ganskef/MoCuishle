@@ -10,7 +10,7 @@ Internet. All the contents can inspected in the file system with a text editor
 or an image viewer for example.
 <!--more-->
 
-# Export Cached Contents
+## Export Cached Contents
 
 The histories of addresses with viewed pages and the recent requested addresses
 contains an *export* link now. All contents of this address is exported to a 
@@ -33,19 +33,19 @@ to export the contents exclusively by inserting `http/` or `https/` like
 `http://localhost:9090/export/http/www.freebsd.org` for example. By extending 
 the path the exported URLs can be restricted as starts with. 
 
-# Cleaned Page Titles
+## Cleaned Page Titles
 
 Page titles listed in the history and search navigation are truncated with ... 
 inserted. In case of HTML entities it could be garbage showed in the text. This 
 should never happens now.
 
-# Another Windows Issue
+## Another Windows Issue
 
 Opens tab in browser to reload outgoing URLs was failing (simply does nothing)
 in Windows. This was a *CR+LF* instead of *LF* in a *RegExp* issue. It's fixed 
 now.
 
-# Outgoing with Links
+## Outgoing with Links
 
 In *outgoing* a history of URLs is provided with pages answered from cache to 
 reload it later when a full Internet connection is available. It's easy to do 
