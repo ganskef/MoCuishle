@@ -30,7 +30,7 @@ the *Download* button from this site. *That's simple!*
 ## Start Up
 
 *Mo Cuishle* is enabled on start up and launches the *Java* proxy in background. 
-The browser opens a tab with the [Browse History](../_posts/2016-01-22-browse-history.md). 
+The browser opens a tab with the [Browse History](2016-01-22-browse-history.md). 
 
 Clicking the little blue *MC Toolbar Icon* stops/starts the *Java* process and 
 removed/entered the following required settings in *Mozilla Firefox*:

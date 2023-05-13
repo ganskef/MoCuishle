@@ -11,7 +11,7 @@ show document URLs only, filtered, with no internal stuff like images or CSS.
 
 Since the history is built in the proxy server instead of the browser it's 
 difficult a little. Sometimes *iframes* with ads are included too. Consider to 
-[block](../_posts/2016-01-19-block-unblock.md) such unwanted contents.
+[block](2016-01-19-block-unblock.md) such unwanted contents.
 
 *Quick browse...* and *Show all...* switches between the first 20 entries only 
 and a full list. It's not a complete paging mechanism, but avoids waiting for 
@@ -27,7 +27,7 @@ moment[^1]. Since it's a file system based cache it's possible to delete
 directories.
 
 Beginning with the 2016-05-16 version it's possible in the list of hosts to 
-[export](../_posts/2016-05-16-export-ui-and-cleaned-titles.md#export-cached-contents)
+[export](2016-05-16-export-ui-and-cleaned-titles.md#export-cached-contents)
 all the cached contents.
 
 ----
