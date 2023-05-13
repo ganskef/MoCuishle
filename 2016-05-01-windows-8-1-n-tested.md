@@ -31,8 +31,8 @@ Now full text search is properly working on *Windows* too.
 [<img class="left" src="../images/windows-github-300.png" alt="">](../images/windows-github.png)
 With *Windows 8.1 N* from [https://java.com/download](https://java.com/download) 
 a 32-bit *JVM* was installed by default. This has covered up an error introduced 
-with the [Chrome and Mediaserver](../_posts/2016-02-07-chrome-and-mediaserver.md) 
-change, see [history](../_posts/2016-09-26-mocuishle.md#history). For more details 
+with the [Chrome and Mediaserver](2016-02-07-chrome-and-mediaserver.md) 
+change, see [history](2016-09-26-mocuishle.md#history). For more details 
 refer to
 [LittleProxy-mitm#18](https://github.com/ganskef/LittleProxy-mitm/issues/18).
 

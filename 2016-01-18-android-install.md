@@ -41,13 +41,13 @@ Open `mocuishle.xpi` and install it. *That's simple!*
 ## Start Up
 
 *Mo Cuishle* is enabled on starting *Mozilla Firefox*. The browser opens a tab 
-with the [Browse History](../_posts/2016-01-22-browse-history.md). 
+with the [Browse History](2016-01-22-browse-history.md). 
 
 Clicking the little blue *MC Page Action* icon stops/starts the proxy usage and 
 removes/enters the required settings in *Mozilla Firefox*.
 
 For background information please refer to 
-[Mozilla Install](../_posts/2016-01-17-mozilla-install.md#other-browsers-settings), too. 
+[Mozilla Install](2016-01-17-mozilla-install.md#other-browsers-settings), too. 
 
 ## Extended Settings, you will never need it
 
