@@ -1,10 +1,7 @@
-_site/
-.sass-cache/
-tmp/
-vendor
-.bundle
 .project
 .settings
 /local/
 .DS_Store
-/MoCuishle jekyll.launch
+*.iml
+/.idea/
+/.vscode/
