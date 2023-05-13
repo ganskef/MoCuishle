@@ -1,6 +1,0 @@
----
-title: ''
-comments: true
----
-
-<!--more-->
