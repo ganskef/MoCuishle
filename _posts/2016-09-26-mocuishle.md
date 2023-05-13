@@ -8,7 +8,6 @@ All web pages you've seen on the Internet via HTTP or HTTPS will be available
 later to read them without having to remain connected.<br><a 
 class="button info" href="../_posts/2016-01-18-android-install.md">Android App</a>&nbsp;<a 
 class="button info" href="../_posts/2016-01-17-mozilla-install.md">Mozilla/Java</a>&nbsp;&nbsp;
-<!--more-->
 
 *Mo Cuishle* provides your 
 [browse history](../_posts/2016-01-22-browse-history.md) ordered by the last access, and 

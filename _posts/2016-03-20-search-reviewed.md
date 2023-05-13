@@ -8,7 +8,6 @@ New binary previews are uploaded to fix
 [issue #1](https://github.com/ganskef/MoCuishle/issues/1). Update: additionally
 uploaded a second *Mozilla/Java* xpi version to fix network state detection on 
 [*Windows*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows).
-<!--more-->
 
 ## Bleeding Edge
 

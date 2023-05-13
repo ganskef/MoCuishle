@@ -7,7 +7,6 @@
 New binary previews are uploaded to fix issues discovered during tests with 
 *Windows* and *Oracle's* 32-bit *JVM*. It affects the *Full Text Search* and 
 caching of *HTTPS* pages in these environments.
-<!--more-->
 
 While I'm regular using *Mo Cuishle* on *Debian GNU/Linux* and *Mac OS X*, 
 *Microsoft Windows* wasn't tested very well. Now I've acquired a license for 

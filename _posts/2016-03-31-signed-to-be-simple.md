@@ -7,7 +7,6 @@
 New binary previews are uploaded to fix "*Mo Cuishle* could not be verified for
 use in Firefox and has been disabled." In Android a switch to enable/disable 
 *Mo Cuishle* is added.
-<!--more-->
 
 ## Signed Mozilla Firefox Add-ons
 

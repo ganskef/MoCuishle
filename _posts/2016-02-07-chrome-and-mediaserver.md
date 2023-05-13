@@ -5,7 +5,6 @@
 # Chrome and Mediaserver
 
 New binary previews are uploaded with some useful enhancements.
-<!--more-->
 
 ## Google Chrome
 

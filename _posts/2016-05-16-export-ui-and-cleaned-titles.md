@@ -8,7 +8,6 @@ New binary previews are uploaded to fulfill a major requirement of *Mo Cuishle*:
 Transparency - everybody should be able to see what happens while using the 
 Internet. All the contents can inspected in the file system with a text editor 
 or an image viewer for example.
-<!--more-->
 
 ## Export Cached Contents
 

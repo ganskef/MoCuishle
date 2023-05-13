@@ -5,7 +5,6 @@
 # Browse History
 
 *Mo Cuishle* provides your browse history ordered by the last access.
-<!--more-->
 
 The list contains distinct URLs grouped by the host name. The intention is to 
 show document URLs only, filtered, with no internal stuff like images or CSS. 

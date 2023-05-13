@@ -8,7 +8,6 @@ New binary previews are uploaded to fix very small *PageActions* icon on high
 resolution *Android* devices, and problems with enabling *Mo Cuishle* with it. 
 It's possible now, to install on, and use with the *GNU IceCat* 
 [browser](https://www.gnu.org/software/gnuzilla/).
-<!--more-->
 
 ## Problems with PageActions
 

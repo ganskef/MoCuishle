@@ -6,4 +6,3 @@
 
 *Mo Cuishle* lists hosts requested in the last Minute and let you decide to 
 block or unblock addresses on the fly.
-<!--more-->
