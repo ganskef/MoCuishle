@@ -1,16 +1,14 @@
----
-image: android-site-actions.png
-caption: "Mo Cuishle's simple navigation for Mobile, too."
-subheadline: "Rebuilt to be signed, On/Off Switch in Android."
-title: "Signed to be Simple"
----
+![](../images/android-site-actions.png "Mo Cuishle's simple navigation for Mobile, too.")
+
+> Rebuilt to be signed, On/Off Switch in Android.
+
+# Signed to be Simple
 
 New binary previews are uploaded to fix "*Mo Cuishle* could not be verified for
 use in Firefox and has been disabled." In Android a switch to enable/disable 
 *Mo Cuishle* is added.
-<!--more-->
 
-# Signed Mozilla Firefox Add-ons
+## Signed Mozilla Firefox Add-ons
 
 The *Mo Cuishle* Add-ons are signed by the
 [Mozilla Add-ons site (AMO)](https://addons.mozilla.org/) now. This passes back
@@ -27,7 +25,7 @@ stand alone.
 The second add-on delivered with the *Android App* is an alternate packaging to 
 use with a standalone running *Mo Cuishle* proxy. It's 20 KB only.
 
-# Little blue MC switches
+## Little blue MC switches
 
 On desktop *Mo Cuishle* provides an *ActionButton* to switch between enabled and
 disabled. It changes the needed proxy and cache settings in *Mozilla Firefox*. 
@@ -39,7 +37,7 @@ The second blue *MC* in the *Android Title Bar* belongs to the *Mo Cuishle*
 service. This is launched by the *Android App*, separated from the add-on but 
 neccessary, since it is the *Java* proxy to work with.
 
-# Refactorings, a new build process
+## Refactorings, a new build process
 
 Behind the scenes, I've added tests for the *Web UI* navigations. I've done some
 refactorings, since I've got some ideas to introduce new features. Signing 

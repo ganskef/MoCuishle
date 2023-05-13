@@ -1,15 +1,13 @@
----
-image: macosx-desktop-startup.png
-caption: "Start up with your browse history in Mac OS X desktop."
-subheadline: "Download and get it working on Java platforms."
-title: "Mozilla Install"
----
+![](../images/macosx-desktop-startup.png "Start up with your browse history in Mac OS X desktop.")
+
+> Download and get it working on Java platforms.
+
+# Mozilla Install
 
 *Mo Cuishle* binary preview XPI is signed by 
 [addons.mozilla.org](https://addons.mozilla.org/) (AMO) since version 20160331 
 and above. It's available here only.<br><a class="button info" 
-href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160926.xpi">Download</a> 7MB
-<!--more-->
+href="../mocuishle-binary-preview/mocuishle-1.0-20160926.xpi">Download</a> 7MB
 
 **The Software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, 
 either express or implied.**
@@ -20,19 +18,19 @@ UNENCRYPTED on your device.**
 Please open an [issue](https://github.com/ganskef/MoCuishle/issues) containing 
 information about your environment in case you've no success.
 
-# Java
+## Java
 
 First of all you need *Java* installed on your system. 
 
-# Mozilla Add-on
+## Mozilla Add-on
 
 The *Add-on XPI* depends on a *Mozilla* browser. With it you can install it via 
 the *Download* button from this site. *That's simple!*
 
-# Start Up
+## Start Up
 
 *Mo Cuishle* is enabled on start up and launches the *Java* proxy in background. 
-The browser opens a tab with the [Browse History]({{ site.url }}/browse-history/). 
+The browser opens a tab with the [Browse History](../_posts/2016-01-22-browse-history.md). 
 
 Clicking the little blue *MC Toolbar Icon* stops/starts the *Java* process and 
 removed/entered the following required settings in *Mozilla Firefox*:
@@ -49,7 +47,7 @@ Try <kbd>ctrl</kbd>+<kbd>shift</kbd>+<kbd>J</kbd>.
 Enabling/Disabling the installation imports/removes the *Certificate Authority* 
 needed to cache *HTTPS* contents. Try it in case of problems with certificates.
 
-# Other Browsers, Settings
+## Other Browsers, Settings
 
 *Mo Cuishle* is a proxy application following *HTTP* standards. So it can be used 
 without the add-on or with other browsers like *Google Chrome* too. The *XPI* is 

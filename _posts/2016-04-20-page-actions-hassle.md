@@ -1,17 +1,15 @@
----
-image: small-icon-and-icecat.png
-caption: "Fixed PageActions icon and GNU IceCat browser."
-subheadline: "Mostly relevant for Android usability."
-title: "Page Actions Hassle"
----
+![](../images/small-icon-and-icecat.png "Fixed PageActions icon and GNU IceCat browser.")
+
+> Mostly relevant for Android usability.
+
+# Page Actions Hassle
 
 New binary previews are uploaded to fix very small *PageActions* icon on high 
 resolution *Android* devices, and problems with enabling *Mo Cuishle* with it. 
 It's possible now, to install on, and use with the *GNU IceCat* 
 [browser](https://www.gnu.org/software/gnuzilla/).
-<!--more-->
 
-# Problems with PageActions
+## Problems with PageActions
 
 The *Mo Cuishle* add-on uses a *PageActions* icon to enable and disable the 
 proxy settings in the browser on *Android* like a breeze. Sadly the first 
@@ -24,7 +22,7 @@ If the tab with the *Mo Cuishle* navigation was not open, a disabled and grayed
 *PageActions* icon would'nt be re-enabled to blue. The *Mo Cuishle* add-on has 
 to be disabled and enabled to fix this state.
 
-# GNU IceCat browser
+## GNU IceCat browser
 
 The *GNUZilla* and *IceCat* project provides a *Mozilla* suite with all brands
 removed. *GNU IceCat* is the *GNU* version of the *Firefox* browser with 
@@ -41,7 +39,7 @@ to work with the proxy:
 
  * prefs.set(&quot;security.ssl.require_safe_negotiation&quot;, false);
 
-# Upstream
+## Upstream
 
 Some dependencies are updated to its current versions: 
 

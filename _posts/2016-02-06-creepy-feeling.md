@@ -1,14 +1,12 @@
----
-image: creepy-feeling.png
-caption: "Modified content - verified by Google?"
-subheadline: "A long running Firefox bug with minor priority."
-title: "Creepy Feeling"
----
+![](../images/creepy-feeling.png "Modified content - verified by Google?")
+
+> A long running Firefox bug with minor priority.
+
+# Creepy Feeling
 
 Using *Mo Cuishle* you're doing Man-In-The-Middle which is usually a very bad 
 thing. A Mozilla add-on installs a root certificate and you can enable and 
 disable it with a single click. And, there is a bug in Firefox:
-<!--more-->
 
 * [Bug 1243901](https://bugzilla.mozilla.org/show_bug.cgi?id=1243901) - Replace Certificate Authority without user notification, wrong CA displayed 
 * [Bug 1230321](https://bugzilla.mozilla.org/show_bug.cgi?id=1230321) - Firefox 42.0 shows wrong certificate issuer when reloading a page after cert has changed 
@@ -43,7 +41,7 @@ certificates in no time without a user notification like it is done by *Mo
 Cuishle*. I'm a beginner programming JavaScript with Firefox APIs and I hear 
 they talking, but...
 
-# Update 2016-04-03
+## Update 2016-04-03
 
 Please, don't misunderstand me. I love *Mozilla Firefox* for giving me the 
 feature to install a certificate. But, it would be okay to ask the user for 
@@ -52,11 +50,11 @@ trusting the CA for websites with the well known
 and to delete the *Mo Cuishle* certificate with its explicit identifier only. 
 This is possible with the old *API*, without the two new methods, I think.
 
-# Update 2016-09-10
+## Update 2016-09-10
 
 With *Aurora Firefox Developer Edition* 50.0a2 (2016-09-10) I've tried out the 
 behavior today. It's a fresh look, but it is the same again. The modified 
 content (notice the green bullets border) is "Verified by Google Inc.":
 
-<img class="" src="{{ site.urlimg }}creepy-feeling-201609.png" alt="" height="270">
-<img class="" src="{{ site.urlimg }}creepy-feeling-201609-2.png" alt="" height="270">
+<img class="" src="../images/creepy-feeling-201609.png" alt="" height="270">
+<img class="" src="../images/creepy-feeling-201609-2.png" alt="" height="270">
