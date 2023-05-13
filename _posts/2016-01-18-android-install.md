@@ -5,7 +5,7 @@
 
 *Mo Cuishle* binary preview is provided as an unsigned APK only. It's not 
 available at Google Play or other stores, but here.<br><a class="button info" 
-href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160926.apk">Download</a> 4MB
+href="../mocuishle-binary-preview/mocuishle-1.0-20160926.apk">Download</a> 4MB
 <!--more-->
 
 **The Software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, 
@@ -34,28 +34,28 @@ running the service in background. [^1]
 The second setting displays a list of the installed *Mozilla* browsers. 
 Selecting one opens the location of the add-on to install:
 
-<img class="" src="{{ site.urlimg }}android-settings-activity.png" alt="">
-<img class="" src="{{ site.urlimg }}android-browser-extension.png" alt="">
+<img class="" src="../images/android-settings-activity.png" alt="">
+<img class="" src="../images/android-browser-extension.png" alt="">
 
 Open `mocuishle.xpi` and install it. *That's simple!* 
 
 # Start Up
 
 *Mo Cuishle* is enabled on starting *Mozilla Firefox*. The browser opens a tab 
-with the [Browse History]({{ site.url }}/browse-history/). 
+with the [Browse History](../_posts/2016-01-22-browse-history.md). 
 
 Clicking the little blue *MC Page Action* icon stops/starts the proxy usage and 
 removes/enters the required settings in *Mozilla Firefox*.
 
 For background information please refer to 
-[Mozilla Install]({{ site.url }}/mozilla-install/#other-browsers-settings), too. 
+[Mozilla Install](../_posts/2016-01-17-mozilla-install.md#other-browsers-settings), too. 
 
 # Extended Settings, you will never need it
 
 These are mostly for development and tests: 
 
-<img class="" src="{{ site.urlimg }}android-extended-settings-1.png" alt="">
-<img class="" src="{{ site.urlimg }}android-extended-settings-2.png" alt="">
+<img class="" src="../images/android-extended-settings-1.png" alt="">
+<img class="" src="../images/android-extended-settings-2.png" alt="">
 
 ---
 

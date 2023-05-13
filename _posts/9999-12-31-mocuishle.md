@@ -6,23 +6,23 @@
 
 All web pages you've seen on the Internet via HTTP or HTTPS will be available 
 later to read them without having to remain connected.<br><a 
-class="button info" href="{{ site.url }}/android-install/">Android App</a>&nbsp;<a 
-class="button info" href="{{ site.url }}/mozilla-install">Mozilla/Java</a>&nbsp;&nbsp;
+class="button info" href="../_posts/2016-01-18-android-install.md">Android App</a>&nbsp;<a 
+class="button info" href="../_posts/2016-01-17-mozilla-install.md">Mozilla/Java</a>&nbsp;&nbsp;
 <!--more-->
 
 *Mo Cuishle* provides your 
-[browse history]({{ site.url }}/browse-history/) ordered by the last access, and 
-an [outgoing history]({{ site.url }}/outgoing-history/) of the pages you've 
+[browse history](../_posts/2016-01-22-browse-history.md) ordered by the last access, and 
+an [outgoing history](../_posts/2016-01-21-outgoing-history.md) of the pages you've 
 requested offline to reload if needed. Also a 
-[full text search]({{ site.url }}/full-text-search/) over the cached web sites 
+[full text search](../_posts/2016-01-20-full-text-search.md) over the cached web sites 
 is included. The hosts requested in the last minute are listed and you can 
-decide to [block or unblock]({{ site.url }}/block-unblock/) addresses on the 
+decide to [block or unblock](../_posts/2016-01-19-block-unblock.md) addresses on the 
 fly. It's been used on *Linux*, *OS X* and *Windows*. Every platform with a 
-[*Mozilla* browser]({{ site.url }}/mozilla-install/) and *Java* should work 
+[*Mozilla* browser](../_posts/2016-01-17-mozilla-install.md) and *Java* should work 
 simply by installing the add-on. For 
-[*Android* devices]({{ site.url }}/android-install/) it is provided by an app 
+[*Android* devices](../_posts/2016-01-18-android-install.md) it is provided by an app 
 which launces the background service and installs the browser extension. This is 
-a binary preview. I'm not ready to [go public]({{ site.url }}/license/) for now.
+a binary preview. I'm not ready to [go public](../_posts/2016-01-16-license.md) for now.
 
 # The vision - Ideas behind
 
@@ -60,64 +60,64 @@ All that *Mo Cuishle* aims to provide to you!
 
 # History
 
-[BED-Con 2016 Berlin]({{ site.url }}/bed-con-2016-berlin/) (updated 2016-09-26)
+[BED-Con 2016 Berlin](../_posts/2016-09-13-bed-con-2016-berlin.md) (updated 2016-09-26)
 
- * [mocuishle-1.0-20160926.apk]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160926.apk)
- * [mocuishle-1.0-20160926.xpi]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160926.xpi)
- * obsolete: [<strike>mocuishle-1.0-20160913.apk</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160913.apk)
- * obsolete: [<strike>mocuishle-1.0-20160913.xpi</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160913.xpi)
+ * [mocuishle-1.0-20160926.apk](../mocuishle-binary-preview/mocuishle-1.0-20160926.apk)
+ * [mocuishle-1.0-20160926.xpi](../mocuishle-binary-preview/mocuishle-1.0-20160926.xpi)
+ * obsolete: [<strike>mocuishle-1.0-20160913.apk</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160913.apk)
+ * obsolete: [<strike>mocuishle-1.0-20160913.xpi</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160913.xpi)
 
-[Export UI and cleaned Titles]({{ site.url }}/export-ui-and-cleaned-titles/)
+[Export UI and cleaned Titles](../_posts/2016-05-16-export-ui-and-cleaned-titles.md)
 
- * [mocuishle-1.0-20160516.apk]({{ site.download }}/v1.0-20160516/mocuishle-1.0-20160516.apk)
- * [mocuishle-1.0-20160516.xpi]({{ site.download }}/v1.0-20160516/mocuishle-1.0-20160516.xpi)
+ * [mocuishle-1.0-20160516.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160516/mocuishle-1.0-20160516.apk)
+ * [mocuishle-1.0-20160516.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160516/mocuishle-1.0-20160516.xpi)
 
-[Windows 8.1 N tested]({{ site.url }}/windows-8-1-n-tested/)
+[Windows 8.1 N tested](../_posts/2016-05-01-windows-8-1-n-tested.md)
 
- * [mocuishle-1.0-20160501.apk]({{ site.download }}/v1.0-20160501/mocuishle-1.0-20160501.apk)
- * [mocuishle-1.0-20160501.xpi]({{ site.download }}/v1.0-20160501/mocuishle-1.0-20160501.xpi)
+ * [mocuishle-1.0-20160501.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160501/mocuishle-1.0-20160501.apk)
+ * [mocuishle-1.0-20160501.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160501/mocuishle-1.0-20160501.xpi)
 
-[Page Actions Hassle]({{ site.url }}/page-actions-hassle/)
+[Page Actions Hassle](../_posts/2016-04-20-page-actions-hassle.md)
 
- * [mocuishle-1.0-20160420.apk]({{ site.download }}/v1.0-20160420/mocuishle-1.0-20160420.apk)
- * [mocuishle-1.0-20160420.xpi]({{ site.download }}/v1.0-20160420/mocuishle-1.0-20160420.xpi)
+ * [mocuishle-1.0-20160420.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160420/mocuishle-1.0-20160420.apk)
+ * [mocuishle-1.0-20160420.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160420/mocuishle-1.0-20160420.xpi)
 
-[Signed to be Simple]({{ site.url }}/signed-to-be-simple/)
+[Signed to be Simple](../_posts/2016-03-31-signed-to-be-simple.md)
 
- * [mocuishle-1.0-20160331.apk]({{ site.download }}/v1.0-20160331/mocuishle-1.0-20160331.apk)
- * [mocuishle-1.0-20160331.xpi]({{ site.download }}/v1.0-20160331/mocuishle-1.0-20160331.xpi)
+ * [mocuishle-1.0-20160331.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160331/mocuishle-1.0-20160331.apk)
+ * [mocuishle-1.0-20160331.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160331/mocuishle-1.0-20160331.xpi)
 
-[Search reviewed, close #1]({{ site.url }}/search-reviewed/), Update: 
-[*Windows]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
+[Search reviewed, close #1](../_posts/2016-03-20-search-reviewed.md), Update: 
+[*Windows](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
 
- * [mocuishle-1.0-20160320-2.xpi]({{ site.download }}/v1.0-20160320-2/mocuishle-1.0-20160320-2.xpi)
- * [mocuishle-1.0-20160320.apk]({{ site.download }}/v1.0-20160320-2/mocuishle-1.0-20160320.apk)
- * [mocuishle-1.0-20160320.xpi]({{ site.download }}/v1.0-20160320-2/mocuishle-1.0-20160320.xpi)
-   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
+ * [mocuishle-1.0-20160320-2.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160320-2/mocuishle-1.0-20160320-2.xpi)
+ * [mocuishle-1.0-20160320.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160320-2/mocuishle-1.0-20160320.apk)
+ * [mocuishle-1.0-20160320.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160320-2/mocuishle-1.0-20160320.xpi)
+   [*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
 
-[Cache Modes]({{ site.url }}/cache-modes/) (updated 2016-03-05)
+[Cache Modes](../_posts/2016-02-29-cache-modes.md) (updated 2016-03-05)
 
- * [mocuishle-1.0-20160305.apk]({{ site.download }}/v1.0-20160305/mocuishle-1.0-20160305.apk)
- * [mocuishle-1.0-20160305.xpi]({{ site.download }}/v1.0-20160305/mocuishle-1.0-20160305.xpi)
-   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
- * obsolete: [<strike>mocuishle-1.0-20160229.apk</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
- * obsolete: [<strike>mocuishle-1.0-20160229.xpi</strike>]({{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
-   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
+ * [mocuishle-1.0-20160305.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160305/mocuishle-1.0-20160305.apk)
+ * [mocuishle-1.0-20160305.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160305/mocuishle-1.0-20160305.xpi)
+   [*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
+ * obsolete: [<strike>mocuishle-1.0-20160229.apk</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160229.apk)
+ * obsolete: [<strike>mocuishle-1.0-20160229.xpi</strike>](../mocuishle-binary-preview/mocuishle-1.0-20160229.xpi)
+   [*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
 
-[Chrome and Mediaserver]({{ site.url }}/chrome-and-mediaserver/)
+[Chrome and Mediaserver](../_posts/2016-02-07-chrome-and-mediaserver.md)
 
- * [mocuishle-1.0-20160207.apk]({{ site.download }}/v1.0-20160207/mocuishle-1.0-20160207.apk)
- * [mocuishle-1.0-20160207.xpi]({{ site.download }}/v1.0-20160207/mocuishle-1.0-20160207.xpi)
-   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
+ * [mocuishle-1.0-20160207.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160207/mocuishle-1.0-20160207.apk)
+ * [mocuishle-1.0-20160207.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160207/mocuishle-1.0-20160207.xpi)
+   [*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
 
-[Better Android]({{ site.url }}/better-android/)
+[Better Android](../_posts/2016-01-27-better-android.md)
 
- * [mocuishle-1.0-20160128.apk]({{ site.download }}/v1.0-20160128/mocuishle-1.0-20160128.apk)
- * [mocuishle-1.0-testing-20160128.apk]({{ site.download }}/v1.0-20160128/mocuishle-testing-1.0-20160128.apk)
+ * [mocuishle-1.0-20160128.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160128/mocuishle-1.0-20160128.apk)
+ * [mocuishle-1.0-testing-20160128.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160128/mocuishle-testing-1.0-20160128.apk)
 
-[It's out!]({{ site.url }}/it-is-out/)
+[It's out!](../_posts/2016-01-25-it-is-out.md)
 
- * [mocuishle-1.0-20160125.apk]({{ site.download }}/v1.0-20160125/mocuishle-1.0-20160125.apk)
- * [mocuishle-1.0-20160125.xpi]({{ site.download }}/v1.0-20160125/mocuishle-1.0-20160125.xpi)
-   [*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows)
- * [mocuishle-1.0-testing-20160125.apk]({{ site.download }}/v1.0-20160125/mocuishle-testing-1.0-20160125.apk)
+ * [mocuishle-1.0-20160125.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160125/mocuishle-1.0-20160125.apk)
+ * [mocuishle-1.0-20160125.xpi](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160125/mocuishle-1.0-20160125.xpi)
+   [*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows)
+ * [mocuishle-1.0-testing-20160125.apk](https://github.com/ganskef/MoCuishle/releases/download/v1.0-20160125/mocuishle-testing-1.0-20160125.apk)

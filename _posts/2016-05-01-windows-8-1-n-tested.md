@@ -17,8 +17,8 @@ it feels like it's needed on every supported device :-) .
 
 # Full Text Search on Windows
 
-[<img class="left" src="{{ site.urlimg }}windows-folder-300.png" alt="">]({{ site.urlimg }}windows-folder.png)
-*Mo Cuishle* provides a [Full Text Search]({{ site.url }}/full-text-search/). 
+[<img class="left" src="../images/windows-folder-300.png" alt="">](../images/windows-folder.png)
+*Mo Cuishle* provides a [Full Text Search](../full-text-search/). 
 Building the *SQLite* index is done in background. The last step is renaming the 
 index file from `mocuishle.sqlite.tmp` to `mocuishle.sqlite`. This is failing 
 on *Microsoft Windows*.
@@ -29,11 +29,11 @@ Now full text search is properly working on *Windows* too.
 
 # HTTPS with Oracle's 32-bit JVM
 
-[<img class="left" src="{{ site.urlimg }}windows-github-300.png" alt="">]({{ site.urlimg }}windows-github.png)
+[<img class="left" src="../images/windows-github-300.png" alt="">](../images/windows-github.png)
 With *Windows 8.1 N* from [https://java.com/download](https://java.com/download) 
 a 32-bit *JVM* was installed by default. This has covered up an error introduced 
-with the [Chrome and Mediaserver]({{ site.url }}/chrome-and-mediaserver/) 
-change, see [history]({{ site.url }}/mocuishle/#history). For more details 
+with the [Chrome and Mediaserver](../_posts/2016-02-07-chrome-and-mediaserver.md) 
+change, see [history](../_posts/9999-12-31-mocuishle.md#history). For more details 
 refer to
 [LittleProxy-mitm#18](https://github.com/ganskef/LittleProxy-mitm/issues/18).
 

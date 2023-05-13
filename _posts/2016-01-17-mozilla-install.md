@@ -7,7 +7,7 @@
 *Mo Cuishle* binary preview XPI is signed by 
 [addons.mozilla.org](https://addons.mozilla.org/) (AMO) since version 20160331 
 and above. It's available here only.<br><a class="button info" 
-href="{{ site.url }}/mocuishle-binary-preview/mocuishle-1.0-20160926.xpi">Download</a> 7MB
+href="../mocuishle-binary-preview/mocuishle-1.0-20160926.xpi">Download</a> 7MB
 <!--more-->
 
 **The Software is distributed on an "AS IS" basis, WITHOUT WARRANTY OF ANY KIND, 
@@ -31,7 +31,7 @@ the *Download* button from this site. *That's simple!*
 # Start Up
 
 *Mo Cuishle* is enabled on start up and launches the *Java* proxy in background. 
-The browser opens a tab with the [Browse History]({{ site.url }}/browse-history/). 
+The browser opens a tab with the [Browse History](../_posts/2016-01-22-browse-history.md). 
 
 Clicking the little blue *MC Toolbar Icon* stops/starts the *Java* process and 
 removed/entered the following required settings in *Mozilla Firefox*:

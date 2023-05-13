@@ -7,7 +7,7 @@
 New binary previews are uploaded to fix
 [issue #1](https://github.com/ganskef/MoCuishle/issues/1). Update: additionally
 uploaded a second *Mozilla/Java* xpi version to fix network state detection on 
-[*Windows*]({{ site.url }}/search-reviewed/#fixed-offline-on-microsoft-windows).
+[*Windows*](../_posts/2016-03-20-search-reviewed.md#fixed-offline-on-microsoft-windows).
 <!--more-->
 
 # Bleeding Edge
@@ -40,4 +40,4 @@ At 2015-09-25 15:29:35 I've replaced usage of NetworkUtils from *LittleProxy* in
 device. I'm dreadfully sorry. Recently I had a chance to try, and it fails. Of 
 course! The state of the network is detected online always, so it doesn't answer 
 from cache while offline. A workaround could be manually use the 
-[tethering]({{ site.url }}/cache-modes/) mode, but now it's fixed.
+[tethering](../_posts/2016-02-29-cache-modes.md) mode, but now it's fixed.
