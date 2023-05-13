@@ -24,7 +24,7 @@ simply by installing the add-on. For
 which launces the background service and installs the browser extension. This is 
 a binary preview. I'm not ready to [go public](../_posts/2016-01-16-license.md) for now.
 
-# The vision - Ideas behind
+## The vision - Ideas behind
 
 > Simplicity is the ultimate sophistication. — Leonardo da Vinci
 
@@ -44,7 +44,7 @@ of course. From [Wikipedia](https://en.wikipedia.org/wiki/Million_Dollar_Baby):
 "my darling, and my blood" (literally, "my pulse")&#187;. There's room for 
 interpretation a lot. 
 
-# Features
+## Features
 
 **Would'nt it be great...**<br/>
 **... to have your own Internet** with you, always without a cable, no WLAN or no cell available?<br/>
@@ -58,7 +58,7 @@ interpretation a lot.
 
 All that *Mo Cuishle* aims to provide to you!
 
-# History
+## History
 
 [BED-Con 2016 Berlin](../_posts/2016-09-13-bed-con-2016-berlin.md) (updated 2016-09-26)
 
