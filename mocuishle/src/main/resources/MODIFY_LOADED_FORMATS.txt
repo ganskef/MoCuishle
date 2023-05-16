@@ -1,0 +1,15 @@
+%.1f years ago
+one year ago
+%.1f months ago
+one month ago
+%.1f weeks ago
+one week ago
+%.1f days ago
+one day ago
+%.1f hours ago
+one hour ago
+%.1f mins ago
+one min ago
+%.0f secs ago
+one sec ago
+up to date

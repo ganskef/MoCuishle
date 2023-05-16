@@ -1,0 +1,1 @@
+ <a href="/%1$s/%2$s?query=%3$s&amp;count=%4$s&amp;index=%5$s">Next</a>

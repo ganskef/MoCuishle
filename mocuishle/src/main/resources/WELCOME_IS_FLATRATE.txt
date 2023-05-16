@@ -1,0 +1,1 @@
+            <li><a href="/flatrate"><b>mode-flatrate</b></a></li>

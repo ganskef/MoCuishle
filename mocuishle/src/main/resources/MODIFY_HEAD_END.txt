@@ -1,0 +1,1 @@
+<!--MoCuishle end head--><style type="text/css" media="screen">html {border-left: 5px dotted; border-color:%s;}</style><!--MC-->

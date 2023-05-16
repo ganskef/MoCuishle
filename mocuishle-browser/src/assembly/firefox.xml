@@ -1,0 +1,42 @@
+
+<assembly xmlns="http://maven.apache.org/ASSEMBLY/2.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/ASSEMBLY/2.0.0 http://maven.apache.org/xsd/assembly-2.0.0.xsd">
+
+  <id>firefox</id>
+
+  <formats>
+    <format>zip</format>
+  </formats>
+
+  <includeBaseDirectory>false</includeBaseDirectory>
+
+  <files>
+    <file>
+      <source>${project.basedir}/../LICENSE.txt</source>
+      <outputDirectory></outputDirectory>
+    </file>
+    <file>
+      <source>${project.build.scriptSourceDirectory}/mocuishle-firefox.js</source>
+      <outputDirectory></outputDirectory>
+      <destName>mocuishle.js</destName>
+    </file>
+    <file>
+      <source>${project.build.scriptSourceDirectory}/manifest-firefox.json</source>
+      <filtered>true</filtered>
+      <outputDirectory></outputDirectory>
+      <destName>manifest.json</destName>
+    </file>
+  </files>
+
+  <fileSets>
+    <fileSet>
+      <directory>${project.build.scriptSourceDirectory}</directory>
+      <outputDirectory></outputDirectory>
+      <includes>
+        <include>data/</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+
+</assembly>

@@ -1,0 +1,2 @@
+            <tr><td><a href="%1$s">%2$s</a></td><td>%3$s</td><td><a href="/delete/%5$s">delete</a></td></tr>
+            <tr><td colspan="3"><small>%4$s</small></td><tr>

@@ -1,0 +1,1 @@
+            <tr><td><a href="/export/%1$s.zip">export</a> <strike><a href="/trash/%1$s/">%1$s</a></strike></td><td><strike><a href="/undelete/%1$s">undelete</a></strike></td></tr>

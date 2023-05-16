@@ -1,0 +1,2 @@
+            <tr><td><strike><a href="/trash/%1$s">%2$s</a></strike></td><td><strike>%3$s</strike></td><td><strike><a href="/undelete/%5$s">undelete</a></strike></td></tr>
+            <tr><td colspan="3"><small><strike>%4$s</strike></small></td></tr>

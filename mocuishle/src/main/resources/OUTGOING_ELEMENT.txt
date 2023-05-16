@@ -1,0 +1,1 @@
+        <tr><td><a href="%1$s">%1$s</a></td><td><a href="/delete-outgoing/%1$s">delete</a></td></tr>

@@ -1,0 +1,1 @@
+<a$1><font color="%1$s">$2</font></a>

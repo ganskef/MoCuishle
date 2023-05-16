@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Mo Cuishle - %3$s-outgoing</title>
+    <!-- Bootstrap core CSS -->
+    <link href="/markup/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/markup/mocuishle.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/markup/html5shiv.min.js"></script>
+      <script src="/markup/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Mo Cuishle</a>
+          <a class="navbar-brand" href="/%3$s">%3$s</a>
+          <b class="navbar-brand hidden-xs">outgoing</b>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li>%5$s</li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/%3$s">%3$s-cached</a></li>
+            <li>%4$s</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+        <form role="form" class="form-horizontal" action="/%3$s" method="get" id="form_self">
+            <div class="form-group col-xs-11 col-sm-11">
+                <label class="sr-only" for="search-phrase">Search Phrase:</label>
+                <input class="form-control" type="text" name="query" value="" id="search-phrase" tabindex="1" accesskey="0" />
+            </div>
+            <div class="form-group col-xs-1 col-sm-1">
+                <button class="btn btn-default" type="submit">Search</button>
+            </div>
+            <input type="hidden" name="count" value="5" />
+            <input type="hidden" name="index" value="0" />
+        </form>
+%1$s        <table class="table table-condensed">
+%2$s        </table>
+        <p>%4$s%5$s</p>
+    </div><!-- /.container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/markup/jquery.min.js"></script>
+    <script src="/markup/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="/markup/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

@@ -1,0 +1,1 @@
+            <li><a href="/automatic"><b>mode-automatic</b></a></li>

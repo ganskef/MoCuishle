@@ -1,0 +1,1 @@
+ <a href="/empty-trash/%1$s/%2$s">Empty trash</a>

@@ -1,0 +1,1 @@
+            <tr><td><i><a href="/export/%1$s.zip">export</a> <strike>%1$s</strike></i></td><td><i><a href="/pass/%1$s">pass</a> <strike><a href="/unblock/%1$s">unblock</a></strike> (%2$ss)</i></td></tr>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <artifactId>mocuishle-browser</artifactId>
+  <groupId>de.ganskef.mocuishle</groupId>
+  <version>2.1.2</version>
+
+  <properties>
+    <junit.jupiter.version>5.9.3</junit.jupiter.version>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <javac.target>11</javac.target>
+    <maven.compiler.target>${javac.target}</maven.compiler.target>
+    <maven.compiler.source>${javac.target}</maven.compiler.source>
+  </properties>
+
+  <name>Mo Cuishle - Browser Extensions</name>
+  <description>A caching proxy for offline use - Browser Extensions to use Mo Cuishle with browsers</description>
+  <url>https://ganskef.github.io/MoCuishle/</url>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-api</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>${junit.jupiter.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <resources>
+      <resource>
+        <directory>${project.basedir}/..</directory>
+        <includes>
+          <include>LICENSE.txt</include>
+        </includes>
+      </resource>
+      <resource>
+        <directory>${project.build.scriptSourceDirectory}</directory>
+        <excludes>
+          <exclude>*-firefox.*</exclude>
+          <exclude>manifest.json</exclude>
+        </excludes>
+      </resource>
+      <resource>
+        <filtering>true</filtering>
+        <directory>${project.build.scriptSourceDirectory}</directory>
+        <includes>
+          <include>manifest.json</include>
+        </includes>
+      </resource>
+    </resources>
+
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-jar</id>
+            <phase>none</phase>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
+        <artifactId>maven-assembly-plugin</artifactId>
+
+        <configuration>
+          <descriptorSourceDirectory>src/assembly</descriptorSourceDirectory>
+        </configuration>
+
+        <executions>
+          <execution>
+            <goals>
+              <goal>single</goal>
+            </goals>
+            <phase>process-resources</phase>
+          </execution>
+        </executions>
+
+      </plugin>
+    </plugins>
+
+    <scriptSourceDirectory>src/extension</scriptSourceDirectory>
+  </build>
+
+</project>

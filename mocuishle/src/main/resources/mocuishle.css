@@ -1,0 +1,30 @@
+body {
+  padding-top: 55px;
+  color: #5a5a5a;
+}
+mark {
+    background-color: yellow;
+    color: black;
+}
+.mocuishle {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 70%;
+    margin: auto;
+}
+
+a.carousel-control:hover {
+    color:#ffffff !important;
+}
+.carousel-indicators li {
+  border-color: #337AB7;
+}
+.carousel-indicators .active {
+/*  background-color: #7f7f7f; */
+  background-color: #337AB7;
+  border-color: #FFFFFF;
+}
