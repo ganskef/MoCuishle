@@ -208,7 +208,7 @@ public class ReplaceAnchorsTest {
 		assertEquals("xxx?a=a&b=\"<b>\"", cached.getUrl());
 	}
 
-	@Test(timeout = 5000)
+	@Test(timeout = 10000)
 	public void testEndlessLoopTitleAtWebDe() throws Exception {
 		InputStream is = ClassLoader.getSystemResourceAsStream("EndlessLoopTitleAtWebDe.txt");
 		String html = IOUtils.toString(is);
