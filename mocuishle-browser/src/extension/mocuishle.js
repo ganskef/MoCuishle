@@ -5,8 +5,6 @@
  */
 var proxyConnection = null;
 
-var validateTabId = null;
-
 function onErrorInfo(error) {
   console.info(`Ignored: ${error}`);
 }
@@ -30,10 +28,10 @@ function enableMoCuishle() {
       }
     });
     /** Open a MoCuishle tab if not exists */
+    // Try to work, if none tabs authorization (optional_permission).
     try {
       chrome.tabs.query({ url: "*://localhost/*" }, startupTab);
     } catch (e) {
-      // Try to work, if none tabs authorization (optional_permission).
       onErrorInfo(e);
     }
     chrome.browserAction.setIcon({
@@ -53,7 +51,6 @@ function enableMoCuishle() {
 }
 
 function startMoCuishle() {
-  validateTabId = null;
   try {
     proxyConnection = chrome.runtime.connectNative("de.ganskef.mocuishle");
     setTimeout(function() {
@@ -76,7 +73,6 @@ function cleanupTabs(tabs) {
 }
 
 function disableMoCuishle() {
-  validateTabId = null;
   try {
     proxyConnection.disconnect();
   } catch (e) {
@@ -94,10 +90,10 @@ function disableMoCuishle() {
     }
   });
   /** Remove MoCuishle tabs on exit */
+  // Try to work, if none tabs authorization (optional_permission).
   try {
     chrome.tabs.query({ url: "*://localhost/*" }, cleanupTabs);
   } catch (e) {
-    // Try to work, if none tabs authorization (optional_permission).
     onErrorInfo(e);
   }
 }
@@ -113,73 +109,17 @@ chrome.browserAction.onClicked.addListener(() => {
   }
 });
 
-chrome.runtime.onSuspend.addListener(() => {
+chrome.windows.onRemoved.addListener(function(windowId){
   if (proxyConnection != null) {
     disableMoCuishle();
   }
 });
 
-/**
- * The XMLHttpRequest object to load the urls for validate-cache-iterate.
- */
-var req;
-
-var validateTabId;
-
-/**
- * Handles parsing the feed data we got back from XMLHttpRequest.
- */
-function validateResponse() {
-  var cacheUrl = req.responseText;
-  if (!cacheUrl || cacheUrl === "http://localhost:9090/done") {
-    return;
-  }
-  setTimeout(function() {
-    chrome.tabs.query({ currentWindow: true, active: true }, function(tabs) {
-      if (tabs[0].url === cacheUrl) {
-        validateNext();
-      }
-    });
-  }, 10000);
-  chrome.tabs.update({ "url": cacheUrl });
-}
-
-function validateNext() {
-  req = new XMLHttpRequest();
-  req.onload = validateResponse;
-  req.onerror = onErrorInfo;
-  req.open('GET', 'http://localhost:9090/validate-cache-iterate', true);
-  req.send(null);
-}
-
-function validateCache() {
-  function onCleared() {
-    chrome.tabs.update({
-      "url": 'http://localhost:9090/cacheonly'
-    }, function(tab) {
-      validateTabId = tab.id;
-    });
-  }
-  try {
-    chrome.browsingData.removeCache({}, onCleared);
-  } catch (e) {
-    onErrorInfo(e);
-  }
-}
-
-/**
- * Each time a tab is updated, check the status and validate next if needed.
- */
-chrome.tabs.onUpdated.addListener((id, changeInfo, tab) => {
-  if (tab.id == validateTabId && changeInfo.status == 'complete') {
-    validateNext();
+chrome.runtime.onSuspend.addListener(() => {
+  if (proxyConnection != null) {
+    disableMoCuishle();
   }
 });
-
-/**
- * Validate cache on entering URL (ugly workaround before implementing a popup).
- */
-chrome.webNavigation.onCompleted.addListener(validateCache, { url: [{ urlMatches: 'http://localhost:9090/validate' }] });
 
 /**
  * On startup, connect to the app, starts if needed.

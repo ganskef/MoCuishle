@@ -5,8 +5,6 @@
  */
 var proxyConnection = null;
 
-var validateTabId;
-
 function onErrorInfo(error) {
   console.info(`Ignored: ${error}`);
 }
@@ -46,7 +44,6 @@ function enableMoCuishle() {
 }
 
 function startMoCuishle() {
-  validateTabId = null;
   try {
     proxyConnection = browser.runtime.connectNative("de.ganskef.mocuishle");
     setTimeout(function() {
@@ -69,7 +66,6 @@ function cleanupTabs(tabs) {
 }
 
 function disableMoCuishle() {
-  validateTabId = null;
   try {
     proxyConnection.disconnect();
   } catch (e) {
@@ -86,6 +82,8 @@ function disableMoCuishle() {
       64: "data/ic_launcher-64b.png"
     }
   });
+  /** Remove MoCuishle tabs on exit */
+  // Try to work, if none tabs authorization (optional_permission).
   browser.tabs.query({ url: "*://localhost/*" }).then(cleanupTabs, onErrorInfo);
 }
 
@@ -99,62 +97,6 @@ browser.browserAction.onClicked.addListener(() => {
     disableMoCuishle();
   }
 });
-
-/**
- * The XMLHttpRequest object to load the urls for validate-cache-iterate.
- */
-var req;
-
-/**
- * Handles parsing the feed data we got back from XMLHttpRequest.
- */
-function validateResponse() {
-  var cacheUrl = req.responseText;
-  if (!cacheUrl || cacheUrl === "http://localhost:9090/done") {
-    return;
-  }
-  setTimeout(function() {
-    browser.tabs.query({ currentWindow: true, active: true }, function(tabs) {
-      if (tabs[0].url === cacheUrl) {
-        validateNext();
-      }
-    });
-  }, 10000);
-  browser.tabs.update({ "url": cacheUrl });
-}
-
-function validateNext() {
-  req = new XMLHttpRequest();
-  req.onload = validateResponse;
-  req.onerror = onErrorInfo;
-  req.open('GET', 'http://localhost:9090/validate-cache-iterate', true);
-  req.send(null);
-}
-
-function validateCache() {
-  function onCleared() {
-    browser.tabs.update({
-      "url": 'http://localhost:9090/cacheonly'
-    }, function(tab) {
-      validateTabId = tab.id;
-    });
-  }
-  browser.browsingData.removeCache({}).then(onCleared, onErrorInfo);
-}
-
-/**
- * Each time a tab is updated, check the status and validate next if needed.
- */
-browser.tabs.onUpdated.addListener((id, changeInfo, tab) => {
-  if (tab.id == validateTabId && changeInfo.status == 'complete') {
-    validateNext();
-  }
-});
-
-/**
- * Validate cache on entering URL (ugly workaround before implementing a popup).
- */
-browser.webNavigation.onCompleted.addListener(validateCache, { url: [{ urlMatches: 'http://localhost:9090/validate' }] });
 
 /**
  * On startup, connect to the app, starts if needed.
