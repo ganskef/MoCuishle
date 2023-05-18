@@ -14,11 +14,11 @@ The submodules are in the special branch `enable_offline_caching_with_mitm` vers
 
     git pull --recurse-submodules
 
-*Mo Cuishle* depends on *JDK 11* and *Maven 3.8* (see issues):
+*Mo Cuishle* depends on *OpenJDK 11* and *Maven 3.8* (see: [#5](https://github.com/ganskef/MoCuishle/issues/5)):
 
     mvn clean install
 
-Tested with Windows 10, macOS and Linux OpenJDK 11.0.19, Maven 3.8.7.
+Tested with *Windows*, *macOS* and *Linux* **OpenJDK 11.0.19 and Maven 3.8.8**.
 
 ## Install Browser Extensions
 
@@ -28,7 +28,7 @@ For *Chrome* like browsers install the built browser extension with the URI: `ch
 
     private static final String CHROMIUM_EXTENSION = "chrome-extension://ajccdogbepemoknjbdigfdnjlinpbedj/";
 
-*[Native messaging host](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)* requires `allowed_origins` which is generated while installing an unpacked extension in the Chrome browser.
+*[Native messaging host](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)* requires `allowed_origins` which is generated while installing an unpacked extension in the *Chrome* browser.
 
 For *Mozilla* browsers it's necessary to use signed extension. You have to use a *[Developer Edition](https://www.mozilla.org/firefox/developer/)* to load the built extension `mocuishle-browser/target/mocuishle-browser-2.1.2-firefox.zip`. Have a look at the release page to grab a signed extension.
 
@@ -55,9 +55,9 @@ The first execution creates a certificate `~/MoCuishle/mocuishle.pem` to install
 
 ## Trouble Shooting
 
-* I had some problems with more recent versions of Java and Maven while testing macOS and Windows. I'm working on it. Please use the given versions at the moment. Double check using a JDK instead a JRE.
+* I had some problems with more recent versions of *Java* and *Maven* while testing *macOS* and *Windows*. I'm working on it (see: [#5](https://github.com/ganskef/MoCuishle/issues/5). Please use the given versions at the moment. Double check using an *OpenJDK* instead of a *JDK* or *JRE* and a [Previous Stable 3.8.x Release](https://maven.apache.org/download.cgi?.#previous-stable-3-8-x-release) of *Maven*.
 * I had test failures on macOS and Windows, try `mvn clean install -DskipTests`. I'm working on it.
-* You have to be an administrative user in macOS, maybe Windows too to install the browser certificate as a trusted certificate agency. If not, You could use a Mozilla browser to install it.
-* Native Host Messaging (browser extension starts the Java application) won't work with new installed unpacked extension in Chrome browsers. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7).
+* You have to be an administrative user in *macOS*, maybe *Windows* too to install the browser certificate as a trusted certificate agency. If not, You could use a *Mozilla* browser to install it.
+* *Native Host Messaging* (browser extension starts the *Java* application) won't work with new installed unpacked extension in *Chrome* browsers. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7).
 
 This is not as simple like the [early days](https://ganskef.github.io/MoCuishle/#!2016-09-26-mocuishle.md#The_vision_-_Ideas_behind), but I'm working on it.
