@@ -1,9 +1,15 @@
 * text=auto eol=lf
 
+# Bootstrap files
 *.ttf binary
 *.woff binary
 *.woff2 binary
+
+# SQLite files
 *.so binary
 *.dylib binary
+*.dll binary
+
+# Image files
 *.png binary
 *.jpg binary
