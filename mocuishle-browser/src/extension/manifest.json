@@ -16,8 +16,7 @@
     "proxy",
     "tabs",
     "browsingData",
-    "*://localhost/*",
-    "webNavigation"
+    "*://localhost/*"
   ],
   "background": {
     "scripts": [
