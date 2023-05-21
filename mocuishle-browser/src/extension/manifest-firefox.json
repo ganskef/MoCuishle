@@ -11,18 +11,22 @@
       "strict_min_version": "91.1.0"
     }
   },
+  "options_ui": {
+    "page": "options.html"
+  },
   "icons": {
     "16": "data/ic_launcher-16.png",
     "32": "data/ic_launcher-32.png",
     "48": "data/ic_launcher-48.png",
-    "64": "data/ic_launcher-64.png"
+    "64": "data/ic_launcher-64.png",
+    "128": "data/ic_launcher-128.png"
   },
   "permissions": [
     "nativeMessaging",
     "proxy",
     "tabs",
-    "browsingData",
-    "*://localhost/*"
+    "storage",
+    "browsingData"
   ],
   "background": {
     "scripts": [

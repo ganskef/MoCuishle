@@ -2,12 +2,14 @@
 
 /**
  * Port for native messaging to the Mo Cuishle application.
+ * 
+ * Connecting to a native messaging host using chrome.runtime.connectNative() in
+ * an extension's service worker will keep the service worker alive as long as 
+ * the port is open.
+ * 
+ * https://developer.chrome.com/docs/extensions/whatsnew/#m100-native-msg-lifetime
  */
 var proxyConnection = null;
-
-function onErrorInfo(error) {
-  console.info(`Ignored: ${error}`);
-}
 
 function startupTab(tabs) {
   for (let tab of tabs) {
@@ -19,7 +21,14 @@ function startupTab(tabs) {
   chrome.tabs.create({ "url": "http://localhost:9090/browse" });
 }
 
-function enableMoCuishle() {
+async function enableMoCuishle() {
+  chrome.storage.session.set({ enabled: true });
+  // Try to work, if Mo Cuishle application is already running or not.
+  try {
+    proxyConnection = await chrome.runtime.connectNative("de.ganskef.mocuishle");
+  } catch (e) {
+    console.warn(`startMoCuishle throws ${e}`);
+  }
   function onCleared() {
     chrome.proxy.settings.set({
       value: {
@@ -32,9 +41,9 @@ function enableMoCuishle() {
     try {
       chrome.tabs.query({ url: "*://localhost/*" }, startupTab);
     } catch (e) {
-      onErrorInfo(e);
+      console.warn(`tabs.query throws ${e}`);
     }
-    chrome.browserAction.setIcon({
+    chrome.action.setIcon({
       path: {
         16: "data/ic_launcher-16.png",
         32: "data/ic_launcher-32.png",
@@ -46,21 +55,7 @@ function enableMoCuishle() {
   try {
     chrome.browsingData.removeCache({}, onCleared);
   } catch (e) {
-    onErrorInfo(e);
-  }
-}
-
-function startMoCuishle() {
-  try {
-    proxyConnection = chrome.runtime.connectNative("de.ganskef.mocuishle");
-    setTimeout(function() {
-      enableMoCuishle();
-    }, 2000);
-  } catch (e) {
-    proxyConnection = {};
-    // Try to work, if Mo Cuishle application is already running.
-    onErrorInfo(e);
-    enableMoCuishle();
+    console.warn(`browsingData.removeCache throws ${e}`);
   }
 }
 
@@ -73,15 +68,14 @@ function cleanupTabs(tabs) {
 }
 
 function disableMoCuishle() {
+  chrome.storage.session.set({ enabled: false });
   try {
     proxyConnection.disconnect();
   } catch (e) {
-    // Ignore any error on disconnecting to continue switch.
-    onErrorInfo(e);
+    console.warn(`proxyConnection.disconnect throws ${e}`);
   }
-  proxyConnection = null;
   chrome.proxy.settings.set({ value: { mode: "direct" } });
-  chrome.browserAction.setIcon({
+  chrome.action.setIcon({
     path: {
       16: "data/ic_launcher-16b.png",
       32: "data/ic_launcher-32b.png",
@@ -94,34 +88,38 @@ function disableMoCuishle() {
   try {
     chrome.tabs.query({ url: "*://localhost/*" }, cleanupTabs);
   } catch (e) {
-    onErrorInfo(e);
+    console.warn(`tabs.query on exit throws ${e}`);
   }
 }
 
 /**
  * On clicked switch on/off the proxy usage.
  */
-chrome.browserAction.onClicked.addListener(() => {
-  if (proxyConnection == null) {
-    startMoCuishle();
-  } else {
-    disableMoCuishle();
-  }
-});
-
-chrome.windows.onRemoved.addListener(function(windowId){
-  if (proxyConnection != null) {
-    disableMoCuishle();
-  }
-});
-
-chrome.runtime.onSuspend.addListener(() => {
-  if (proxyConnection != null) {
-    disableMoCuishle();
-  }
+chrome.action.onClicked.addListener(() => {
+  chrome.storage.session.get(["enabled"]).then((item) => {
+    console.log(`action.onClicked while enabled=${item.enabled}`);
+    if (item.enabled != true) {
+      enableMoCuishle();
+    } else {
+      disableMoCuishle();
+    }
+  });
 });
 
 /**
- * On startup, connect to the app, starts if needed.
+ * Remove on uninstall, but fails to remove on closing Chrome. Mo Cuishle app is
+ * not forced to close like on Firefox.
+ * 
+ * https://developer.chrome.com/docs/extensions/migrating/api-calls/
+ * 
+ * "Not supported in extension service workers. Use the beforeunload document
+ * event instead."
+ * 
  */
-startMoCuishle();
+chrome.runtime.onSuspend.addListener(() => disableMoCuishle());
+
+/**
+ * On startup, connect to the Mo Cuishle app, starts if needed.
+ */
+chrome.runtime.onInstalled.addListener(() => enableMoCuishle());
+chrome.runtime.onStartup.addListener(() => enableMoCuishle());

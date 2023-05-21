@@ -33,9 +33,10 @@
     <fileSet>
       <directory>${project.build.scriptSourceDirectory}</directory>
       <outputDirectory></outputDirectory>
-      <includes>
-        <include>data/</include>
-      </includes>
+      <excludes>
+        <exclude>manifest*.json</exclude>
+        <exclude>mocuishle*.js</exclude>
+      </excludes>
     </fileSet>
   </fileSets>
 

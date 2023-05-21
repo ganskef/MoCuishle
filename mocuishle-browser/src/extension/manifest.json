@@ -1,29 +1,31 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Mo Cuishle",
   "short_name": "${project.artifactId}",
   "description": "${project.description}",
   "homepage_url": "${project.url}",
   "version": "${project.version}",
+  "options_ui": {
+    "page": "options.html"
+  },
   "icons": {
     "16": "data/ic_launcher-16.png",
     "32": "data/ic_launcher-32.png",
     "48": "data/ic_launcher-48.png",
-    "64": "data/ic_launcher-64.png"
+    "64": "data/ic_launcher-64.png",
+    "128": "data/ic_launcher-128.png"
   },
   "permissions": [
     "nativeMessaging",
     "proxy",
     "tabs",
-    "browsingData",
-    "*://localhost/*"
+    "storage",
+    "browsingData"
   ],
   "background": {
-    "scripts": [
-      "mocuishle.js"
-    ]
+    "service_worker": "mocuishle.js"
   },
-  "browser_action": {
+  "action": {
     "default_icon": {
       "16": "data/ic_launcher-16b.png",
       "32": "data/ic_launcher-32b.png"
