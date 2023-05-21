@@ -20,18 +20,6 @@ The submodules are in the special branch `enable_offline_caching_with_mitm` vers
 
 Tested with *Windows*, *macOS* and *Linux* **OpenJDK 11.0.19 and Maven 3.8.8**.
 
-## Install Browser Extensions
-
-For *Chrome* like browsers install the built browser extension with the URI: `chrome://extensions`. It requires to enable the *Developer mode*. Use the button *Load unpacked* to select the subdir `mocuishle-browser/target/classes` in your workspace. The browser should open an new tab with <http://localhost:9090/>.
-
-**Hint:** For *Chrome* browsers it's **necessary to get the ID** of the unpacked extension which is generated at first installation. Modify this [this line](https://github.com/ganskef/MoCuishle/blob/master/mocuishle/src/main/java/de/ganskef/mocuishle/main/BrowserExtensionSupport.java#L158) depending on your installation and build again. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7).
-
-    private static final String CHROMIUM_EXTENSION = "chrome-extension://ajccdogbepemoknjbdigfdnjlinpbedj/";
-
-*[Native messaging host](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)* requires `allowed_origins` which is generated while installing an unpacked extension in the *Chrome* browser.
-
-For *Mozilla* browsers it's necessary to use signed extension. You have to use a *[Developer Edition](https://www.mozilla.org/firefox/developer/)* to load the built extension `mocuishle-browser/target/mocuishle-browser-2.1.2-firefox.zip`. Have a look at the release page to grab a signed extension.
-
 ## Initialize the application
 
 First run the *Java* application by double click or command line:
@@ -52,6 +40,26 @@ In the home directory a `~/MoCuishle` directory is created. It contains the runt
 ## Browser Certificate
 
 The first execution creates a certificate `~/MoCuishle/mocuishle.pem` to install in your browsers. For details see [LittleProxy-mitm](https://github.com/ganskef/LittleProxy-mitm#get-it-up-and-running).
+
+## Install Browser Extensions
+
+For *Chrome* like browsers install the built browser extension with the URI: `chrome://extensions`. It requires to enable the *Developer mode*. Use the button *Load unpacked* to select the subdir `mocuishle-browser/target/classes` in your workspace. The browser should open an new tab with <http://localhost:9090/>.
+
+**Hint:** For *Chrome* browsers it's **necessary to get the ID** of the unpacked extension which is generated at first installation. Until it's published in the Web Stores, please modify the native host config files. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7).
+
+*[Native messaging host](https://developer.chrome.com/docs/apps/nativeMessaging/#native-messaging-host)* requires `allowed_origins` which is generated while installing an unpacked extension in the *Chrome* browser. The file looks like this, but with your home dir, here with an additional unpacked extension:
+
+    {
+      "name": "de.ganskef.mocuishle",
+      "description": "A caching proxy for offline use.",
+      "path": "/home/frank/MoCuishle/mocuishle.sh",
+      "type": "stdio",
+      "allowed_origins": [ "chrome-extension://ajccdogbepemoknjbdigfdnjlinpbedj/","chrome-extension://oohnpccaehbcpnanlbbboljabnajlhem/" ]
+    }
+
+For *Mozilla* browsers it's necessary to use signed extension. You have to use a *[Developer Edition](https://www.mozilla.org/firefox/developer/)* to load the built extension `mocuishle-browser/target/mocuishle-browser-2.1.4-firefox.zip`. Have a look at the release page to grab a signed extension.
+
+Of course you can use an other proxy switcher, but try to disable the browser cache to avoid conflicts, since *Mo Cuishle* should be the cache for offline use.
 
 ## Trouble Shooting
 
