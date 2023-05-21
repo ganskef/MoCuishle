@@ -107,8 +107,14 @@ chrome.action.onClicked.addListener(() => {
 });
 
 /**
- * Remove on uninstall, but fails to remove on closing Crone caused by the 
- * asynchrone design. The Mo Cuishle app is not forced to close like on Firefox.
+ * Remove on uninstall, but fails to remove on closing Chrome. Mo Cuishle app is
+ * not forced to close like on Firefox.
+ * 
+ * https://developer.chrome.com/docs/extensions/migrating/api-calls/
+ * 
+ * "Not supported in extension service workers. Use the beforeunload document
+ * event instead."
+ * 
  */
 chrome.runtime.onSuspend.addListener(() => disableMoCuishle());
 
