@@ -16,8 +16,8 @@
     <maven.compiler.source>${javac.target}</maven.compiler.source>
   </properties>
 
-  <name>Mo Cuishle - Browser Extensions</name>
-  <description>A caching proxy for offline use - Browser Extensions to use Mo Cuishle with browsers</description>
+  <name>Mo Cuishle - Browser Extension</name>
+  <description>A caching proxy for offline use - Enable the browser to use the app.</description>
   <url>https://ganskef.github.io/MoCuishle/</url>
 
   <dependencies>

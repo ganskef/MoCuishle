@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "${project.name}",
+  "name": "Mo Cuishle",
   "short_name": "${project.artifactId}",
   "description": "${project.description}",
   "homepage_url": "${project.url}",
