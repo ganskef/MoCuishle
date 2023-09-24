@@ -22,7 +22,10 @@ import org.junit.jupiter.api.Test;
 
 class InterceptionProxyTest {
 
+  private static String OS = System.getProperty("os.name").toLowerCase();
+
   private static final String BASE_DIR = "target";
+
   private MockWebServer server;
   private OkHttpClient directClient;
   private OkHttpClient proxyClient;
@@ -41,7 +44,8 @@ class InterceptionProxyTest {
     Impersonation direct =
         new Impersonation.Builder().basedir(BASE_DIR).alias("MockWebServer").build();
     server = new MockWebServer();
-    server.useHttps(direct.createSSLContext("localhost").getSocketFactory(), false);
+    String securedAddress = OS.contains("win") ? "127.0.0.1" : "localhost";
+    server.useHttps(direct.createSSLContext(securedAddress).getSocketFactory(), false);
     server.start();
 
     // The client needs the certificate of the MockWebServer.

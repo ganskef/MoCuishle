@@ -19,6 +19,10 @@ import org.junit.jupiter.api.Test;
 
 class SecuredServerTest {
 
+  private static String OS = System.getProperty("os.name").toLowerCase();
+
+  private static final String BASE_DIR = "target";
+
   private SecuredServer server;
 
   private OkHttpClient client;
@@ -32,8 +36,9 @@ class SecuredServerTest {
   public void setUp() throws Exception {
 
     // The server needs a certificate to serve secured content.
-    Impersonation impersonator = new Impersonation.Builder().basedir("target").build();
-    SSLContext sslContext = impersonator.createSSLContext("localhost");
+    Impersonation impersonator = new Impersonation.Builder().basedir(BASE_DIR).build();
+    String securedAddress = OS.contains("win") ? "127.0.0.1" : "localhost";
+    SSLContext sslContext = impersonator.createSSLContext(securedAddress);
     server = new SecuredServer(sslContext, "target", 0);
     server.run();
 
