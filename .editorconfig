@@ -2,7 +2,7 @@
 
 root = true
 
-[*.{js,json,xml}]
+[*.{js,json,xml,java}]
 end_of_line = lf
 insert_final_newline = true
 charset = utf-8

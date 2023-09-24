@@ -1,60 +1,83 @@
 package de.ganskef.mocuishle.modify;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+
+import java.io.File;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import de.ganskef.mocuishle.ICacheableModify;
 import de.ganskef.mocuishle.IPlatform;
 import de.ganskef.mocuishle.Markup;
-import de.ganskef.mocuishle.McTestProxy;
-import de.ganskef.mocuishle.main.JavaPlatform;
 
 public class HtmlModifierTest {
 
-	static class ModifyCacheableAdapter implements ICacheableModify {
+	@Mock
+	IPlatform platform;
+
+	private ICacheableModify cached;
+
+	@Before
+	public void initMocks() {
+		MockitoAnnotations.initMocks(this);
+		when(platform.getHttpSpoolDir())
+				.thenReturn(new File(String.format("target/%s/http", getClass().getSimpleName())));
+	}
+
+	/** TODO replace with Mockito */
+	static class CacheableModifyMock implements ICacheableModify {
+
+		private final IPlatform platform;
 
 		private String url;
 
+		CacheableModifyMock(IPlatform platform) {
+			this.platform = platform;
+		}
+
+		@Override
 		public String toUrl(String href) {
 			return href;
 		}
 
+		@Override
 		public boolean isRequested(String href) {
-			url = toUrl(href);
+			url = href;
 			return ("requested".equals(href));
 		}
 
+		@Override
 		public boolean isCached(String href) {
-			url = toUrl(href);
+			url = href;
 			return ("cached".equals(href));
 		}
 
+		@Override
 		public void recordBrowse(String title) {
-			// TODO Auto-generated method stub
-
 		}
 
+		@Override
 		public String getLocalUrl() {
-			return "http://127.0.0.1:" + new JavaPlatform().getProxyPort();
+			return "http://127.0.0.1:9090";
 		}
 
+		@Override
 		public String getHostName() {
 			return "www.freebsd.org";
 		}
 
+		@Override
 		public boolean isOkStatus() {
 			return true;
 		}
 
 		@Override
 		public Markup getMarkup() {
-			return new Markup(getPlatform());
-		}
-
-		IPlatform getPlatform() {
-			return new McTestProxy();
+			return new Markup(platform);
 		}
 
 		@Override
@@ -68,8 +91,6 @@ public class HtmlModifierTest {
 		}
 	}
 
-	private ModifyCacheableAdapter cached;
-
 	private String modify(String input) {
 		HtmlModifier replacer = new HtmlModifier(cached, input);
 		return replacer.getModifiedHtml(true).toString();
@@ -77,7 +98,7 @@ public class HtmlModifierTest {
 
 	@Before
 	public void before() {
-		cached = new ModifyCacheableAdapter();
+		cached = new CacheableModifyMock(platform);
 	}
 
 	@Test
@@ -98,10 +119,10 @@ public class HtmlModifierTest {
 
 	@Test
 	public void testModifyEncodedUrlInBodyEnd() throws Exception {
-		cached = new ModifyCacheableAdapter() {
+		cached = new CacheableModifyMock(platform) {
 			@Override
 			public Markup getMarkup() {
-				return new Markup(getPlatform()) {
+				return new Markup(platform) {
 					@Override
 					public Modify getModify() {
 						return new Modify() {

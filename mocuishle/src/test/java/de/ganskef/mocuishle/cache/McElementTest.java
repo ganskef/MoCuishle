@@ -1,15 +1,20 @@
 package de.ganskef.mocuishle.cache;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
+
+import java.io.File;
 
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
 import de.ganskef.mocuishle.IPlatform;
-import de.ganskef.mocuishle.McTestProxy;
 
 public class McElementTest {
 
+	@Mock
 	private IPlatform platform;
 
 	private McCache cache;
@@ -20,7 +25,12 @@ public class McElementTest {
 
 	@Before
 	public void before() {
-		platform = new McTestProxy();
+		MockitoAnnotations.initMocks(this);
+		when(platform.getHttpSpoolDir())
+				.thenReturn(new File(String.format("target/%s/http", getClass().getSimpleName())));
+		when(platform.getHttpsSpoolDir())
+				.thenReturn(new File(String.format("target/%s/https", getClass().getSimpleName())));
+
 		cache = new McCache(platform);
 		root = "http://martinfowler.com/";
 		rootElement = cache.createElement(root);

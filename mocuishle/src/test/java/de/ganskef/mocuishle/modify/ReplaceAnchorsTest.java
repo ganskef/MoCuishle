@@ -1,18 +1,34 @@
 package de.ganskef.mocuishle.modify;
 
 import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.when;
 
+import java.io.File;
 import java.io.InputStream;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.Before;
 import org.junit.Test;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 
-import de.ganskef.mocuishle.modify.HtmlModifierTest.ModifyCacheableAdapter;
+import de.ganskef.mocuishle.ICacheableModify;
+import de.ganskef.mocuishle.IPlatform;
+import de.ganskef.mocuishle.modify.HtmlModifierTest.CacheableModifyMock;
 
 public class ReplaceAnchorsTest {
 
-	private ModifyCacheableAdapter cached;
+	@Mock
+	private IPlatform platform;
+
+	private ICacheableModify cached;
+
+	@Before
+	public void initMocks() {
+		MockitoAnnotations.initMocks(this);
+		when(platform.getHttpSpoolDir())
+				.thenReturn(new File(String.format("target/%s/http", getClass().getSimpleName())));
+	}
 
 	private IModifier replacer;
 
@@ -27,7 +43,7 @@ public class ReplaceAnchorsTest {
 
 	@Before
 	public void before() {
-		cached = new ModifyCacheableAdapter();
+		cached = new CacheableModifyMock(platform);
 		replacer = new ReplaceAnchors(cached, "title");
 	}
 

@@ -15,7 +15,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import de.ganskef.mocuishle.cache.McElement;
-import de.ganskef.mocuishle.proxy.McHttpHeaders;
 
 public interface ICacheableProxy {
 
@@ -170,11 +169,33 @@ public interface ICacheableProxy {
 		}
 
 		public boolean isTextHtml() {
-			return McHttpHeaders.isContentTypeTextHtml(mHeaders);
+			return isContentTypeTextHtml(mHeaders);
+		}
+
+		private boolean isContentTypeTextHtml(Iterable<Entry<String, String>> headers) {
+			String contentType = getContentType(headers);
+			if (contentType != null) {
+				return isContentTypeTextHtml(contentType);
+			}
+			return false;
+		}
+
+		private boolean isContentTypeTextHtml(String contentType) {
+			return contentType != null
+					&& (contentType.contains("text/html") || contentType.contains("application/xhtml"));
 		}
 
 		public String getContentType() {
-			return McHttpHeaders.getContentType(mHeaders);
+			return getContentType(mHeaders);
+		}
+
+		private String getContentType(Iterable<Entry<String, String>> headers) {
+			for (Map.Entry<String, String> each : headers) {
+				if ("content-type".equalsIgnoreCase(each.getKey())) {
+					return each.getValue();
+				}
+			}
+			return null;
 		}
 	}
 

@@ -4,16 +4,22 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>de.ganskef.mocuishle</groupId>
-  <artifactId>mocuishle</artifactId>
+  <artifactId>mocuishle-okproxy</artifactId>
   <version>2.2.0</version>
   <packaging>jar</packaging>
 
-  <name>Mo Cuishle library</name>
-  <description>A caching proxy for offline use. (The application main class is removed from here during the replacement of the Netty dependencies)</description>
+  <name>Mo Cuishle (OkProxy)</name>
+  <description>A caching proxy for offline use - based on OkProxy.</description>
   <url>https://ganskef.github.io/MoCuishle/</url>
 
   <properties>
     <sqlite4java.version>1.0.392</sqlite4java.version>
+    <netty.version>4.1.92.Final</netty.version>
+    <littleproxy.version>1.1.1-offline</littleproxy.version>
+
+    <junit.version>4.13.1</junit.version>
+    <junit.jupiter.version>5.8.2</junit.jupiter.version>
+    <mockito.version>2.27.0</mockito.version>
 
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <javac.target>11</javac.target>
@@ -23,6 +29,27 @@
 
   <dependencies>
     <dependency>
+      <groupId>de.ganskef.mocuishle</groupId>
+      <artifactId>mocuishle</artifactId>
+      <version>2.2.0</version>
+    </dependency>
+    <dependency>
+      <groupId>de.ganskef</groupId>
+      <artifactId>okproxy-java</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.brotli</groupId>
+      <artifactId>dec</artifactId>
+      <version>0.1.2</version>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>logging-interceptor</artifactId>
+      <version>3.14.9</version>
+    </dependency>
+
+    <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
       <version>4.13.1</version>
@@ -31,15 +58,10 @@
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>2.27.0</version>
+      <version>5.3.1</version>
       <scope>test</scope>
     </dependency>
 
-    <dependency>
-      <groupId>com.jcraft</groupId>
-      <artifactId>jzlib</artifactId>
-      <version>1.1.3</version>
-    </dependency>
     <dependency>
       <groupId>com.almworks.sqlite4java</groupId>
       <artifactId>sqlite4java</artifactId>
@@ -58,6 +80,11 @@
       <version>1.7.21</version>
     </dependency>
     <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <version>1.2.11</version>
+    </dependency>
+    <dependency>
       <groupId>org.jsoup</groupId>
       <artifactId>jsoup</artifactId>
       <version>1.16.1</version>
@@ -70,17 +97,20 @@
     <dependency>
       <groupId>commons-io</groupId>
       <artifactId>commons-io</artifactId>
-      <version>2.13.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>3.13.0</version>
+      <version>2.11.0</version>
+      <scope>compile</scope>
     </dependency>
     <dependency>
       <groupId>com.google.guava</groupId>
       <artifactId>guava</artifactId>
-      <version>32.1.2-jre</version>
+      <version>31.1-jre</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.12.0</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
 
@@ -109,7 +139,6 @@
           <target>${javac.target}</target>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -122,19 +151,58 @@
       </plugin>
 
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>3.2.3</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <!-- TODO: <minimizeJar>true</minimizeJar> -->
+              <artifactSet>
+                <excludes>
+                  <exclude>com.almworks.sqlite4java:lib*</exclude>
+                </excludes>
+              </artifactSet>
+              <filters>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>OSGI-INF/**/*</exclude>
+                    <exclude>templates/**/*</exclude>
+                    <exclude>**/.gitignore</exclude>
+                    <exclude>META-INF/maven/**/*</exclude>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <manifestEntries>
+                    <Main-Class>de.ganskef.mocuishle2.main.McOkProxyMain</Main-Class>
+                  </manifestEntries>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+
+      <plugin>
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
         <version>2.22.5</version>
         <configuration>
           <java>
-            <importOrder>
-              <order>java,javax,org,com</order>
-            </importOrder>
+            <importOrder/>
             <removeUnusedImports/>
-            <eclipse>
-              <version>4.13.0</version>
-              <file>src/eclipse-jdt-formatter.xml</file>
-            </eclipse>
+            <googleJavaFormat/>
           </java>
           <pom>
             <sortPom>
@@ -152,8 +220,8 @@
           </execution>
         </executions>
       </plugin>
-    </plugins>
 
+    </plugins>
   </build>
 
 </project>
