@@ -22,6 +22,7 @@ import org.junit.jupiter.api.Test;
 
 class InterceptionProxyTest {
 
+  private static final String BASE_DIR = "target";
   private MockWebServer server;
   private OkHttpClient directClient;
   private OkHttpClient proxyClient;
@@ -38,7 +39,7 @@ class InterceptionProxyTest {
 
     // The MockWebServer needs a certificate to serve secured content.
     Impersonation direct =
-        new Impersonation.Builder().basedir("target").alias("MockWebServer").build();
+        new Impersonation.Builder().basedir(BASE_DIR).alias("MockWebServer").build();
     server = new MockWebServer();
     server.useHttps(direct.createSSLContext("localhost").getSocketFactory(), false);
     server.start();
@@ -56,7 +57,7 @@ class InterceptionProxyTest {
     directClient = testClientBuilder.build();
 
     // This creates okproxy.p12 and okproxy.pem in target
-    Impersonation.Builder testImpersonationBuilder = new Impersonation.Builder().basedir("target");
+    Impersonation.Builder testImpersonationBuilder = new Impersonation.Builder().basedir(BASE_DIR);
     proxy = new InterceptionProxy(0, testImpersonationBuilder, testClientBuilder);
     proxy.run();
 

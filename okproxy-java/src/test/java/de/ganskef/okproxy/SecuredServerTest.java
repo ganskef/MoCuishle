@@ -32,7 +32,7 @@ class SecuredServerTest {
   public void setUp() throws Exception {
 
     // The server needs a certificate to serve secured content.
-    Impersonation impersonator = new Impersonation.Builder().build();
+    Impersonation impersonator = new Impersonation.Builder().basedir("target").build();
     SSLContext sslContext = impersonator.createSSLContext("localhost");
     server = new SecuredServer(sslContext, "target", 0);
     server.run();

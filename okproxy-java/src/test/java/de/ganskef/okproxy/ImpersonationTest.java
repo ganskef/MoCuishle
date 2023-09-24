@@ -15,7 +15,7 @@ class ImpersonationTest {
 
   @BeforeAll
   static void setUpBeforeClass() throws Exception {
-    new Impersonation.Builder().build();
+    new Impersonation.Builder().basedir(BASE_DIR).build();
   }
 
   @Test
@@ -100,7 +100,7 @@ class ImpersonationTest {
 
   @Test
   void testWithExistingKeystore() throws Exception {
-    final Impersonation impersonator = new Impersonation.Builder().build();
+    final Impersonation impersonator = new Impersonation.Builder().basedir(BASE_DIR).build();
     assertThat(impersonator.intermediateCertificate()).isNotNull();
   }
 
@@ -143,7 +143,7 @@ class ImpersonationTest {
 
   @Test
   void testServerCertificate() throws Exception {
-    final Impersonation impersonator = new Impersonation.Builder().build();
+    final Impersonation impersonator = new Impersonation.Builder().basedir(BASE_DIR).build();
     assertThat(impersonator.createSSLContext("localhost")).isNotNull();
   }
 }
