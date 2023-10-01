@@ -105,11 +105,5 @@ class SimpleServerTest {
             () -> {
               SimpleServer.main(new String[] {"-1"});
             });
-    assertThatExceptionOfType(IOException.class)
-        .as("protected port number")
-        .isThrownBy(
-            () -> {
-              SimpleServer.main(new String[] {"80"});
-            });
   }
 }

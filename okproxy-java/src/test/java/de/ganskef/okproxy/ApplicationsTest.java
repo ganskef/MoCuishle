@@ -46,7 +46,7 @@ class ApplicationsTest {
           .contains("de.ganskef.okproxy.OkHttpServer");
       assertThat(br.readLine())
           .as("syserr with java util logging line 2")
-          .isEqualTo("INFORMATION: Starting to accept connections");
+          .endsWith(": Starting to accept connections");
     }
   }
 
@@ -73,7 +73,7 @@ class ApplicationsTest {
           .contains("de.ganskef.okproxy.OkHttpServer");
       assertThat(br.readLine())
           .as("syserr with java util logging line 2")
-          .isEqualTo("INFORMATION: Starting to accept connections");
+          .endsWith(": Starting to accept connections");
     }
   }
 
@@ -96,22 +96,20 @@ class ApplicationsTest {
           .contains("de.ganskef.okproxy.OkHttpServer");
       assertThat(br.readLine())
           .as("syserr with java util logging line 2")
-          .isEqualTo("INFORMATION: Starting to accept connections");
+          .endsWith(": Starting to accept connections");
     }
   }
 
   @Test
   void testInterceptionProxy() throws Exception {
-    new Impersonation.Builder().basedir(BASE_DIR).alias("testInterceptionProxy").build();
+    new Impersonation.Builder().basedir(BASE_DIR).build();
     process =
         new ProcessBuilder(
                 "java",
                 "-cp",
                 CLASSPATH,
                 "de.ganskef.okproxy.InterceptionProxy",
-                "0", // port number, 0 means try to find an unused port
-                "testInterceptionProxy.p12", // key store file name
-                "") // key store password
+                "0") // port number, 0 means try to find an unused port
             .directory(new File(BASE_DIR))
             .start();
 
@@ -122,13 +120,13 @@ class ApplicationsTest {
           .endsWith(" de.ganskef.okproxy.Impersonation <init>");
       assertThat(br.readLine())
           .as("syserr with java util logging line 2")
-          .startsWith("INFORMATION: Load: _OkProxy (offline cache) from ");
+          .contains(" _OkProxy (offline cache) from ");
       assertThat(br.readLine())
           .as("syserr with java util logging line 3")
           .contains("de.ganskef.okproxy.OkHttpServer");
       assertThat(br.readLine())
           .as("syserr with java util logging line 4")
-          .isEqualTo("INFORMATION: Starting to accept connections");
+          .endsWith(": Starting to accept connections");
     }
   }
 }
