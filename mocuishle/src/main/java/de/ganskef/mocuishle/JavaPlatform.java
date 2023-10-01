@@ -1,4 +1,4 @@
-package de.ganskef.mocuishle.main;
+package de.ganskef.mocuishle;
 
 import java.io.File;
 import java.net.InterfaceAddress;
@@ -8,10 +8,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Enumeration;
 
-import de.ganskef.mocuishle.ICache;
-import de.ganskef.mocuishle.IFullTextIndex;
-import de.ganskef.mocuishle.IFullTextSearch;
-import de.ganskef.mocuishle.IPlatform;
 import de.ganskef.mocuishle.sqlite.FullTextIndex;
 import de.ganskef.mocuishle.sqlite.FullTextSearch;
 

@@ -35,8 +35,8 @@ import de.ganskef.mocuishle.IFullTextIndex;
 import de.ganskef.mocuishle.IFullTextSearch;
 import de.ganskef.mocuishle.IPlatform;
 import de.ganskef.mocuishle.IPlatform.ConnectionState;
+import de.ganskef.mocuishle.JavaPlatform;
 import de.ganskef.mocuishle.Markup;
-import de.ganskef.mocuishle.main.JavaPlatform;
 import de.ganskef.mocuishle.util.base64.Base64;
 
 public class McCache implements ICache, IStore {

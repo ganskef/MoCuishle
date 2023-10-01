@@ -1,11 +1,11 @@
-package de.ganskef.mocuishle2.main;
+package de.ganskef.mocuishle2;
 
 import de.ganskef.mocuishle.ICache;
 import de.ganskef.mocuishle.IPlatform;
+import de.ganskef.mocuishle.JavaPlatform;
 import de.ganskef.mocuishle.Markup;
 import de.ganskef.mocuishle.cache.McCache;
 import de.ganskef.mocuishle.main.BrowserExtensionSupport;
-import de.ganskef.mocuishle.main.JavaPlatform;
 import de.ganskef.mocuishle.main.StartupScript;
 import de.ganskef.mocuishle2.proxy.McOkProxy;
 import java.io.File;
@@ -21,14 +21,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.slf4j.bridge.SLF4JBridgeHandler;
 
-public class McOkProxyMain {
+public class MoCuishleMain {
 
   static {
     SLF4JBridgeHandler.removeHandlersForRootLogger();
     SLF4JBridgeHandler.install();
   }
 
-  private static final Logger log = LoggerFactory.getLogger(McOkProxyMain.class);
+  private static final Logger log = LoggerFactory.getLogger(MoCuishleMain.class);
 
   /*
    * This block prevents the Maven Shade plugin to remove the specified classes

@@ -185,7 +185,7 @@
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
                   <manifestEntries>
-                    <Main-Class>de.ganskef.mocuishle2.main.McOkProxyMain</Main-Class>
+                    <Main-Class>de.ganskef.mocuishle2.MoCuishleMain</Main-Class>
                   </manifestEntries>
                 </transformer>
               </transformers>
