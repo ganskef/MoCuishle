@@ -68,7 +68,7 @@ class ExtensionAssemblyTest {
         Files.newDirectoryStream(Paths.get("target"), "mocuishle-browser-*-chrome.zip").iterator();
     assertThat(it.hasNext()).isTrue().as("Chrome extension exists");
 
-    URI uri = URI.create("jar:file:" + it.next().toAbsolutePath());
+    URI uri = URI.create("jar:" + it.next().toUri());
     try (FileSystem zipfs = FileSystems.newFileSystem(uri, Collections.emptyMap(), null); ) {
       assertThat(list(zipfs.getPath("/"))).isNotBlank();
       // TODO compare collections instead of strings, different ordering on Windows
@@ -107,11 +107,11 @@ class ExtensionAssemblyTest {
   public void testChromeAssemblyFiltering() throws IOException {
     URI assembly =
         URI.create(
-            "jar:file:"
+            "jar:"
                 + Files.newDirectoryStream(Paths.get("target"), "mocuishle-browser-*-chrome.zip")
                     .iterator()
                     .next()
-                    .toAbsolutePath());
+                    .toUri());
     try (FileSystem zipfs = FileSystems.newFileSystem(assembly, Collections.emptyMap(), null); ) {
       Path manifest = zipfs.getPath("/manifest.json");
       for (Iterator<String> it = Files.lines(manifest, StandardCharsets.UTF_8).iterator();
@@ -125,11 +125,11 @@ class ExtensionAssemblyTest {
   public void testFirefoxAssemblyFiltering() throws IOException {
     URI assembly =
         URI.create(
-            "jar:file:"
+            "jar:"
                 + Files.newDirectoryStream(Paths.get("target"), "mocuishle-browser-*-firefox.zip")
                     .iterator()
                     .next()
-                    .toAbsolutePath());
+                    .toUri());
     try (FileSystem zipfs = FileSystems.newFileSystem(assembly, Collections.emptyMap(), null); ) {
       Path manifest = zipfs.getPath("/manifest.json");
       for (Iterator<String> it = Files.lines(manifest, StandardCharsets.UTF_8).iterator();
