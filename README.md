@@ -2,23 +2,19 @@
 
 > All web pages you've seen on the Internet via HTTP or HTTPS will be available later to read them without having to remain connected.
 
-See **https://ganskef.github.io/MoCuishle/** for details.
+See **https://ganskef.github.io/MoCuishle/** for further information.
 
 ## Build and install
 
-Get this repository with submodules included:
+Get this repository:
 
-    git clone --recurse-submodules https://github.com/ganskef/MoCuishle
+    git clone https://github.com/ganskef/MoCuishle
 
-The submodules are in the special branch `enable_offline_caching_with_mitm` version `1.1.1-offline` to enable interception while offline by spoofing the requested address:
-
-    git pull --recurse-submodules
-
-*Mo Cuishle* depends on *OpenJDK 11* and *Maven 3.8* (see: [#5](https://github.com/ganskef/MoCuishle/issues/5)):
+Change dir and build with Maven:
 
     mvn clean install
 
-Tested with *Windows*, *macOS* and *Linux* **OpenJDK 11.0.19 and Maven 3.8.8**.
+Tested on *Windows*, *macOS*, *GNU/Debian* and *FreeBSD*, development on *Arch Linux* with *OpenJDK* 11.0.20.1 and *Maven* 3.8.7. It's simple *Java* internally with a *Kotlin* runtime dependency *OkHttp*.
 
 ## Initialize the application
 
@@ -39,7 +35,9 @@ In the home directory a `~/MoCuishle` directory is created. It contains the runt
 
 ## Browser Certificate
 
-The first execution creates a certificate `~/MoCuishle/mocuishle.pem` to install in your browsers. For details see [LittleProxy-mitm](https://github.com/ganskef/LittleProxy-mitm#get-it-up-and-running).
+The first execution creates a certificate `~/MoCuishle/okproxy.pem` to install in your browsers. For details see [okproxy-java](okproxy-java/README.md).
+
+* [ ] 2023-09-30 **TODO:** MoCuishle uses the formerly mocuishle.pem instead of okhttp.pem (but mocuishle.p12 contains a root certificate instead of the intermediate certificate, might not work)
 
 ## Install Browser Extensions
 
@@ -63,9 +61,14 @@ Of course you can use an other proxy switcher, but try to disable the browser ca
 
 ## Trouble Shooting
 
-* I had some problems with more recent versions of *Java* and *Maven* while testing *macOS* and *Windows*. I'm working on it (see: [#5](https://github.com/ganskef/MoCuishle/issues/5). Please use the given versions at the moment. Double check using an *OpenJDK* instead of a *JDK* or *JRE* and a [Previous Stable 3.8.x Release](https://maven.apache.org/download.cgi?.#previous-stable-3-8-x-release) of *Maven*.
-* I had test failures on macOS and Windows, try `mvn clean install -DskipTests`. I'm working on it.
+* [x] ~~I had some problems with more recent versions of *Java* and *Maven* while testing *macOS* and *Windows*. I'm working on it (see: [#5](https://github.com/ganskef/MoCuishle/issues/5). Please use the given versions at the moment. Double check using an *OpenJDK* instead of a *JDK* or *JRE* and a [Previous Stable 3.8.x Release](https://maven.apache.org/download.cgi?.#previous-stable-3-8-x-release) of *Maven*.~~ 2023-09-30 After replacing *LittleProxy-mitm* with *OkProxy* build succeeds on every tested system.
+* [x] ~~I had test failures on macOS and Windows, try `mvn clean install -DskipTests`. I'm working on it.~~ 2023-09-30 After replacing *LittleProxy-mitm* with *OkProxy* tests are working on every tested system.
 * You have to be an administrative user in *macOS*, maybe *Windows* too to install the browser certificate as a trusted certificate agency. If not, You could use a *Mozilla* browser to install it.
-* *Native Host Messaging* (browser extension starts the *Java* application) won't work with new installed unpacked extension in *Chrome* browsers. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7).
+* *Native Host Messaging* (browser extension starts the *Java* application) won't work with new installed unpacked extension in *Chrome* browsers. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7). **Simply use the autostart feature of your system to launch the MoCuishle JAR in the background.**
 
-This is not as simple like the [early days](https://ganskef.github.io/MoCuishle/#!2016-09-26-mocuishle.md#The_vision_-_Ideas_behind), but I'm working on it.
+This is not as simple like the [early days](https://ganskef.github.io/MoCuishle/#!2016-09-26-mocuishle.md#The_vision_-_Ideas_behind). For good security reasons in [modern browser extensions](https://blog.mozilla.org/addons/2018/08/21/timeline-for-disabling-legacy-firefox-add-ons/) it's not possibly anymore:
+
+* ... to install the certificate in the browser automatically
+* ... to simply handle a Java process by the extension
+* ... to package the Java application into the extension
+

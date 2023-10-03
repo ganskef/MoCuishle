@@ -3,157 +3,152 @@
      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>de.ganskef.mocuishle</groupId>
+  <parent>
+    <groupId>de.ganskef.mocuishle</groupId>
+    <artifactId>mocuishle-parent</artifactId>
+    <version>2.2.0</version>
+  </parent>
+
   <artifactId>mocuishle</artifactId>
-  <version>2.2.0</version>
   <packaging>jar</packaging>
 
-  <name>Mo Cuishle library</name>
-  <description>A caching proxy for offline use. (The application main class is removed from here during the replacement of the Netty dependencies)</description>
-  <url>https://ganskef.github.io/MoCuishle/</url>
-
-  <properties>
-    <sqlite4java.version>1.0.392</sqlite4java.version>
-
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <javac.target>11</javac.target>
-    <maven.compiler.target>${javac.target}</maven.compiler.target>
-    <maven.compiler.source>${javac.target}</maven.compiler.source>
-  </properties>
+  <name>Mo Cuishle - Executable JAR</name>
+  <description>A caching proxy for offline use.</description>
 
   <dependencies>
+    <!-- The major dependencies of the application  -->
     <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>4.13.1</version>
+      <groupId>de.ganskef.mocuishle</groupId>
+      <artifactId>mocuishle-legacy</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>de.ganskef.mocuishle</groupId>
+      <artifactId>mocuishle-okproxy</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <!-- Introduced to implement BrotliInterceptor -->
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp-brotli</artifactId>
+    </dependency>
+    <!-- Selected Logging implementation -->
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+    </dependency>
+    <!-- To analyse traffic -->
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>logging-interceptor</artifactId>
+    </dependency>
+
+    <!-- JUnit5 for testing -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- AssertJ for better testing exceptions and String#contains ... -->
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Mockito for testing with mocks -->
     <dependency>
       <groupId>org.mockito</groupId>
       <artifactId>mockito-core</artifactId>
-      <version>2.27.0</version>
       <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>com.jcraft</groupId>
-      <artifactId>jzlib</artifactId>
-      <version>1.1.3</version>
-    </dependency>
-    <dependency>
-      <groupId>com.almworks.sqlite4java</groupId>
-      <artifactId>sqlite4java</artifactId>
-      <version>${sqlite4java.version}</version>
-      <type>jar</type>
-    </dependency>
-    <dependency>
-      <groupId>com.almworks.sqlite4java</groupId>
-      <artifactId>libsqlite4java-linux-amd64</artifactId>
-      <version>${sqlite4java.version}</version>
-      <type>so</type>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>jul-to-slf4j</artifactId>
-      <version>1.7.21</version>
-    </dependency>
-    <dependency>
-      <groupId>org.jsoup</groupId>
-      <artifactId>jsoup</artifactId>
-      <version>1.16.1</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.code.gson</groupId>
-      <artifactId>gson</artifactId>
-      <version>2.10.1</version>
-    </dependency>
-    <dependency>
-      <groupId>commons-io</groupId>
-      <artifactId>commons-io</artifactId>
-      <version>2.13.0</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>3.13.0</version>
-    </dependency>
-    <dependency>
-      <groupId>com.google.guava</groupId>
-      <artifactId>guava</artifactId>
-      <version>32.1.2-jre</version>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>kr.motd.maven</groupId>
-        <artifactId>os-maven-plugin</artifactId>
-        <version>1.7.0</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>detect</goal>
-            </goals>
-            <phase>initialize</phase>
-          </execution>
-        </executions>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
       </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.1</version>
-        <configuration>
-          <source>${javac.target}</source>
-          <target>${javac.target}</target>
-        </configuration>
+        <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
 
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
-        <version>2.5</version>
-        <configuration>
-          <excludes>
-            <exclude>META-INF/maven/**/*</exclude>
-          </excludes>
-        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-shade-plugin</artifactId>
+        <executions>
+          <execution>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <shadedArtifactAttached>true</shadedArtifactAttached>
+              <minimizeJar>true</minimizeJar>
+              <artifactSet>
+                <excludes>
+                  <exclude>com.almworks.sqlite4java:lib*</exclude>
+                </excludes>
+              </artifactSet>
+              <filters>
+                <filter>
+                  <artifact>com.squareup.okhttp3:okhttp-tls</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+                <filter>
+                  <artifact>org.bouncycastle:bcprov-jdk15on</artifact>
+                  <includes>
+                    <include>**</include>
+                  </includes>
+                </filter>
+                <filter>
+                  <artifact>*:*</artifact>
+                  <excludes>
+                    <exclude>**/.gitignore</exclude>
+                    <exclude>META-INF/maven/**/*</exclude>
+                    <exclude>META-INF/*.SF</exclude>
+                    <exclude>META-INF/*.DSA</exclude>
+                    <exclude>META-INF/*.RSA</exclude>
+                    <exclude>META-INF/LICENSE*</exclude>
+                    <exclude>META-INF/NOTICE.txt</exclude>
+                    <exclude>META-INF/MANIFEST.MF</exclude>
+                  </excludes>
+                </filter>
+              </filters>
+              <transformers>
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <manifestEntries>
+                    <Main-Class>de.ganskef.mocuishle2.MoCuishleMain</Main-Class>
+                  </manifestEntries>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
 
       <plugin>
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
-        <version>2.22.5</version>
         <configuration>
           <java>
-            <importOrder>
-              <order>java,javax,org,com</order>
-            </importOrder>
+            <importOrder/>
             <removeUnusedImports/>
-            <eclipse>
-              <version>4.13.0</version>
-              <file>src/eclipse-jdt-formatter.xml</file>
-            </eclipse>
+            <googleJavaFormat/>
           </java>
-          <pom>
-            <sortPom>
-              <expandEmptyElements>false</expandEmptyElements>
-              <indentSchemaLocation>true</indentSchemaLocation>
-            </sortPom>
-          </pom>
         </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>apply</goal>
-            </goals>
-            <phase>validate</phase>
-          </execution>
-        </executions>
       </plugin>
-    </plugins>
 
+    </plugins>
   </build>
 
 </project>

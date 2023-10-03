@@ -61,6 +61,7 @@ public class McOkProxy extends InterceptionProxy {
         platform.getProxyPort(),
         new Impersonation.Builder().basedir(cache.getWritableDir().getPath()),
         new OkHttpClient.Builder()
+            // TODO okhttp3.brotli.BrotliInterceptor.INSTANCE fails to intercept deflate
             .addInterceptor(new BrotliInterceptor())
             .addInterceptor(
                 new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)));

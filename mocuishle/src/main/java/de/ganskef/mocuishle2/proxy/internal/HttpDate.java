@@ -23,7 +23,11 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/** Best-effort parser for HTTP dates. */
+/**
+ * Best-effort parser for HTTP dates.
+ *
+ * @see okhttp3.internal.http
+ */
 public final class HttpDate {
   /** The last four-digit year: "Fri, 31 Dec 9999 23:59:59 GMT". */
   public static final long MAX_DATE = 253402300799999L;

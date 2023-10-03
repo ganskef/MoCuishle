@@ -1,6 +1,6 @@
 # POM "mocuishle-browser"
 
-The module `mocuishle-browser` contains browser extensions to enable and disable *Mo Cuishle* - A caching proxy for offline use.
+This module contains browser extensions to enable and disable *Mo Cuishle* - A caching proxy for offline use.
 
 Install it from the Web Store of your browser. (I'm working on it.)
 

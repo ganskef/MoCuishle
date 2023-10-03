@@ -35,7 +35,13 @@ public class MoCuishleMain {
    */
   static {
     @SuppressWarnings("unused")
-    Class<?>[] classes = new Class<?>[] {};
+    Class<?>[] classes =
+        new Class<?>[] {
+          ch.qos.logback.core.FileAppender.class,
+          ch.qos.logback.classic.BasicConfigurator.class,
+          ch.qos.logback.classic.jul.LevelChangePropagator.class,
+          org.slf4j.bridge.SLF4JBridgeHandler.class,
+        };
   }
 
   public static void main(String[] args) throws Exception {

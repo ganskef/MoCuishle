@@ -37,7 +37,7 @@
 		<level value="warn" />
 	</logger>
 
-<!--
+<!-- 
 	<logger name="de.ganskef.mocuishle.proxy.CacheControl">
 		<level value="warn" />
 	</logger>
