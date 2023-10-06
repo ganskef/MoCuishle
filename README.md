@@ -14,7 +14,7 @@ Change dir and build with Maven:
 
     mvn clean install
 
-Tested on *Windows*, *macOS*, *GNU/Debian* and *FreeBSD*, development on *Arch Linux* with *OpenJDK* 11 and 21+35 using *Maven* 3.8.7. It's simple *Java* internally with a *Kotlin* runtime dependency *OkHttp*.
+Tested on *Windows*, *macOS*, *GNU/Debian* and *FreeBSD*, development on *Arch Linux* with *OpenJDK* 21+35 and *Maven* 3.8.7. It's simple *Java* internally with a *Kotlin* runtime dependency *OkHttp*.
 
 ## Initialize the application
 

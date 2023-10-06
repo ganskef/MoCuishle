@@ -1,6 +1,6 @@
 # POM "mocuishle-legacy"
 
-After years of using *Mo Cuishle* - A caching proxy for offline use - developed 2013 - 2016 I'm going *Open Source* with it.
+After years of using *Mo Cuishle* - A caching proxy for offline use - developed 2013 - 2016 I'm going *Open Source* with it in 2023.
 
 This module *Mo Cuishle - Legacy* is **no**t intended to be a base of **further development** but to migrate its features to more sophisticated implementations. 
 
