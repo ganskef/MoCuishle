@@ -59,9 +59,19 @@ public class McOkProxy extends InterceptionProxy {
   public McOkProxy(IPlatform platform, ICache cache) {
     super(
         platform.getProxyPort(),
-        new Impersonation.Builder().basedir(cache.getWritableDir().getPath()),
+        new Impersonation.Builder()
+            .basedir(cache.getWritableDir().getPath())
+            .alias(System.getProperty("de.ganskef.mocuishle.keystore.alias", "mocuishle"))
+            .name(
+                System.getProperty(
+                    "de.ganskef.mocuishle.keystore.name", "_Mo Cuishle (offline cache)"))
+            .password(
+                // historic default password taken from https://github.com/adamfisk/LittleProxy
+                System.getProperty("de.ganskef.mocuishle.keystore.password", "Be Your Own Lantern")
+                    .toCharArray()),
         new OkHttpClient.Builder()
-            // TODO okhttp3.brotli.BrotliInterceptor.INSTANCE fails to intercept deflate
+            // TODO okhttp3.brotli.BrotliInterceptor.INSTANCE fails to intercept deflate and gzip,
+            // fix it upstream
             .addInterceptor(new BrotliInterceptor())
             .addInterceptor(
                 new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)));
@@ -70,6 +80,7 @@ public class McOkProxy extends InterceptionProxy {
   }
 
   public void start() throws IOException {
+    LOG.info("Starting proxy server with port {} ...", super.portArgument);
     super.run();
     LOG.info(READY_MESSAGE);
   }

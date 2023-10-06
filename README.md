@@ -14,30 +14,42 @@ Change dir and build with Maven:
 
     mvn clean install
 
-Tested on *Windows*, *macOS*, *GNU/Debian* and *FreeBSD*, development on *Arch Linux* with *OpenJDK* 11.0.20.1 and *Maven* 3.8.7. It's simple *Java* internally with a *Kotlin* runtime dependency *OkHttp*.
+Tested on *Windows*, *macOS*, *GNU/Debian* and *FreeBSD*, development on *Arch Linux* with *OpenJDK* 11 and 21+35 using *Maven* 3.8.7. It's simple *Java* internally with a *Kotlin* runtime dependency *OkHttp*.
 
 ## Initialize the application
 
 First run the *Java* application by double click or command line:
 
-    java -jar mocuishle/target/mocuishle-2.1.0-shaded.jar
+    java -jar mocuishle/target/mocuishle-2.2.0-shaded.jar
 
 Browser communication to the application is initialized, it's necessary if the location of the `JAR` is changed:
 
-    0      2023-05-13 18:53:30,327 INFO  [main] main.McProxyMain - Install Native Messaging to support browser extensions...
-    13     2023-05-13 18:53:30,340 INFO  [main] main.BrowserExtensionSupport - FIREFOX_UNIX
-    14     2023-05-13 18:53:30,341 INFO  [main] main.BrowserExtensionSupport - CHROME_UNIX
-    15     2023-05-13 18:53:30,342 INFO  [main] main.BrowserExtensionSupport - CHROMIUM_UNIX
-    27     2023-05-13 18:53:30,354 INFO  [main] proxy.McProxy - Starting proxy server with port 9090 ...
-    364    2023-05-13 18:53:30,691 INFO  [main] proxy.McProxy - Startup done
+    122    2023-10-03 23:19:26,664 INFO  [main] d.g.m.MoCuishleMain - Install Native Messaging to support browser extensions...
+    128    2023-10-03 23:19:26,670 INFO  [main] d.g.m.m.BrowserExtensionSupport - FIREFOX_UNIX
+    128    2023-10-03 23:19:26,670 INFO  [main] d.g.m.m.BrowserExtensionSupport - CHROME_UNIX
+    128    2023-10-03 23:19:26,670 INFO  [main] d.g.m.m.BrowserExtensionSupport - CHROMIUM_UNIX
+    494    2023-10-03 23:19:27,036 INFO  [main] d.g.m.p.McOkProxy - Starting proxy server with port 9090 ...
+    502    2023-10-03 23:19:27,044 INFO  [main] d.g.m.p.McOkProxy - Startup done
 
 In the home directory a `~/MoCuishle` directory is created. It contains the runtime data of the application and will updated if needed. A symbolic link to put it to another location is okay.
 
 ## Browser Certificate
 
-The first execution creates a certificate `~/MoCuishle/okproxy.pem` to install in your browsers. For details see [okproxy-java](okproxy-java/README.md).
+The first execution creates a certificate `~/MoCuishle/mocuishle.pem` to install in your browsers Authorities or system wide if needed.
 
-* [ ] 2023-09-30 **TODO:** MoCuishle uses the formerly mocuishle.pem instead of okhttp.pem (but mocuishle.p12 contains a root certificate instead of the intermediate certificate, might not work)
+* [X] ~~*2023-09-30 MoCuishle uses the formerly mocuishle.pem instead of okhttp.pem (but mocuishle.p12 contains a root certificate instead of the intermediate certificate, might not work)*~~ [2023-10-06] Mo Cuishle works with an existing KeyStore too.
+
+The second file `~/MoCuishle/mocuishle.p12` is generated to hold the matching private key and intermediate certificate, the proxy use to intercept upstream connections (Man In The Middle).
+
+If needed, use a PKCS12 KeyStore (and certificate authority) of your own by setting this system properties:
+
+|Property                               |Default value               |
+|:------------------------------------- |:-------------------------- |
+|de.ganskef.mocuishle.keystore.alias    |mocuishle                   |
+|de.ganskef.mocuishle.keystore.name     |_Mo Cuishle (offline cache) |
+|de.ganskef.mocuishle.keystore.password |Be Your Own Lantern         |
+
+(historic default password taken from <https://github.com/adamfisk/LittleProxy>)
 
 ## Install Browser Extensions
 

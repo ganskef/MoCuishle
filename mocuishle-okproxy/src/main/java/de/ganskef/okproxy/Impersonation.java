@@ -127,7 +127,7 @@ public class Impersonation {
   public static class Builder {
     private String alias = "okproxy";
     private String basedir = System.getProperty("user.dir");
-    private String name = "_OkProxy (offline cache)";
+    private String name = "_OkProxy (Man In The Middle)";
     private char[] password = "".toCharArray();
 
     /**

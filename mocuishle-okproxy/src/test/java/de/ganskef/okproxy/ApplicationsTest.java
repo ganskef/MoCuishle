@@ -120,7 +120,7 @@ class ApplicationsTest {
           .endsWith(" de.ganskef.okproxy.Impersonation <init>");
       assertThat(br.readLine())
           .as("syserr with java util logging line 2")
-          .contains(" _OkProxy (offline cache) from ");
+          .contains(" _OkProxy (Man In The Middle) from ");
       assertThat(br.readLine())
           .as("syserr with java util logging line 3")
           .contains("de.ganskef.okproxy.OkHttpServer");

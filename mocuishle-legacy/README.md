@@ -10,7 +10,4 @@ The modules of *Mo Cuishle* will be developed in the parent module. See the **[R
 
 The test coverage is 28% only after replacing LittleProxy-mitm with OkProxy but I've used it over the last 10 years on a daily base.
 
-    mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent test
-    mvn org.jacoco:jacoco-maven-plugin:report
-
-A better unit test coverage is an important goal of new implemented modules. Implementing JUnit tests in *Mo Cuishle - Legacy* is an excellent starting point of course.
+A better unit test coverage is an important goal of new implemented modules. Implementing JUnit tests in *Mo Cuishle - Legacy* is an excellent starting point of course. (see: `target/site/jacoco/index.html`)

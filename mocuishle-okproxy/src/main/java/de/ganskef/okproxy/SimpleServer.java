@@ -19,20 +19,20 @@ public class SimpleServer extends Dispatcher {
 
   private static OkHttpServer server;
 
-  private final String root;
+  protected final String rootArgument;
 
-  private final int port;
+  protected final int portArgument;
 
   public SimpleServer(String root, int port) {
-    this.root = root;
-    this.port = port;
+    this.rootArgument = root;
+    this.portArgument = port;
   }
 
   public void run() throws IOException {
     server = new OkHttpServer();
     server.setDispatcher(this);
     configure(server);
-    server.start(port);
+    server.start(portArgument);
   }
 
   public HttpUrl url(String path) {
@@ -48,7 +48,7 @@ public class SimpleServer extends Dispatcher {
     try {
       if (!path.startsWith("/") || path.contains("..")) throw new FileNotFoundException();
 
-      File file = new File(root + path);
+      File file = new File(rootArgument + path);
       return file.isDirectory() ? directoryToResponse(path, file) : fileToResponse(path, file);
     } catch (FileNotFoundException e) {
       return new Response()

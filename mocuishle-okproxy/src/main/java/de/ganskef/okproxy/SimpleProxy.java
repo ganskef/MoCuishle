@@ -29,7 +29,7 @@ public class SimpleProxy extends Dispatcher {
 
   private static final String ERROR_STATUS = "HTTP/1.1 500", BLOCKED_STATUS = "HTTP/1.1 501";
 
-  private final int initialPort;
+  protected final int portArgument;
 
   private final OkHttpClient client;
 
@@ -40,7 +40,7 @@ public class SimpleProxy extends Dispatcher {
   }
 
   public SimpleProxy(int port, OkHttpClient.Builder clientBuilder) {
-    this.initialPort = port;
+    this.portArgument = port;
     this.client =
         clientBuilder
             // Avoid to many redirects exception.
@@ -54,7 +54,7 @@ public class SimpleProxy extends Dispatcher {
   public void run() throws IOException {
     server = new OkHttpServer(getClass().getSimpleName());
     server.setDispatcher(this);
-    server.start(initialPort);
+    server.start(portArgument);
   }
 
   public Proxy toProxyAddress() {
