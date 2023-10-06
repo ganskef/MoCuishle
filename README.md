@@ -2,44 +2,54 @@
 
 > All web pages you've seen on the Internet via HTTP or HTTPS will be available later to read them without having to remain connected.
 
-See **https://ganskef.github.io/MoCuishle/** for details.
+See **https://ganskef.github.io/MoCuishle/** for further information.
 
 ## Build and install
 
-Get this repository with submodules included:
+Get this repository:
 
-    git clone --recurse-submodules https://github.com/ganskef/MoCuishle
+    git clone https://github.com/ganskef/MoCuishle
 
-The submodules are in the special branch `enable_offline_caching_with_mitm` version `1.1.1-offline` to enable interception while offline by spoofing the requested address:
-
-    git pull --recurse-submodules
-
-*Mo Cuishle* depends on *OpenJDK 11* and *Maven 3.8* (see: [#5](https://github.com/ganskef/MoCuishle/issues/5)):
+Change dir and build with Maven:
 
     mvn clean install
 
-Tested with *Windows*, *macOS* and *Linux* **OpenJDK 11.0.19 and Maven 3.8.8**.
+Tested on *Windows*, *macOS*, *GNU/Debian* and *FreeBSD*, development on *Arch Linux* with *OpenJDK* 21+35 and *Maven* 3.8.7. It's simple *Java* internally with a *Kotlin* runtime dependency *OkHttp*.
 
 ## Initialize the application
 
 First run the *Java* application by double click or command line:
 
-    java -jar mocuishle/target/mocuishle-2.1.0-shaded.jar
+    java -jar mocuishle/target/mocuishle-2.2.0-shaded.jar
 
 Browser communication to the application is initialized, it's necessary if the location of the `JAR` is changed:
 
-    0      2023-05-13 18:53:30,327 INFO  [main] main.McProxyMain - Install Native Messaging to support browser extensions...
-    13     2023-05-13 18:53:30,340 INFO  [main] main.BrowserExtensionSupport - FIREFOX_UNIX
-    14     2023-05-13 18:53:30,341 INFO  [main] main.BrowserExtensionSupport - CHROME_UNIX
-    15     2023-05-13 18:53:30,342 INFO  [main] main.BrowserExtensionSupport - CHROMIUM_UNIX
-    27     2023-05-13 18:53:30,354 INFO  [main] proxy.McProxy - Starting proxy server with port 9090 ...
-    364    2023-05-13 18:53:30,691 INFO  [main] proxy.McProxy - Startup done
+    122    2023-10-03 23:19:26,664 INFO  [main] d.g.m.MoCuishleMain - Install Native Messaging to support browser extensions...
+    128    2023-10-03 23:19:26,670 INFO  [main] d.g.m.m.BrowserExtensionSupport - FIREFOX_UNIX
+    128    2023-10-03 23:19:26,670 INFO  [main] d.g.m.m.BrowserExtensionSupport - CHROME_UNIX
+    128    2023-10-03 23:19:26,670 INFO  [main] d.g.m.m.BrowserExtensionSupport - CHROMIUM_UNIX
+    494    2023-10-03 23:19:27,036 INFO  [main] d.g.m.p.McOkProxy - Starting proxy server with port 9090 ...
+    502    2023-10-03 23:19:27,044 INFO  [main] d.g.m.p.McOkProxy - Startup done
 
 In the home directory a `~/MoCuishle` directory is created. It contains the runtime data of the application and will updated if needed. A symbolic link to put it to another location is okay.
 
 ## Browser Certificate
 
-The first execution creates a certificate `~/MoCuishle/mocuishle.pem` to install in your browsers. For details see [LittleProxy-mitm](https://github.com/ganskef/LittleProxy-mitm#get-it-up-and-running).
+The first execution creates a certificate `~/MoCuishle/mocuishle.pem` to install in your browsers Authorities or system wide if needed.
+
+* [X] ~~*2023-09-30 MoCuishle uses the formerly mocuishle.pem instead of okhttp.pem (but mocuishle.p12 contains a root certificate instead of the intermediate certificate, might not work)*~~ [2023-10-06] Mo Cuishle works with an existing KeyStore too.
+
+The second file `~/MoCuishle/mocuishle.p12` is generated to hold the matching private key and intermediate certificate, the proxy use to intercept upstream connections (Man In The Middle).
+
+If needed, use a PKCS12 KeyStore (and certificate authority) of your own by setting this system properties:
+
+|Property                               |Default value               |
+|:------------------------------------- |:-------------------------- |
+|de.ganskef.mocuishle.keystore.alias    |mocuishle                   |
+|de.ganskef.mocuishle.keystore.name     |_Mo Cuishle (offline cache) |
+|de.ganskef.mocuishle.keystore.password |Be Your Own Lantern         |
+
+(historic default password taken from <https://github.com/adamfisk/LittleProxy>)
 
 ## Install Browser Extensions
 
@@ -63,9 +73,14 @@ Of course you can use an other proxy switcher, but try to disable the browser ca
 
 ## Trouble Shooting
 
-* I had some problems with more recent versions of *Java* and *Maven* while testing *macOS* and *Windows*. I'm working on it (see: [#5](https://github.com/ganskef/MoCuishle/issues/5). Please use the given versions at the moment. Double check using an *OpenJDK* instead of a *JDK* or *JRE* and a [Previous Stable 3.8.x Release](https://maven.apache.org/download.cgi?.#previous-stable-3-8-x-release) of *Maven*.
-* I had test failures on macOS and Windows, try `mvn clean install -DskipTests`. I'm working on it.
+* [x] ~~I had some problems with more recent versions of *Java* and *Maven* while testing *macOS* and *Windows*. I'm working on it (see: [#5](https://github.com/ganskef/MoCuishle/issues/5). Please use the given versions at the moment. Double check using an *OpenJDK* instead of a *JDK* or *JRE* and a [Previous Stable 3.8.x Release](https://maven.apache.org/download.cgi?.#previous-stable-3-8-x-release) of *Maven*.~~ 2023-10-03 After replacing *LittleProxy-mitm* with *OkProxy* build succeeds on every tested system, with current *Maven* and *Java*, with `LANG=de_DE` and `LANG=en_US`. Please describe an [Issue](https://github.com/ganskef/MoCuishle/issues), if not.
+* [x] ~~I had test failures on macOS and Windows, try `mvn clean install -DskipTests`. I'm working on it.~~ 2023-09-30 After replacing *LittleProxy-mitm* with *OkProxy* tests are working on every tested system.
 * You have to be an administrative user in *macOS*, maybe *Windows* too to install the browser certificate as a trusted certificate agency. If not, You could use a *Mozilla* browser to install it.
-* *Native Host Messaging* (browser extension starts the *Java* application) won't work with new installed unpacked extension in *Chrome* browsers. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7).
+* *Native Host Messaging* (browser extension starts the *Java* application) won't work with new installed unpacked extension in *Chrome* browsers. I'm working on it, see: [#7](https://github.com/ganskef/MoCuishle/issues/7). **Simply use the autostart feature of your system to launch the MoCuishle JAR in the background.**
 
-This is not as simple like the [early days](https://ganskef.github.io/MoCuishle/#!2016-09-26-mocuishle.md#The_vision_-_Ideas_behind), but I'm working on it.
+This is not as simple like the [early days](https://ganskef.github.io/MoCuishle/#!2016-09-26-mocuishle.md#The_vision_-_Ideas_behind). For good security reasons in [modern browser extensions](https://blog.mozilla.org/addons/2018/08/21/timeline-for-disabling-legacy-firefox-add-ons/) it's not possibly anymore:
+
+* ... to install the certificate in the browser automatically
+* ... to simply handle a Java process by the extension
+* ... to package the Java application into the extension
+

@@ -5,42 +5,313 @@
 
   <groupId>de.ganskef.mocuishle</groupId>
   <artifactId>mocuishle-parent</artifactId>
-  <version>2.0.0</version>
+  <version>2.2.0</version>
   <packaging>pom</packaging>
 
   <name>Mo Cuishle - Parent</name>
   <description>A caching proxy for offline use - modules root</description>
   <url>https://ganskef.github.io/MoCuishle/</url>
 
+  <licenses>
+    <license>
+      <name>Apache 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
   <modules>
-    <module>LittleProxy</module>
-    <module>LittleProxy-mitm</module>
+    <module>mocuishle-legacy</module>
+    <module>mocuishle-okproxy</module>
     <module>mocuishle</module>
     <module>mocuishle-browser</module>
   </modules>
 
+  <scm>
+    <connection>scm:git:https://github.com/ganskef/MoCuishle.git</connection>
+    <developerConnection>scm:git:git@github.com:ganskef/MoCuishle.git</developerConnection>
+    <tag>HEAD</tag>
+    <url>https://github.com/ganskef/MoCuishle/</url>
+  </scm>
+
+  <issueManagement>
+    <system>GitHub Issues</system>
+    <url>https://github.com/ganskef/MoCuishle/issues</url>
+  </issueManagement>
+
+  <properties>
+    <okhttp.version>4.10.0</okhttp.version>
+    <brotli.version>0.1.2</brotli.version>
+    <logback.version>1.2.11</logback.version>
+    <slf4j.version>1.7.21</slf4j.version>
+
+    <junit.version>4.13.1</junit.version>
+    <junit-jupiter.version>5.9.3</junit-jupiter.version>
+    <assertj.version>3.20.2</assertj.version>
+    <mockito.version>5.3.1</mockito.version>
+
+    <sqlite4java.version>1.0.392</sqlite4java.version>
+    <jzlib.version>1.1.3</jzlib.version>
+    <jsoup.version>1.16.1</jsoup.version>
+    <gson.version>2.10.1</gson.version>
+    <commons-io.version>2.13.0</commons-io.version>
+    <commons-lang3.version>3.13.0</commons-lang3.version>
+    <guava.version>32.1.2-jre</guava.version>
+    <slf4j.version>1.7.21</slf4j.version>
+
+    <spotless-maven-plugin.version>2.40.0</spotless-maven-plugin.version>
+    <jacoco-maven-plugin.version>0.8.10</jacoco-maven-plugin.version>
+    <maven-jar-plugin.version>3.3.0</maven-jar-plugin.version>
+    <maven-shade-plugin.version>3.5.1</maven-shade-plugin.version>
+    <maven-assembly-plugin.version>3.6.0</maven-assembly-plugin.version>
+    <maven-resources-plugin.version>3.3.1</maven-resources-plugin.version>
+    <maven-compiler-plugin.version>3.11.0</maven-compiler-plugin.version>
+    <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.release>11</maven.compiler.release>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+      <!-- The major dependencies of the Mo Cuishle application  -->
+      <dependency>
+        <groupId>de.ganskef.mocuishle</groupId>
+        <artifactId>mocuishle-legacy</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>de.ganskef.mocuishle</groupId>
+        <artifactId>mocuishle-okproxy</artifactId>
+        <version>${project.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-brotli</artifactId>
+        <version>${okhttp.version}</version>
+      </dependency>
+      <!-- Selected Logging implementation -->
+      <dependency>
+        <groupId>ch.qos.logback</groupId>
+        <artifactId>logback-classic</artifactId>
+        <version>${logback.version}</version>
+      </dependency>
+      <!-- To analyse traffic -->
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>logging-interceptor</artifactId>
+        <version>${okhttp.version}</version>
+      </dependency>
+
+      <!-- The major dependency of OKProxy -->
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>${okhttp.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp-tls</artifactId>
+        <version>${okhttp.version}</version>
+      </dependency>
+
+      <!-- Mo Cuishle Library (legacy) -->
+      <dependency>
+        <groupId>com.jcraft</groupId>
+        <artifactId>jzlib</artifactId>
+        <version>${jzlib.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.almworks.sqlite4java</groupId>
+        <artifactId>sqlite4java</artifactId>
+        <version>${sqlite4java.version}</version>
+        <type>jar</type>
+      </dependency>
+      <dependency>
+        <groupId>com.almworks.sqlite4java</groupId>
+        <artifactId>libsqlite4java-linux-amd64</artifactId>
+        <version>${sqlite4java.version}</version>
+        <type>so</type>
+      </dependency>
+      <dependency>
+        <groupId>org.slf4j</groupId>
+        <artifactId>jul-to-slf4j</artifactId>
+        <version>${slf4j.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.jsoup</groupId>
+        <artifactId>jsoup</artifactId>
+        <version>${jsoup.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.code.gson</groupId>
+        <artifactId>gson</artifactId>
+        <version>${gson.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>commons-io</groupId>
+        <artifactId>commons-io</artifactId>
+        <version>${commons-io.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${commons-lang3.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>com.google.guava</groupId>
+        <artifactId>guava</artifactId>
+        <version>${guava.version}</version>
+      </dependency>
+
+      <!-- Legacy testing in Mo Cuishle Library -->
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <!--JUnit Jupiter Engine to depend on the JUnit4 engine and JUnit 4 API  -->
+      <dependency>
+        <groupId>org.junit.vintage</groupId>
+        <artifactId>junit-vintage-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+      </dependency>
+
+      <!-- JUnit5 for testing -->
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>${junit-jupiter.version}</version>
+      </dependency>
+      <!-- api obsolete? -->
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-engine</artifactId>
+        <version>${junit-jupiter.version}</version>
+      </dependency>
+      <!-- AssertJ for better testing exceptions and String#contains ... -->
+      <dependency>
+        <groupId>org.assertj</groupId>
+        <artifactId>assertj-core</artifactId>
+        <version>${assertj.version}</version>
+      </dependency>
+      <!-- Mockito for testing with mocks -->
+      <dependency>
+        <groupId>org.mockito</groupId>
+        <artifactId>mockito-core</artifactId>
+        <version>${mockito.version}</version>
+      </dependency>
+      <!-- MockWebServer for integration test -->
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>mockwebserver</artifactId>
+        <version>${okhttp.version}</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+
   <build>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>com.diffplug.spotless</groupId>
+          <artifactId>spotless-maven-plugin</artifactId>
+          <version>${spotless-maven-plugin.version}</version>
+          <configuration>
+            <pom>
+              <sortPom>
+                <expandEmptyElements>false</expandEmptyElements>
+                <indentSchemaLocation>true</indentSchemaLocation>
+              </sortPom>
+            </pom>
+          </configuration>
+          <executions>
+            <execution>
+              <goals>
+                <goal>apply</goal>
+              </goals>
+              <phase>validate</phase>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.jacoco</groupId>
+          <artifactId>jacoco-maven-plugin</artifactId>
+          <version>${jacoco-maven-plugin.version}</version>
+          <executions>
+            <execution>
+              <id>default-prepare-agent</id>
+              <goals>
+                <goal>prepare-agent</goal>
+              </goals>
+              <phase>validate</phase>
+            </execution>
+            <execution>
+              <id>default-report</id>
+              <goals>
+                <goal>report</goal>
+              </goals>
+              <phase>install</phase>
+            </execution>
+          </executions>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-jar-plugin</artifactId>
+          <version>${maven-jar-plugin.version}</version>
+          <configuration>
+            <excludes>
+              <exclude>META-INF/maven/**/*</exclude>
+            </excludes>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-compiler-plugin</artifactId>
+          <version>${maven-compiler-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-resources-plugin</artifactId>
+          <version>${maven-resources-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-surefire-plugin</artifactId>
+          <version>${maven-surefire-plugin.version}</version>
+          <configuration>
+            <redirectTestOutputToFile>true</redirectTestOutputToFile>
+          </configuration>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-assembly-plugin</artifactId>
+          <version>${maven-assembly-plugin.version}</version>
+        </plugin>
+
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-shade-plugin</artifactId>
+          <version>${maven-shade-plugin.version}</version>
+        </plugin>
+
+      </plugins>
+    </pluginManagement>
+
     <plugins>
       <plugin>
         <groupId>com.diffplug.spotless</groupId>
         <artifactId>spotless-maven-plugin</artifactId>
-        <version>2.22.5</version>
-        <configuration>
-          <pom>
-            <sortPom>
-              <expandEmptyElements>false</expandEmptyElements>
-              <indentSchemaLocation>true</indentSchemaLocation>
-            </sortPom>
-          </pom>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>apply</goal>
-            </goals>
-            <phase>validate</phase>
-          </execution>
-        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

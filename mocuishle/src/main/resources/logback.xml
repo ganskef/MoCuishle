@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false" scan="true">
+
+  <contextListener
+    class="ch.qos.logback.classic.jul.LevelChangePropagator" />
+
+  <appender name="STDOUT"
+    class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <!-- <pattern>%date %level [%thread] %logger{10} [%file:%line] %msg%n</pattern> -->
+      <!-- <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern> -->
+      <pattern>%-6r %d{ISO8601} %-5p [%t] %c{2} - %m%n</pattern>
+    </encoder>
+  </appender>
+
+  <root level="INFO">
+    <appender-ref ref="STDOUT" />
+  </root>
+
+  <!-- Loggers to verbose in INFO level -->
+  <logger name="de.ganskef.okproxy" level="WARN"/>
+  <logger name="com.almworks.sqlite4java" level="WARN"/>
+
+</configuration>

@@ -1,0 +1,6 @@
+# EditorConfig: https://editorconfig.org
+# Apply root definitions this, do Eclipse formatter in Maven verify
+
+[*.java]
+indent_style = tab
+indent_size = 1

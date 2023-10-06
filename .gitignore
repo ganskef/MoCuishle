@@ -5,3 +5,5 @@ target/
 *.iml
 .idea/
 .vscode/
+*.p12
+*.pem

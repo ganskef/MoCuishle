@@ -9,17 +9,31 @@
     <version>2.2.0</version>
   </parent>
 
-  <artifactId>mocuishle-browser</artifactId>
-  <packaging>jar</packaging>
+  <artifactId>mocuishle-okproxy</artifactId>
 
-  <name>Mo Cuishle - Browser Extension</name>
-  <description>A caching proxy for offline use - Enable the browser to use the app.</description>
+  <name>Mo Cuishle - OkProxy (Java)</name>
+  <description>HTTP(S) server variants based on OkHttp.</description>
 
   <dependencies>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp-tls</artifactId>
+    </dependency>
+
     <!-- JUnit5 for testing -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Mockito for testing with mocks -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
       <scope>test</scope>
     </dependency>
     <!-- AssertJ for better testing exceptions and String#contains ... -->
@@ -28,47 +42,19 @@
       <artifactId>assertj-core</artifactId>
       <scope>test</scope>
     </dependency>
+    <!-- MockWebServer for integration test -->
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>mockwebserver</artifactId>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 
   <build>
-    <resources>
-      <resource>
-        <directory>${project.basedir}/..</directory>
-        <includes>
-          <include>LICENSE.txt</include>
-        </includes>
-      </resource>
-      <resource>
-        <directory>${project.build.scriptSourceDirectory}</directory>
-        <excludes>
-          <exclude>*-firefox.*</exclude>
-          <exclude>manifest.json</exclude>
-        </excludes>
-      </resource>
-      <resource>
-        <filtering>true</filtering>
-        <directory>${project.build.scriptSourceDirectory}</directory>
-        <includes>
-          <include>manifest.json</include>
-        </includes>
-      </resource>
-    </resources>
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <configuration>
-          <descriptorSourceDirectory>src/assembly</descriptorSourceDirectory>
-        </configuration>
-        <executions>
-          <execution>
-            <goals>
-              <goal>single</goal>
-            </goals>
-            <phase>process-resources</phase>
-          </execution>
-        </executions>
+        <artifactId>maven-surefire-plugin</artifactId>
       </plugin>
 
       <plugin>
@@ -84,8 +70,6 @@
       </plugin>
 
     </plugins>
-
-    <scriptSourceDirectory>src/extension</scriptSourceDirectory>
   </build>
 
 </project>
