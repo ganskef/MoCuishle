@@ -4,6 +4,13 @@
 
 See **https://ganskef.github.io/MoCuishle/** for further information.
 
+## TODO
+
+* [ ] 2023-10-08 The shaded jar contains no version to allow update without reinstallation by execution
+* [ ] 2023-10-08 Log config is fixed (with new logback an slf4j versions loglevel is DEBUG instead of INFO)
+* [ ] 2023-10-07 Maven build contains no warnings
+* [ ] 2023-10-07 In VS Code classpath of tests in mocuishle-okproxy-kt is fixed (Maven build works but VS Code is failing to find the Kotlin classes in the Java tests, and fails to find TimeUnit (since 1.5) in Kotlin too)
+
 ## Build and install
 
 Get this repository:
