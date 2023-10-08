@@ -91,6 +91,7 @@
             <phase>package</phase>
             <configuration>
               <shadedArtifactAttached>true</shadedArtifactAttached>
+              <finalName>mocuishle-shaded</finalName>
               <minimizeJar>true</minimizeJar>
               <artifactSet>
                 <excludes>
