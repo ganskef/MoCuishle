@@ -22,7 +22,8 @@
   <modules>
     <module>mocuishle-legacy</module>
     <module>mocuishle-okproxy</module>
-        <module>mocuishle</module>
+    <module>mocuishle-okproxy-kt</module>
+    <module>mocuishle</module>
     <module>mocuishle-browser</module>
   </modules>
 
