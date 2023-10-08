@@ -24,11 +24,12 @@ class OkHttpServerTest {
           threadName = each.getName();
         }
       }
-      assertThat(expected).isEqualTo(threadName);
+      assertThat(threadName).isEqualTo(expected);
     } finally {
       server.shutdown();
     }
-    assertThat(String.format("%s[%s]", OkHttpServerTest.class.getSimpleName(), server.getPort()))
-        .isEqualTo(server.toString());
+    assertThat(server.toString())
+        .isEqualTo(
+            String.format("%s[%s]", OkHttpServerTest.class.getSimpleName(), server.getPort()));
   }
 }
