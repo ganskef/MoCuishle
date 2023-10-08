@@ -81,7 +81,7 @@
       </dependency>
       <dependency>
         <groupId>de.ganskef.mocuishle</groupId>
-        <artifactId>mocuishle-okproxy</artifactId>
+        <artifactId>mocuishle-okproxy-kt</artifactId>
         <version>${project.version}</version>
       </dependency>
       <dependency>

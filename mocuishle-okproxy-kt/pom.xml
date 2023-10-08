@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>de.ganskef.mocuishle</groupId>
+    <artifactId>mocuishle-parent</artifactId>
+    <version>2.2.1</version>
+  </parent>
+
+  <artifactId>mocuishle-okproxy-kt</artifactId>
+
+  <name>Mo Cuishle - OkProxy (Kotlin)</name>
+  <description>HTTP(S) server variants based on OkHttp.</description>
+
+  <properties>
+    <kotlin_version>1.9.10</kotlin_version>
+    <kotlin.code.style>official</kotlin.code.style>
+    <kotlin.compiler.incremental>false</kotlin.compiler.incremental>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>okhttp-tls</artifactId>
+    </dependency>
+
+    <!-- JUnit5 for testing -->
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Mockito for testing with mocks -->
+    <dependency>
+      <groupId>org.mockito</groupId>
+      <artifactId>mockito-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- AssertJ for better testing exceptions and String#contains ... -->
+    <dependency>
+      <groupId>org.assertj</groupId>
+      <artifactId>assertj-core</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- MockWebServer for integration test -->
+    <dependency>
+      <groupId>com.squareup.okhttp3</groupId>
+      <artifactId>mockwebserver</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <!-- Logging for tests and example applications -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>jul-to-slf4j</artifactId>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>ch.qos.logback</groupId>
+      <artifactId>logback-classic</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.jetbrains.kotlin</groupId>
+        <artifactId>kotlin-maven-plugin</artifactId>
+        <version>${kotlin_version}</version>
+        <configuration>
+          <jvmTarget>11</jvmTarget>
+        </configuration>
+        <executions>
+          <execution>
+            <id>compile</id>
+            <goals>
+              <goal>compile</goal>
+            </goals>
+            <phase>process-sources</phase>
+            <configuration>
+              <sourceDirs>
+                <!-- mix kotlin + java -->
+                <sourceDir>${project.basedir}/src/main/java</sourceDir>
+                <sourceDir>${project.basedir}/src/main/kotlin</sourceDir>
+              </sourceDirs>
+            </configuration>
+          </execution>
+          <execution>
+            <id>test-compile</id>
+            <goals>
+              <goal>test-compile</goal>
+            </goals>
+            <!-- Phase generate-test-resources to compile Kotlin classes before executing the tests. -->
+            <phase>process-test-sources</phase>
+            <configuration>
+              <sourceDirs>
+                <!-- mix kotlin + java -->
+                <sourceDir>${project.basedir}/src/test/java</sourceDir>
+                <sourceDir>${project.basedir}/src/test/kotlin</sourceDir>
+              </sourceDirs>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+      </plugin>
+
+      <plugin>
+        <groupId>com.diffplug.spotless</groupId>
+        <artifactId>spotless-maven-plugin</artifactId>
+        <configuration>
+          <java>
+            <importOrder/>
+            <removeUnusedImports/>
+            <googleJavaFormat/>
+          </java>
+          <kotlin>
+            <ktfmt>
+              <version>0.37</version>
+              <style>GOOGLE</style>
+            </ktfmt>
+          </kotlin>
+        </configuration>
+      </plugin>
+
+    </plugins>
+  </build>
+
+</project>

@@ -1,0 +1,5 @@
+# EditorConfig: https://editorconfig.org
+# apply root definitions, do Google ktfmt in Maven verify
+
+[*.kt]
+indent_size = 2
