@@ -115,7 +115,9 @@
             </importOrder>
             <removeUnusedImports/>
             <eclipse>
-              <version>4.13.0</version>
+              <!-- Running Spotless on JVM 11 limits to eclipse jdt formatter 4.26. - ->
+              <version>4.27</version>
+              -->
               <file>src/eclipse-jdt-formatter.xml</file>
             </eclipse>
           </java>
