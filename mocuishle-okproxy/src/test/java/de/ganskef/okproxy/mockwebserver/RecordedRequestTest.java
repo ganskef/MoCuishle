@@ -27,8 +27,15 @@ import java.util.Collections;
 import okhttp3.Headers;
 import okio.Buffer;
 import org.junit.jupiter.api.Test;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 class RecordedRequestTest {
+
+  static {
+    SLF4JBridgeHandler.removeHandlersForRootLogger();
+    SLF4JBridgeHandler.install();
+  }
+
   Headers headers = new Headers.Builder().build();
 
   private class FakeSocket extends Socket {

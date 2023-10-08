@@ -7,8 +7,14 @@ import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Timeout;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 class ImpersonationTest {
+
+  static {
+    SLF4JBridgeHandler.removeHandlersForRootLogger();
+    SLF4JBridgeHandler.install();
+  }
 
   private static final String BASE_DIR = "target";
   private static final String BASE_NAME = Impersonation.class.getSimpleName();

@@ -3,8 +3,14 @@ package de.ganskef.okproxy;
 import static org.assertj.core.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 class OkHttpServerTest {
+
+  static {
+    SLF4JBridgeHandler.removeHandlersForRootLogger();
+    SLF4JBridgeHandler.install();
+  }
 
   @Test
   void testThreadNameContainsPortInsteadOfZero() throws Exception {

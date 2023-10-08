@@ -16,12 +16,18 @@ import okio.Okio;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 class SecuredServerTest {
 
   private static String OS = System.getProperty("os.name").toLowerCase();
 
   private static final String BASE_DIR = "target";
+
+  static {
+    SLF4JBridgeHandler.removeHandlersForRootLogger();
+    SLF4JBridgeHandler.install();
+  }
 
   private SecuredServer server;
 

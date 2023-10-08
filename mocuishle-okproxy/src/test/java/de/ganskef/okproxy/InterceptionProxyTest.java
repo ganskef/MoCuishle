@@ -19,12 +19,18 @@ import okhttp3.tls.HandshakeCertificates;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 class InterceptionProxyTest {
 
   private static String OS = System.getProperty("os.name").toLowerCase();
 
   private static final String BASE_DIR = "target";
+
+  static {
+    SLF4JBridgeHandler.removeHandlersForRootLogger();
+    SLF4JBridgeHandler.install();
+  }
 
   private MockWebServer server;
   private OkHttpClient directClient;

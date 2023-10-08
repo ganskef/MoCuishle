@@ -26,6 +26,7 @@ import okhttp3.Headers;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.slf4j.bridge.SLF4JBridgeHandler;
 
 /**
  * MockWebServerTest of <a href=
@@ -33,6 +34,11 @@ import org.junit.jupiter.api.Test;
  * version 3.14.9 adapted to verify {@link OkHttpServer}.
  */
 final class MockWebServerTest {
+
+  static {
+    SLF4JBridgeHandler.removeHandlersForRootLogger();
+    SLF4JBridgeHandler.install();
+  }
 
   private OkHttpServer server;
 
